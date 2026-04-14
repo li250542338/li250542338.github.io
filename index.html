@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>李老板的博客</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1 class="logo">📚 李老板的博客</h1>
+            <nav class="nav">
+                <a href="#" class="nav-link active" data-page="home">首页</a>
+                <a href="#" class="nav-link" data-page="archives">归档</a>
+                <a href="#" class="nav-link" data-page="tags">标签</a>
+                <button class="theme-toggle" id="themeToggle">🌙</button>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="container">
+            <!-- 首页 -->
+            <div id="homePage" class="page active">
+                <div class="posts-list" id="postsList"></div>
+            </div>
+
+            <!-- 归档页 -->
+            <div id="archivesPage" class="page">
+                <h2 class="page-title">📅 文章归档</h2>
+                <div id="archivesList"></div>
+            </div>
+
+            <!-- 标签页 -->
+            <div id="tagsPage" class="page">
+                <h2 class="page-title">🏷️ 标签云</h2>
+                <div id="tagsCloud"></div>
+                <div id="tagPosts"></div>
+            </div>
+
+            <!-- 文章详情页 -->
+            <div id="postPage" class="page">
+                <button class="back-btn" id="backBtn">← 返回首页</button>
+                <article id="postContent"></article>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>© 2026 李老板的博客 | 用心记录生活</p>
+        </div>
+    </footer>
+
+    <script src="posts.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
