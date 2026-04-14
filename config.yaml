@@ -1,0 +1,83 @@
+baseURL: "https://li250542338.github.io/"
+title: "李老板的博客"
+theme: "PaperMod"
+
+paginate: 5
+
+enableInlineShortcodes: true
+enableRobotsTXT: true
+buildDrafts: false
+buildFuture: false
+buildExpired: false
+
+googleAnalytics: UA-123-45
+
+minify:
+  disableXML: true
+  minifyOutput: true
+
+params:
+  env: production # to enable google analytics, opengraph, twitter-cards and schema.
+  title: "李老板的博客"
+  description: "记录学习和生活的地方"
+  keywords: [博客, 学习, 生活]
+  author: "李老板"
+  # author: ["Me", "You"] # multiple authors
+
+  defaultTheme: auto
+  # disableThemeToggle: true
+  ShowShareButtons: true
+  ShowReadingTime: true
+  # disableSpecial1stPost: true
+  displayFullLangName: true
+  ShowPostNavLinks: true
+  ShowBreadCrumbs: true
+  ShowCodeCopyButtons: true
+  ShowRssButtonInSectionTermList: true
+  ShowAllPagesInArchive: true
+  ShowPageNums: true
+  ShowToc: true
+  # TocOpen: true
+  # comments: false
+  # hidemeta: false
+  # hideSummary: false
+  # showtoc: false
+  # tocopen: false
+
+  images: ["<link or path of image for opengraph, twitter-cards>"]
+
+  # for search
+  # https://fusejs.io/api/options.html
+  fuseOpts:
+    isCaseSensitive: false
+    shouldSort: true
+    location: 0
+    distance: 1000
+    threshold: 0.4
+    minMatchCharLength: 0
+    keys: ["title", "permalink", "summary", "content"]
+
+menu:
+  main:
+    - identifier: 首页
+      name: 首页
+      url: /
+      weight: 1
+    - identifier: 归档
+      name: 归档
+      url: /archives/
+      weight: 2
+    - identifier: 标签
+      name: 标签
+      url: /tags/
+      weight: 3
+    - identifier: 分类
+      name: 分类
+      url: /categories/
+      weight: 4
+
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON
