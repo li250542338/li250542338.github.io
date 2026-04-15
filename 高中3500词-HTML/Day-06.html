@@ -1,0 +1,1848 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>高中英语3500词 - Day 6</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            overflow: hidden;
+        }
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+        .header h1 { font-size: 2em; margin-bottom: 10px; }
+        .search-box {
+            padding: 20px 30px;
+            background: #f8f9fa;
+        }
+        .search-box input {
+            width: 100%;
+            padding: 15px 20px;
+            border: 2px solid #e9ecef;
+            border-radius: 10px;
+            font-size: 16px;
+            transition: all 0.3s;
+        }
+        .search-box input:focus {
+            outline: none;
+            border-color: #667eea;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+        }
+        .nav-letters {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            padding: 15px 30px;
+            background: #f8f9fa;
+            border-top: 1px solid #e9ecef;
+        }
+        .nav-letters a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 36px;
+            height: 36px;
+            background: white;
+            border: 2px solid #667eea;
+            color: #667eea;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            font-size: 14px;
+            transition: all 0.3s;
+        }
+        .nav-letters a:hover {
+            background: #667eea;
+            color: white;
+        }
+        .content { padding: 30px; }
+        .letter-section { margin-bottom: 40px; }
+        .letter-title {
+            font-size: 2em;
+            color: #667eea;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #667eea;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .letter-title::before {
+            content: '';
+            display: inline-block;
+            width: 8px;
+            height: 40px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 4px;
+        }
+        .word-list { display: grid; gap: 12px; }
+        .word-item {
+            display: grid;
+            grid-template-columns: 150px 1fr;
+            gap: 20px;
+            padding: 15px 20px;
+            background: linear-gradient(135deg, #f6f8ff 0%, #faf8ff 100%);
+            border-radius: 12px;
+            border-left: 4px solid #667eea;
+            transition: all 0.3s;
+        }
+        .word-item:hover {
+            transform: translateX(5px);
+            box-shadow: 0 5px 20px rgba(102, 126, 234, 0.15);
+        }
+        .word-english {
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #333;
+            display: flex;
+            align-items: center;
+        }
+        .word-ipa {
+            color: #667eea;
+            font-family: 'Lucida Sans Unicode', 'Arial Unicode MS', sans-serif;
+            margin-left: 10px;
+            font-size: 0.9em;
+            background: white;
+            padding: 2px 8px;
+            border-radius: 4px;
+        }
+        .word-chinese {
+            color: #666;
+            font-size: 1.1em;
+            line-height: 1.6;
+        }
+        .footer {
+            text-align: center;
+            padding: 30px;
+            background: #f8f9fa;
+            color: #666;
+        }
+        .tips {
+            background: #fff3cd;
+            border: 1px solid #ffc107;
+            padding: 20px;
+            border-radius: 12px;
+            margin-bottom: 30px;
+        }
+        .tips h3 {
+            color: #856404;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .tips ul { margin-left: 20px; color: #856404; }
+        .tips li { margin-bottom: 5px; }
+        @media (max-width: 600px) {
+            .word-item { grid-template-columns: 1fr; gap: 10px; }
+            .word-english { justify-content: space-between; }
+        }
+        .hidden { display: none !important; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>📚 高中英语3500词 - Day 6</h1>
+            <p>今日学习目标：认识500词，看到单词能反应出中文意思即可</p>
+        </div>
+
+        <div class="search-box">
+            <input type="text" id="searchInput" placeholder="🔍 搜索单词或中文释义...">
+        </div>
+
+        <div class="nav-letters" id="navLetters">
+            <a href="#letter-J">J</a><a href="#letter-K">K</a><a href="#letter-L">L</a><a href="#letter-M">M</a>
+        </div>
+
+        <div class="content">
+            <div class="tips">
+                <h3>💡 今日学习建议</h3>
+                <ul>
+                    <li>每组50词，分10组完成</li>
+                    <li>每个单词看3-5秒，有个印象就行</li>
+                    <li>学完后、睡前、明天早上各快速复习一遍</li>
+                </ul>
+            </div>
+
+            <div class="letter-section" id="letter-J">
+                <h2 class="letter-title">J</h2>
+                <div class="word-list">
+
+                    <div class="word-item" data-en="jacket" data-zh="n. 短上衣，夹克衫">
+                        <div class="word-english">jacket </div>
+                        <div class="word-chinese">n. 短上衣，夹克衫</div>
+                    </div>
+
+                    <div class="word-item" data-en="jam" data-zh="n. 果酱；阻塞">
+                        <div class="word-english">jam </div>
+                        <div class="word-chinese">n. 果酱；阻塞</div>
+                    </div>
+
+                    <div class="word-item" data-en="january" data-zh="n. 一月">
+                        <div class="word-english">January </div>
+                        <div class="word-chinese">n. 一月</div>
+                    </div>
+
+                    <div class="word-item" data-en="japan" data-zh="n. 日本">
+                        <div class="word-english">Japan </div>
+                        <div class="word-chinese">n. 日本</div>
+                    </div>
+
+                    <div class="word-item" data-en="japanese" data-zh="a. 日本的，日本人的，日语的 n. 日本人，日语">
+                        <div class="word-english">Japanese </div>
+                        <div class="word-chinese">a. 日本的，日本人的，日语的 n. 日本人，日语</div>
+                    </div>
+
+                    <div class="word-item" data-en="jazz" data-zh="n. 爵士乐">
+                        <div class="word-english">jazz </div>
+                        <div class="word-chinese">n. 爵士乐</div>
+                    </div>
+
+                    <div class="word-item" data-en="jeans" data-zh="n. 牛仔裤">
+                        <div class="word-english">jeans </div>
+                        <div class="word-chinese">n. 牛仔裤</div>
+                    </div>
+
+                    <div class="word-item" data-en="jeep" data-zh="n. 吉普车">
+                        <div class="word-english">jeep </div>
+                        <div class="word-chinese">n. 吉普车</div>
+                    </div>
+
+                    <div class="word-item" data-en="jet" data-zh="n. 喷气式飞机；喷射（器）">
+                        <div class="word-english">jet </div>
+                        <div class="word-chinese">n. 喷气式飞机；喷射（器）</div>
+                    </div>
+
+                    <div class="word-item" data-en="jewellery (美 jewelry)" data-zh="n. （总称）珠宝">
+                        <div class="word-english">jewellery (美 jewelry) </div>
+                        <div class="word-chinese">n. （总称）珠宝</div>
+                    </div>
+
+                    <div class="word-item" data-en="job" data-zh="n. （一份）工作">
+                        <div class="word-english">job </div>
+                        <div class="word-chinese">n. （一份）工作</div>
+                    </div>
+
+                    <div class="word-item" data-en="jog" data-zh="v. 慢跑">
+                        <div class="word-english">jog </div>
+                        <div class="word-chinese">v. 慢跑</div>
+                    </div>
+
+                    <div class="word-item" data-en="join" data-zh="v. 参加，加入；连接；会合">
+                        <div class="word-english">join </div>
+                        <div class="word-chinese">v. 参加，加入；连接；会合</div>
+                    </div>
+
+                    <div class="word-item" data-en="joy" data-zh="n. 欢乐，高兴，乐趣">
+                        <div class="word-english">joy </div>
+                        <div class="word-chinese">n. 欢乐，高兴，乐趣</div>
+                    </div>
+
+                    <div class="word-item" data-en="judge" data-zh="n. 裁判；审判员；法官 vt. 判断，断定">
+                        <div class="word-english">judge </div>
+                        <div class="word-chinese">n. 裁判；审判员；法官 vt. 判断，断定</div>
+                    </div>
+
+                    <div class="word-item" data-en="judgement (美 judgment)" data-zh="n. 裁判">
+                        <div class="word-english">judgement (美 judgment) </div>
+                        <div class="word-chinese">n. 裁判</div>
+                    </div>
+
+                    <div class="word-item" data-en="juice" data-zh="n. 汁、液">
+                        <div class="word-english">juice </div>
+                        <div class="word-chinese">n. 汁、液</div>
+                    </div>
+
+                    <div class="word-item" data-en="july" data-zh="n. 七月">
+                        <div class="word-english">July </div>
+                        <div class="word-chinese">n. 七月</div>
+                    </div>
+
+                    <div class="word-item" data-en="jump" data-zh="n. 跳跃；跳变 v. 跳跃；惊起；猛扑">
+                        <div class="word-english">jump </div>
+                        <div class="word-chinese">n. 跳跃；跳变 v. 跳跃；惊起；猛扑</div>
+                    </div>
+
+                    <div class="word-item" data-en="june" data-zh="n. 六月">
+                        <div class="word-english">June </div>
+                        <div class="word-chinese">n. 六月</div>
+                    </div>
+
+                    <div class="word-item" data-en="jungle" data-zh="n. 丛林，密林">
+                        <div class="word-english">jungle </div>
+                        <div class="word-chinese">n. 丛林，密林</div>
+                    </div>
+
+                    <div class="word-item" data-en="junior" data-zh="a. 初级的；年少的">
+                        <div class="word-english">junior </div>
+                        <div class="word-chinese">a. 初级的；年少的</div>
+                    </div>
+
+                    <div class="word-item" data-en="justice" data-zh="n. 正义； 公正；司法">
+                        <div class="word-english">justice </div>
+                        <div class="word-chinese">n. 正义； 公正；司法</div>
+                    </div>
+
+                    <div class="word-item" data-en="just now" data-zh="刚才，才不久">
+                        <div class="word-english">just now </div>
+                        <div class="word-chinese">刚才，才不久</div>
+                    </div>
+
+                    <div class="word-item" data-en="justify" data-zh="vt. 证明……是正当的">
+                        <div class="word-english">justify </div>
+                        <div class="word-chinese">vt. 证明……是正当的</div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="letter-section" id="letter-K">
+                <h2 class="letter-title">K</h2>
+                <div class="word-list">
+
+                    <div class="word-item" data-en="kangaroo" data-zh="n. 大袋鼠">
+                        <div class="word-english">kangaroo </div>
+                        <div class="word-chinese">n. 大袋鼠</div>
+                    </div>
+
+                    <div class="word-item" data-en="keep (kept, kept)" data-zh="v. 保持；保存；继续不断">
+                        <div class="word-english">keep (kept, kept) </div>
+                        <div class="word-chinese">v. 保持；保存；继续不断</div>
+                    </div>
+
+                    <div class="word-item" data-en="keeper" data-zh="n. （动物园中的）饲养员，看守人">
+                        <div class="word-english">keeper </div>
+                        <div class="word-chinese">n. （动物园中的）饲养员，看守人</div>
+                    </div>
+
+                    <div class="word-item" data-en="kettle" data-zh="n. （烧水用的）水壶">
+                        <div class="word-english">kettle </div>
+                        <div class="word-chinese">n. （烧水用的）水壶</div>
+                    </div>
+
+                    <div class="word-item" data-en="key" data-zh="n. 钥匙；答案；键；关键">
+                        <div class="word-english">key </div>
+                        <div class="word-chinese">n. 钥匙；答案；键；关键</div>
+                    </div>
+
+                    <div class="word-item" data-en="keyboard" data-zh="n. 键盘">
+                        <div class="word-english">keyboard </div>
+                        <div class="word-chinese">n. 键盘</div>
+                    </div>
+
+                    <div class="word-item" data-en="kick" data-zh="v. & n. 踢">
+                        <div class="word-english">kick </div>
+                        <div class="word-chinese">v. & n. 踢</div>
+                    </div>
+
+                    <div class="word-item" data-en="kid" data-zh="n. 小孩">
+                        <div class="word-english">kid </div>
+                        <div class="word-chinese">n. 小孩</div>
+                    </div>
+
+                    <div class="word-item" data-en="kill" data-zh="v. 杀死，弄死">
+                        <div class="word-english">kill </div>
+                        <div class="word-chinese">v. 杀死，弄死</div>
+                    </div>
+
+                    <div class="word-item" data-en="kilo = kilogram" data-zh="n. 千克">
+                        <div class="word-english">kilo = kilogram </div>
+                        <div class="word-chinese">n. 千克</div>
+                    </div>
+
+                    <div class="word-item" data-en="kilometre (美kilometer)" data-zh="n. 千米（公里）">
+                        <div class="word-english">kilometre (美kilometer) </div>
+                        <div class="word-chinese">n. 千米（公里）</div>
+                    </div>
+
+                    <div class="word-item" data-en="kindergarten" data-zh="n. 幼儿园">
+                        <div class="word-english">kindergarten </div>
+                        <div class="word-chinese">n. 幼儿园</div>
+                    </div>
+
+                    <div class="word-item" data-en="kind-hearted" data-zh="a. 好心的">
+                        <div class="word-english">kind-hearted </div>
+                        <div class="word-chinese">a. 好心的</div>
+                    </div>
+
+                    <div class="word-item" data-en="king" data-zh="n. 国王">
+                        <div class="word-english">king </div>
+                        <div class="word-chinese">n. 国王</div>
+                    </div>
+
+                    <div class="word-item" data-en="kingdom" data-zh="n. 王国">
+                        <div class="word-english">kingdom </div>
+                        <div class="word-chinese">n. 王国</div>
+                    </div>
+
+                    <div class="word-item" data-en="kiss" data-zh="n. & vt. 吻，亲吻">
+                        <div class="word-english">kiss </div>
+                        <div class="word-chinese">n. & vt. 吻，亲吻</div>
+                    </div>
+
+                    <div class="word-item" data-en="kitchen" data-zh="n. 厨房">
+                        <div class="word-english">kitchen </div>
+                        <div class="word-chinese">n. 厨房</div>
+                    </div>
+
+                    <div class="word-item" data-en="kite" data-zh="n. 风筝">
+                        <div class="word-english">kite </div>
+                        <div class="word-chinese">n. 风筝</div>
+                    </div>
+
+                    <div class="word-item" data-en="knee" data-zh="n. 膝盖">
+                        <div class="word-english">knee </div>
+                        <div class="word-chinese">n. 膝盖</div>
+                    </div>
+
+                    <div class="word-item" data-en="knife (复 knives)" data-zh="n. 小刀；匕首；刀片">
+                        <div class="word-english">knife (复 knives) </div>
+                        <div class="word-chinese">n. 小刀；匕首；刀片</div>
+                    </div>
+
+                    <div class="word-item" data-en="knock" data-zh="n. & v. 敲；打；击">
+                        <div class="word-english">knock </div>
+                        <div class="word-chinese">n. & v. 敲；打；击</div>
+                    </div>
+
+                    <div class="word-item" data-en="know (knew, known)" data-zh="v. 知道，了解；认识；懂得">
+                        <div class="word-english">know (knew, known) </div>
+                        <div class="word-chinese">v. 知道，了解；认识；懂得</div>
+                    </div>
+
+                    <div class="word-item" data-en="knowledge" data-zh="n. 知识，学问">
+                        <div class="word-english">knowledge </div>
+                        <div class="word-chinese">n. 知识，学问</div>
+                    </div>
+
+                    <div class="word-item" data-en="known" data-zh="a. 知名的">
+                        <div class="word-english">known </div>
+                        <div class="word-chinese">a. 知名的</div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="letter-section" id="letter-L">
+                <h2 class="letter-title">L</h2>
+                <div class="word-list">
+
+                    <div class="word-item" data-en="lab = laboratory" data-zh="n. 实验室">
+                        <div class="word-english">lab = laboratory </div>
+                        <div class="word-chinese">n. 实验室</div>
+                    </div>
+
+                    <div class="word-item" data-en="labour (美labor)" data-zh="n. 劳动">
+                        <div class="word-english">labour (美labor) </div>
+                        <div class="word-chinese">n. 劳动</div>
+                    </div>
+
+                    <div class="word-item" data-en="lack" data-zh="n. & vt. 缺乏，缺少">
+                        <div class="word-english">lack </div>
+                        <div class="word-chinese">n. & vt. 缺乏，缺少</div>
+                    </div>
+
+                    <div class="word-item" data-en="lady" data-zh="n. 女士，夫人">
+                        <div class="word-english">lady </div>
+                        <div class="word-chinese">n. 女士，夫人</div>
+                    </div>
+
+                    <div class="word-item" data-en="lake" data-zh="n. 湖">
+                        <div class="word-english">lake </div>
+                        <div class="word-chinese">n. 湖</div>
+                    </div>
+
+                    <div class="word-item" data-en="lamb" data-zh="n. 羔羊">
+                        <div class="word-english">lamb </div>
+                        <div class="word-chinese">n. 羔羊</div>
+                    </div>
+
+                    <div class="word-item" data-en="lame" data-zh="a. 跛的，瘸的，残废的">
+                        <div class="word-english">lame </div>
+                        <div class="word-chinese">a. 跛的，瘸的，残废的</div>
+                    </div>
+
+                    <div class="word-item" data-en="lamp" data-zh="n. 灯，油灯；光源">
+                        <div class="word-english">lamp </div>
+                        <div class="word-chinese">n. 灯，油灯；光源</div>
+                    </div>
+
+                    <div class="word-item" data-en="land" data-zh="n. 陆地；土地 v. 登岸（陆）；降落">
+                        <div class="word-english">land </div>
+                        <div class="word-chinese">n. 陆地；土地 v. 登岸（陆）；降落</div>
+                    </div>
+
+                    <div class="word-item" data-en="landlady" data-zh="n. 女房东；女地主">
+                        <div class="word-english">landlady </div>
+                        <div class="word-chinese">n. 女房东；女地主</div>
+                    </div>
+
+                    <div class="word-item" data-en="landlord" data-zh="n. 房东；地主">
+                        <div class="word-english">landlord </div>
+                        <div class="word-chinese">n. 房东；地主</div>
+                    </div>
+
+                    <div class="word-item" data-en="language" data-zh="n. 语言">
+                        <div class="word-english">language </div>
+                        <div class="word-chinese">n. 语言</div>
+                    </div>
+
+                    <div class="word-item" data-en="lantern" data-zh="n. 灯笼；提灯">
+                        <div class="word-english">lantern </div>
+                        <div class="word-chinese">n. 灯笼；提灯</div>
+                    </div>
+
+                    <div class="word-item" data-en="lap" data-zh="n. （人坐时）膝部；（跑道的）一圈">
+                        <div class="word-english">lap </div>
+                        <div class="word-chinese">n. （人坐时）膝部；（跑道的）一圈</div>
+                    </div>
+
+                    <div class="word-item" data-en="large" data-zh="a. 大的；巨大的">
+                        <div class="word-english">large </div>
+                        <div class="word-chinese">a. 大的；巨大的</div>
+                    </div>
+
+                    <div class="word-item" data-en="late" data-zh="a. 晚的，迟的 ad. 晚地，迟地">
+                        <div class="word-english">late </div>
+                        <div class="word-chinese">a. 晚的，迟的 ad. 晚地，迟地</div>
+                    </div>
+
+                    <div class="word-item" data-en="lately" data-zh="ad. 最近，不久前">
+                        <div class="word-english">lately </div>
+                        <div class="word-chinese">ad. 最近，不久前</div>
+                    </div>
+
+                    <div class="word-item" data-en="later" data-zh="a. 晚些的，迟些的">
+                        <div class="word-english">later </div>
+                        <div class="word-chinese">a. 晚些的，迟些的</div>
+                    </div>
+
+                    <div class="word-item" data-en="latest" data-zh="a. 最近，最新的；最晚的">
+                        <div class="word-english">latest </div>
+                        <div class="word-chinese">a. 最近，最新的；最晚的</div>
+                    </div>
+
+                    <div class="word-item" data-en="latter" data-zh="n. （两者之中的）后者">
+                        <div class="word-english">latter </div>
+                        <div class="word-chinese">n. （两者之中的）后者</div>
+                    </div>
+
+                    <div class="word-item" data-en="laugh" data-zh="n. & v. 笑，大笑；嘲笑">
+                        <div class="word-english">laugh </div>
+                        <div class="word-chinese">n. & v. 笑，大笑；嘲笑</div>
+                    </div>
+
+                    <div class="word-item" data-en="laughter" data-zh="n. 笑； 笑声">
+                        <div class="word-english">laughter </div>
+                        <div class="word-chinese">n. 笑； 笑声</div>
+                    </div>
+
+                    <div class="word-item" data-en="launch" data-zh="vt. 发射，使(船)下水">
+                        <div class="word-english">launch </div>
+                        <div class="word-chinese">vt. 发射，使(船)下水</div>
+                    </div>
+
+                    <div class="word-item" data-en="laundry" data-zh="n. 洗衣店；要洗的衣服">
+                        <div class="word-english">laundry </div>
+                        <div class="word-chinese">n. 洗衣店；要洗的衣服</div>
+                    </div>
+
+                    <div class="word-item" data-en="lavatory" data-zh="n. 便所，厕所">
+                        <div class="word-english">lavatory </div>
+                        <div class="word-chinese">n. 便所，厕所</div>
+                    </div>
+
+                    <div class="word-item" data-en="law" data-zh="n. 法律，法令；定律">
+                        <div class="word-english">law </div>
+                        <div class="word-chinese">n. 法律，法令；定律</div>
+                    </div>
+
+                    <div class="word-item" data-en="lawyer" data-zh="n. 律师">
+                        <div class="word-english">lawyer </div>
+                        <div class="word-chinese">n. 律师</div>
+                    </div>
+
+                    <div class="word-item" data-en="lay (laid, laid)" data-zh="vt. 放，搁">
+                        <div class="word-english">lay (laid, laid) </div>
+                        <div class="word-chinese">vt. 放，搁</div>
+                    </div>
+
+                    <div class="word-item" data-en="lazy" data-zh="a. 懒惰的">
+                        <div class="word-english">lazy </div>
+                        <div class="word-chinese">a. 懒惰的</div>
+                    </div>
+
+                    <div class="word-item" data-en="lead 2 (led, led)" data-zh="v. 领导，带领 n. 主角">
+                        <div class="word-english">lead 2 (led, led) </div>
+                        <div class="word-chinese">v. 领导，带领 n. 主角</div>
+                    </div>
+
+                    <div class="word-item" data-en="leader" data-zh="n. 领袖，领导人">
+                        <div class="word-english">leader </div>
+                        <div class="word-chinese">n. 领袖，领导人</div>
+                    </div>
+
+                    <div class="word-item" data-en="leadership" data-zh="n. 领导">
+                        <div class="word-english">leadership </div>
+                        <div class="word-chinese">n. 领导</div>
+                    </div>
+
+                    <div class="word-item" data-en="leaf (复 leaves)" data-zh="n. （树，菜）叶">
+                        <div class="word-english">leaf (复 leaves) </div>
+                        <div class="word-chinese">n. （树，菜）叶</div>
+                    </div>
+
+                    <div class="word-item" data-en="league" data-zh="n. 联盟，社团">
+                        <div class="word-english">league </div>
+                        <div class="word-chinese">n. 联盟，社团</div>
+                    </div>
+
+                    <div class="word-item" data-en="leak" data-zh="vi. 漏；渗">
+                        <div class="word-english">leak </div>
+                        <div class="word-chinese">vi. 漏；渗</div>
+                    </div>
+
+                    <div class="word-item" data-en="learn (learnt, learnt；--ed --ed)" data-zh="vt. 学，学习，学会">
+                        <div class="word-english">learn (learnt, learnt；--ed --ed) </div>
+                        <div class="word-chinese">vt. 学，学习，学会</div>
+                    </div>
+
+                    <div class="word-item" data-en="least" data-zh="n. 最少，最少量">
+                        <div class="word-english">least </div>
+                        <div class="word-chinese">n. 最少，最少量</div>
+                    </div>
+
+                    <div class="word-item" data-en="leather" data-zh="n. 皮革">
+                        <div class="word-english">leather </div>
+                        <div class="word-chinese">n. 皮革</div>
+                    </div>
+
+                    <div class="word-item" data-en="leave (left, left)" data-zh="v. 离开；把……留下，剩下 n. 假期">
+                        <div class="word-english">leave (left, left) </div>
+                        <div class="word-chinese">v. 离开；把……留下，剩下 n. 假期</div>
+                    </div>
+
+                    <div class="word-item" data-en="lecture" data-zh="n. 讲课，演讲">
+                        <div class="word-english">lecture </div>
+                        <div class="word-chinese">n. 讲课，演讲</div>
+                    </div>
+
+                    <div class="word-item" data-en="left" data-zh="a. 左边的 ad. 向左 n. 左，左边">
+                        <div class="word-english">left </div>
+                        <div class="word-chinese">a. 左边的 ad. 向左 n. 左，左边</div>
+                    </div>
+
+                    <div class="word-item" data-en="leftover" data-zh="a. 剩余的，剩下的 n. 剩余物，剩饭菜">
+                        <div class="word-english">leftover </div>
+                        <div class="word-chinese">a. 剩余的，剩下的 n. 剩余物，剩饭菜</div>
+                    </div>
+
+                    <div class="word-item" data-en="legal" data-zh="a. 法律的，法定的">
+                        <div class="word-english">legal </div>
+                        <div class="word-chinese">a. 法律的，法定的</div>
+                    </div>
+
+                    <div class="word-item" data-en="lemon" data-zh="n. 柠檬 a. 柠檬色(味)的">
+                        <div class="word-english">lemon </div>
+                        <div class="word-chinese">n. 柠檬 a. 柠檬色(味)的</div>
+                    </div>
+
+                    <div class="word-item" data-en="lemonade" data-zh="n. 柠檬水">
+                        <div class="word-english">lemonade </div>
+                        <div class="word-chinese">n. 柠檬水</div>
+                    </div>
+
+                    <div class="word-item" data-en="lend (lent, lent)" data-zh="vt. 借(出),把……借给">
+                        <div class="word-english">lend (lent, lent) </div>
+                        <div class="word-chinese">vt. 借(出),把……借给</div>
+                    </div>
+
+                    <div class="word-item" data-en="length" data-zh="n. 长，长度，段，节">
+                        <div class="word-english">length </div>
+                        <div class="word-chinese">n. 长，长度，段，节</div>
+                    </div>
+
+                    <div class="word-item" data-en="lesson" data-zh="n. 课；功课；教训">
+                        <div class="word-english">lesson </div>
+                        <div class="word-chinese">n. 课；功课；教训</div>
+                    </div>
+
+                    <div class="word-item" data-en="let (let, let)" data-zh="vt. 让">
+                        <div class="word-english">let (let, let) </div>
+                        <div class="word-chinese">vt. 让</div>
+                    </div>
+
+                    <div class="word-item" data-en="letter" data-zh="n. 信；字母">
+                        <div class="word-english">letter </div>
+                        <div class="word-chinese">n. 信；字母</div>
+                    </div>
+
+                    <div class="word-item" data-en="level" data-zh="n. 水平线，水平">
+                        <div class="word-english">level </div>
+                        <div class="word-chinese">n. 水平线，水平</div>
+                    </div>
+
+                    <div class="word-item" data-en="liberate" data-zh="vt. 解放，使获自由">
+                        <div class="word-english">liberate </div>
+                        <div class="word-chinese">vt. 解放，使获自由</div>
+                    </div>
+
+                    <div class="word-item" data-en="liberation" data-zh="n. 解放">
+                        <div class="word-english">liberation </div>
+                        <div class="word-chinese">n. 解放</div>
+                    </div>
+
+                    <div class="word-item" data-en="librarian" data-zh="n. 图书管理员；（西方的）图书馆馆长">
+                        <div class="word-english">librarian </div>
+                        <div class="word-chinese">n. 图书管理员；（西方的）图书馆馆长</div>
+                    </div>
+
+                    <div class="word-item" data-en="library" data-zh="n. 图书馆，图书室">
+                        <div class="word-english">library </div>
+                        <div class="word-chinese">n. 图书馆，图书室</div>
+                    </div>
+
+                    <div class="word-item" data-en="license = licence" data-zh="n. 执照，许可证">
+                        <div class="word-english">license = licence </div>
+                        <div class="word-chinese">n. 执照，许可证</div>
+                    </div>
+
+                    <div class="word-item" data-en="lid" data-zh="n. 盖子">
+                        <div class="word-english">lid </div>
+                        <div class="word-chinese">n. 盖子</div>
+                    </div>
+
+                    <div class="word-item" data-en="lie 2 (lay, lain)" data-zh="v. 躺；卧；平放；位于">
+                        <div class="word-english">lie 2 (lay, lain) </div>
+                        <div class="word-chinese">v. 躺；卧；平放；位于</div>
+                    </div>
+
+                    <div class="word-item" data-en="life (复 lives)" data-zh="n. 生命；生涯；生活；人生；生物">
+                        <div class="word-english">life (复 lives) </div>
+                        <div class="word-chinese">n. 生命；生涯；生活；人生；生物</div>
+                    </div>
+
+                    <div class="word-item" data-en="lifetime" data-zh="n. 一生，终生">
+                        <div class="word-english">lifetime </div>
+                        <div class="word-chinese">n. 一生，终生</div>
+                    </div>
+
+                    <div class="word-item" data-en="lightning" data-zh="n. 闪电">
+                        <div class="word-english">lightning </div>
+                        <div class="word-chinese">n. 闪电</div>
+                    </div>
+
+                    <div class="word-item" data-en="likely" data-zh="a. 很可能的">
+                        <div class="word-english">likely </div>
+                        <div class="word-chinese">a. 很可能的</div>
+                    </div>
+
+                    <div class="word-item" data-en="limit" data-zh="vt. 限制；减少">
+                        <div class="word-english">limit </div>
+                        <div class="word-chinese">vt. 限制；减少</div>
+                    </div>
+
+                    <div class="word-item" data-en="line" data-zh="n. 绳索，线，排，行，线路 v. 画线于，（使）成行">
+                        <div class="word-english">line </div>
+                        <div class="word-chinese">n. 绳索，线，排，行，线路 v. 画线于，（使）成行</div>
+                    </div>
+
+                    <div class="word-item" data-en="link" data-zh="v. 连接； 联系">
+                        <div class="word-english">link </div>
+                        <div class="word-chinese">v. 连接； 联系</div>
+                    </div>
+
+                    <div class="word-item" data-en="lion" data-zh="n. 狮子">
+                        <div class="word-english">lion </div>
+                        <div class="word-chinese">n. 狮子</div>
+                    </div>
+
+                    <div class="word-item" data-en="lip" data-zh="n. 嘴唇">
+                        <div class="word-english">lip </div>
+                        <div class="word-chinese">n. 嘴唇</div>
+                    </div>
+
+                    <div class="word-item" data-en="liquid" data-zh="n. & a. 液体；液体的">
+                        <div class="word-english">liquid </div>
+                        <div class="word-chinese">n. & a. 液体；液体的</div>
+                    </div>
+
+                    <div class="word-item" data-en="list" data-zh="n. 一览表，清单">
+                        <div class="word-english">list </div>
+                        <div class="word-chinese">n. 一览表，清单</div>
+                    </div>
+
+                    <div class="word-item" data-en="listen" data-zh="vi. 听,仔细听">
+                        <div class="word-english">listen </div>
+                        <div class="word-chinese">vi. 听,仔细听</div>
+                    </div>
+
+                    <div class="word-item" data-en="literature" data-zh="n. 文学">
+                        <div class="word-english">literature </div>
+                        <div class="word-chinese">n. 文学</div>
+                    </div>
+
+                    <div class="word-item" data-en="litre (美liter)" data-zh="n. 升；公升">
+                        <div class="word-english">litre (美liter) </div>
+                        <div class="word-chinese">n. 升；公升</div>
+                    </div>
+
+                    <div class="word-item" data-en="little (less, least)" data-zh="a. 小的,少的 ad. 很少地, 稍许 n. 没有多少,一点">
+                        <div class="word-english">little (less, least) </div>
+                        <div class="word-chinese">a. 小的,少的 ad. 很少地, 稍许 n. 没有多少,一点</div>
+                    </div>
+
+                    <div class="word-item" data-en="lively" data-zh="a. 活泼的； 充满生气的">
+                        <div class="word-english">lively </div>
+                        <div class="word-chinese">a. 活泼的； 充满生气的</div>
+                    </div>
+
+                    <div class="word-item" data-en="living" data-zh="a. 活着的 n. 生计">
+                        <div class="word-english">living </div>
+                        <div class="word-chinese">a. 活着的 n. 生计</div>
+                    </div>
+
+                    <div class="word-item" data-en="load" data-zh="n. 担子，货物">
+                        <div class="word-english">load </div>
+                        <div class="word-chinese">n. 担子，货物</div>
+                    </div>
+
+                    <div class="word-item" data-en="loaf" data-zh="n. 一个面包">
+                        <div class="word-english">loaf </div>
+                        <div class="word-chinese">n. 一个面包</div>
+                    </div>
+
+                    <div class="word-item" data-en="local" data-zh="a. 当地的；地方的">
+                        <div class="word-english">local </div>
+                        <div class="word-chinese">a. 当地的；地方的</div>
+                    </div>
+
+                    <div class="word-item" data-en="lock" data-zh="n. 锁 vt. 锁，锁上">
+                        <div class="word-english">lock </div>
+                        <div class="word-chinese">n. 锁 vt. 锁，锁上</div>
+                    </div>
+
+                    <div class="word-item" data-en="locust" data-zh="n. 蝗虫">
+                        <div class="word-english">locust </div>
+                        <div class="word-chinese">n. 蝗虫</div>
+                    </div>
+
+                    <div class="word-item" data-en="london" data-zh="n. 伦敦">
+                        <div class="word-english">London </div>
+                        <div class="word-chinese">n. 伦敦</div>
+                    </div>
+
+                    <div class="word-item" data-en="lonely" data-zh="a. 孤独的，寂寞的">
+                        <div class="word-english">lonely </div>
+                        <div class="word-chinese">a. 孤独的，寂寞的</div>
+                    </div>
+
+                    <div class="word-item" data-en="look" data-zh="n. 看，瞧 v. 看，观看 看起来">
+                        <div class="word-english">look </div>
+                        <div class="word-chinese">n. 看，瞧 v. 看，观看 看起来</div>
+                    </div>
+
+                    <div class="word-item" data-en="loose" data-zh="a. 松散的； 宽松的">
+                        <div class="word-english">loose </div>
+                        <div class="word-chinese">a. 松散的； 宽松的</div>
+                    </div>
+
+                    <div class="word-item" data-en="lorry" data-zh="n. （英）运货汽车，卡车">
+                        <div class="word-english">lorry </div>
+                        <div class="word-chinese">n. （英）运货汽车，卡车</div>
+                    </div>
+
+                    <div class="word-item" data-en="loss" data-zh="n. 丧失；损耗">
+                        <div class="word-english">loss </div>
+                        <div class="word-chinese">n. 丧失；损耗</div>
+                    </div>
+
+                    <div class="word-item" data-en="lost" data-zh="a. 失去的；丢失的；迷路的">
+                        <div class="word-english">lost </div>
+                        <div class="word-chinese">a. 失去的；丢失的；迷路的</div>
+                    </div>
+
+                    <div class="word-item" data-en="lot" data-zh="n. 许多，好些">
+                        <div class="word-english">lot </div>
+                        <div class="word-chinese">n. 许多，好些</div>
+                    </div>
+
+                    <div class="word-item" data-en="loud" data-zh="a. 大声的">
+                        <div class="word-english">loud </div>
+                        <div class="word-chinese">a. 大声的</div>
+                    </div>
+
+                    <div class="word-item" data-en="loudly" data-zh="ad. 大声地">
+                        <div class="word-english">loudly </div>
+                        <div class="word-chinese">ad. 大声地</div>
+                    </div>
+
+                    <div class="word-item" data-en="loudspeaker" data-zh="n. 扬声器，喇叭">
+                        <div class="word-english">loudspeaker </div>
+                        <div class="word-chinese">n. 扬声器，喇叭</div>
+                    </div>
+
+                    <div class="word-item" data-en="lounge" data-zh="n. 休息厅； 休息室">
+                        <div class="word-english">lounge </div>
+                        <div class="word-chinese">n. 休息厅； 休息室</div>
+                    </div>
+
+                    <div class="word-item" data-en="love" data-zh="n. & vt. 爱；热爱；很喜欢">
+                        <div class="word-english">love </div>
+                        <div class="word-chinese">n. & vt. 爱；热爱；很喜欢</div>
+                    </div>
+
+                    <div class="word-item" data-en="lovely" data-zh="a. 美好的，可爱的">
+                        <div class="word-english">lovely </div>
+                        <div class="word-chinese">a. 美好的，可爱的</div>
+                    </div>
+
+                    <div class="word-item" data-en="low" data-zh="a. & ad. 低；矮">
+                        <div class="word-english">low </div>
+                        <div class="word-chinese">a. & ad. 低；矮</div>
+                    </div>
+
+                    <div class="word-item" data-en="luck" data-zh="n. 运气，好运">
+                        <div class="word-english">luck </div>
+                        <div class="word-chinese">n. 运气，好运</div>
+                    </div>
+
+                    <div class="word-item" data-en="lucky" data-zh="a. 运气好，侥幸">
+                        <div class="word-english">lucky </div>
+                        <div class="word-chinese">a. 运气好，侥幸</div>
+                    </div>
+
+                    <div class="word-item" data-en="luggage" data-zh="n. (总称)行李">
+                        <div class="word-english">luggage </div>
+                        <div class="word-chinese">n. (总称)行李</div>
+                    </div>
+
+                    <div class="word-item" data-en="lunch" data-zh="n. 午餐，午饭">
+                        <div class="word-english">lunch </div>
+                        <div class="word-chinese">n. 午餐，午饭</div>
+                    </div>
+
+                    <div class="word-item" data-en="lung" data-zh="n. 肺；肺脏">
+                        <div class="word-english">lung </div>
+                        <div class="word-chinese">n. 肺；肺脏</div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="letter-section" id="letter-M">
+                <h2 class="letter-title">M</h2>
+                <div class="word-list">
+
+                    <div class="word-item" data-en="machine" data-zh="n. 机器">
+                        <div class="word-english">machine </div>
+                        <div class="word-chinese">n. 机器</div>
+                    </div>
+
+                    <div class="word-item" data-en="mad" data-zh="a. 发疯的；生气的">
+                        <div class="word-english">mad </div>
+                        <div class="word-chinese">a. 发疯的；生气的</div>
+                    </div>
+
+                    <div class="word-item" data-en="madam/ madame" data-zh="n. 夫人，女士">
+                        <div class="word-english">madam/ madame </div>
+                        <div class="word-chinese">n. 夫人，女士</div>
+                    </div>
+
+                    <div class="word-item" data-en="magazine" data-zh="n. 杂志">
+                        <div class="word-english">magazine </div>
+                        <div class="word-chinese">n. 杂志</div>
+                    </div>
+
+                    <div class="word-item" data-en="magic" data-zh="a. 有魔力的">
+                        <div class="word-english">magic </div>
+                        <div class="word-chinese">a. 有魔力的</div>
+                    </div>
+
+                    <div class="word-item" data-en="magician" data-zh="n. 魔术师">
+                        <div class="word-english">magician </div>
+                        <div class="word-chinese">n. 魔术师</div>
+                    </div>
+
+                    <div class="word-item" data-en="mail" data-zh="n. 邮政，邮递 v. （美）邮寄">
+                        <div class="word-english">mail </div>
+                        <div class="word-chinese">n. 邮政，邮递 v. （美）邮寄</div>
+                    </div>
+
+                    <div class="word-item" data-en="mailbox" data-zh="n. 邮筒；邮箱">
+                        <div class="word-english">mailbox </div>
+                        <div class="word-chinese">n. 邮筒；邮箱</div>
+                    </div>
+
+                    <div class="word-item" data-en="main" data-zh="a. 主要的">
+                        <div class="word-english">main </div>
+                        <div class="word-chinese">a. 主要的</div>
+                    </div>
+
+                    <div class="word-item" data-en="mainland" data-zh="n. 大陆">
+                        <div class="word-english">mainland </div>
+                        <div class="word-chinese">n. 大陆</div>
+                    </div>
+
+                    <div class="word-item" data-en="major" data-zh="a. 较大的；主要的">
+                        <div class="word-english">major </div>
+                        <div class="word-chinese">a. 较大的；主要的</div>
+                    </div>
+
+                    <div class="word-item" data-en="majority" data-zh="n. 大多数">
+                        <div class="word-english">majority </div>
+                        <div class="word-chinese">n. 大多数</div>
+                    </div>
+
+                    <div class="word-item" data-en="make (made, made)" data-zh="vt. 制造，做；使得">
+                        <div class="word-english">make (made, made) </div>
+                        <div class="word-chinese">vt. 制造，做；使得</div>
+                    </div>
+
+                    <div class="word-item" data-en="male" data-zh="a. 男（性）的；雄的">
+                        <div class="word-english">male </div>
+                        <div class="word-chinese">a. 男（性）的；雄的</div>
+                    </div>
+
+                    <div class="word-item" data-en="man (复 men)" data-zh="n. 成年男人；人，人类">
+                        <div class="word-english">man (复 men) </div>
+                        <div class="word-chinese">n. 成年男人；人，人类</div>
+                    </div>
+
+                    <div class="word-item" data-en="manage" data-zh="v. 管理；设法对付">
+                        <div class="word-english">manage </div>
+                        <div class="word-chinese">v. 管理；设法对付</div>
+                    </div>
+
+                    <div class="word-item" data-en="manager" data-zh="n. 经理">
+                        <div class="word-english">manager </div>
+                        <div class="word-chinese">n. 经理</div>
+                    </div>
+
+                    <div class="word-item" data-en="mankind" data-zh="n. 人类；（总称）人">
+                        <div class="word-english">mankind </div>
+                        <div class="word-chinese">n. 人类；（总称）人</div>
+                    </div>
+
+                    <div class="word-item" data-en="man-made" data-zh="a. 人造的，人工的">
+                        <div class="word-english">man-made </div>
+                        <div class="word-chinese">a. 人造的，人工的</div>
+                    </div>
+
+                    <div class="word-item" data-en="manner" data-zh="n. 方式，态度，举止">
+                        <div class="word-english">manner </div>
+                        <div class="word-chinese">n. 方式，态度，举止</div>
+                    </div>
+
+                    <div class="word-item" data-en="table manners" data-zh="餐桌礼节，用餐的规矩">
+                        <div class="word-english">table manners </div>
+                        <div class="word-chinese">餐桌礼节，用餐的规矩</div>
+                    </div>
+
+                    <div class="word-item" data-en="many (more, most)" data-zh="pron. 许多人（或物） a. 许多的">
+                        <div class="word-english">many (more, most) </div>
+                        <div class="word-chinese">pron. 许多人（或物） a. 许多的</div>
+                    </div>
+
+                    <div class="word-item" data-en="map" data-zh="n. 地图">
+                        <div class="word-english">map </div>
+                        <div class="word-chinese">n. 地图</div>
+                    </div>
+
+                    <div class="word-item" data-en="maple" data-zh="n. 枫树">
+                        <div class="word-english">maple </div>
+                        <div class="word-chinese">n. 枫树</div>
+                    </div>
+
+                    <div class="word-item" data-en="marathon" data-zh="n. 马拉松">
+                        <div class="word-english">marathon </div>
+                        <div class="word-chinese">n. 马拉松</div>
+                    </div>
+
+                    <div class="word-item" data-en="march" data-zh="n. 游行，行进">
+                        <div class="word-english">march </div>
+                        <div class="word-chinese">n. 游行，行进</div>
+                    </div>
+
+                    <div class="word-item" data-en="march" data-zh="n. 3月">
+                        <div class="word-english">March </div>
+                        <div class="word-chinese">n. 3月</div>
+                    </div>
+
+                    <div class="word-item" data-en="mark" data-zh="n. 标记 vt. 标明，作记号于">
+                        <div class="word-english">mark </div>
+                        <div class="word-chinese">n. 标记 vt. 标明，作记号于</div>
+                    </div>
+
+                    <div class="word-item" data-en="market" data-zh="n. 市场，集市">
+                        <div class="word-english">market </div>
+                        <div class="word-chinese">n. 市场，集市</div>
+                    </div>
+
+                    <div class="word-item" data-en="marriage" data-zh="n. 结婚，婚姻">
+                        <div class="word-english">marriage </div>
+                        <div class="word-chinese">n. 结婚，婚姻</div>
+                    </div>
+
+                    <div class="word-item" data-en="marry" data-zh="v. （使）成婚，结婚">
+                        <div class="word-english">marry </div>
+                        <div class="word-chinese">v. （使）成婚，结婚</div>
+                    </div>
+
+                    <div class="word-item" data-en="mask" data-zh="n. 口罩；面罩(具)；遮盖物 v. 戴面具；掩饰；伪装">
+                        <div class="word-english">mask </div>
+                        <div class="word-chinese">n. 口罩；面罩(具)；遮盖物 v. 戴面具；掩饰；伪装</div>
+                    </div>
+
+                    <div class="word-item" data-en="mass" data-zh="n. 众多；大量；（复）群众">
+                        <div class="word-english">mass </div>
+                        <div class="word-chinese">n. 众多；大量；（复）群众</div>
+                    </div>
+
+                    <div class="word-item" data-en="master" data-zh="vt. 精通，掌握">
+                        <div class="word-english">master </div>
+                        <div class="word-chinese">vt. 精通，掌握</div>
+                    </div>
+
+                    <div class="word-item" data-en="mat" data-zh="n. 垫子">
+                        <div class="word-english">mat </div>
+                        <div class="word-chinese">n. 垫子</div>
+                    </div>
+
+                    <div class="word-item" data-en="material" data-zh="n. 材料，原料">
+                        <div class="word-english">material </div>
+                        <div class="word-chinese">n. 材料，原料</div>
+                    </div>
+
+                    <div class="word-item" data-en="math(s) = mathematics" data-zh="n. 数学">
+                        <div class="word-english">math(s) = mathematics </div>
+                        <div class="word-chinese">n. 数学</div>
+                    </div>
+
+                    <div class="word-item" data-en="mathematics" data-zh="n. （通常作单数用）数学">
+                        <div class="word-english">mathematics </div>
+                        <div class="word-chinese">n. （通常作单数用）数学</div>
+                    </div>
+
+                    <div class="word-item" data-en="matter" data-zh="n. 要紧事，要紧，事情；问题，麻烦事 vi. 要紧，有重大关系">
+                        <div class="word-english">matter </div>
+                        <div class="word-chinese">n. 要紧事，要紧，事情；问题，麻烦事 vi. 要紧，有重大关系</div>
+                    </div>
+
+                    <div class="word-item" data-en="mature" data-zh="a. 成熟的">
+                        <div class="word-english">mature </div>
+                        <div class="word-chinese">a. 成熟的</div>
+                    </div>
+
+                    <div class="word-item" data-en="maximum" data-zh="a. & n. 最大量(的)； 最大限度(的)">
+                        <div class="word-english">maximum </div>
+                        <div class="word-chinese">a. & n. 最大量(的)； 最大限度(的)</div>
+                    </div>
+
+                    <div class="word-item" data-en="may" data-zh="n. 5月">
+                        <div class="word-english">May </div>
+                        <div class="word-chinese">n. 5月</div>
+                    </div>
+
+                    <div class="word-item" data-en="maybe" data-zh="ad. 可能，大概，也许">
+                        <div class="word-english">maybe </div>
+                        <div class="word-chinese">ad. 可能，大概，也许</div>
+                    </div>
+
+                    <div class="word-item" data-en="me" data-zh="pron. 我（宾格）">
+                        <div class="word-english">me </div>
+                        <div class="word-chinese">pron. 我（宾格）</div>
+                    </div>
+
+                    <div class="word-item" data-en="meal" data-zh="n. 一餐（饭）">
+                        <div class="word-english">meal </div>
+                        <div class="word-chinese">n. 一餐（饭）</div>
+                    </div>
+
+                    <div class="word-item" data-en="mean (meant, meant)" data-zh="vt. 意思是，意指">
+                        <div class="word-english">mean (meant, meant) </div>
+                        <div class="word-chinese">vt. 意思是，意指</div>
+                    </div>
+
+                    <div class="word-item" data-en="meaning" data-zh="n. 意思，含意">
+                        <div class="word-english">meaning </div>
+                        <div class="word-chinese">n. 意思，含意</div>
+                    </div>
+
+                    <div class="word-item" data-en="means" data-zh="n. 方法，手段；财产">
+                        <div class="word-english">means </div>
+                        <div class="word-chinese">n. 方法，手段；财产</div>
+                    </div>
+
+                    <div class="word-item" data-en="meanwhile" data-zh="ad. 同时">
+                        <div class="word-english">meanwhile </div>
+                        <div class="word-chinese">ad. 同时</div>
+                    </div>
+
+                    <div class="word-item" data-en="measure" data-zh="v. 量">
+                        <div class="word-english">measure </div>
+                        <div class="word-chinese">v. 量</div>
+                    </div>
+
+                    <div class="word-item" data-en="meat" data-zh="n. （猪、牛、羊等的）肉">
+                        <div class="word-english">meat </div>
+                        <div class="word-chinese">n. （猪、牛、羊等的）肉</div>
+                    </div>
+
+                    <div class="word-item" data-en="medal" data-zh="n. 奖牌">
+                        <div class="word-english">medal </div>
+                        <div class="word-chinese">n. 奖牌</div>
+                    </div>
+
+                    <div class="word-item" data-en="gold medal" data-zh="金牌">
+                        <div class="word-english">gold medal </div>
+                        <div class="word-chinese">金牌</div>
+                    </div>
+
+                    <div class="word-item" data-en="gold medals" data-zh="金牌">
+                        <div class="word-english">gold medals </div>
+                        <div class="word-chinese">金牌</div>
+                    </div>
+
+                    <div class="word-item" data-en="media" data-zh="n. 大众传播媒介">
+                        <div class="word-english">media </div>
+                        <div class="word-chinese">n. 大众传播媒介</div>
+                    </div>
+
+                    <div class="word-item" data-en="medical" data-zh="a. 医学的，医疗的">
+                        <div class="word-english">medical </div>
+                        <div class="word-chinese">a. 医学的，医疗的</div>
+                    </div>
+
+                    <div class="word-item" data-en="medicine" data-zh="n. 药">
+                        <div class="word-english">medicine </div>
+                        <div class="word-chinese">n. 药</div>
+                    </div>
+
+                    <div class="word-item" data-en="medium" data-zh="n. 媒体，方法">
+                        <div class="word-english">medium </div>
+                        <div class="word-chinese">n. 媒体，方法</div>
+                    </div>
+
+                    <div class="word-item" data-en="meet (met, met)" data-zh="vt. 遇见，见到 n. 会；集会">
+                        <div class="word-english">meet (met, met) </div>
+                        <div class="word-chinese">vt. 遇见，见到 n. 会；集会</div>
+                    </div>
+
+                    <div class="word-item" data-en="meeting" data-zh="n. 会；集会；会见；汇合点">
+                        <div class="word-english">meeting </div>
+                        <div class="word-chinese">n. 会；集会；会见；汇合点</div>
+                    </div>
+
+                    <div class="word-item" data-en="melon" data-zh="n. （甜）瓜；瓜状物">
+                        <div class="word-english">melon </div>
+                        <div class="word-chinese">n. （甜）瓜；瓜状物</div>
+                    </div>
+
+                    <div class="word-item" data-en="member" data-zh="n. 成员，会员">
+                        <div class="word-english">member </div>
+                        <div class="word-chinese">n. 成员，会员</div>
+                    </div>
+
+                    <div class="word-item" data-en="memorial" data-zh="n. 纪念馆">
+                        <div class="word-english">memorial </div>
+                        <div class="word-chinese">n. 纪念馆</div>
+                    </div>
+
+                    <div class="word-item" data-en="memory" data-zh="n. 回忆，记忆">
+                        <div class="word-english">memory </div>
+                        <div class="word-chinese">n. 回忆，记忆</div>
+                    </div>
+
+                    <div class="word-item" data-en="mend" data-zh="v. 修理，修补">
+                        <div class="word-english">mend </div>
+                        <div class="word-chinese">v. 修理，修补</div>
+                    </div>
+
+                    <div class="word-item" data-en="mental" data-zh="a. 精神的；脑力的">
+                        <div class="word-english">mental </div>
+                        <div class="word-chinese">a. 精神的；脑力的</div>
+                    </div>
+
+                    <div class="word-item" data-en="mentally" data-zh="ad. 精神上； 智力上">
+                        <div class="word-english">mentally </div>
+                        <div class="word-chinese">ad. 精神上； 智力上</div>
+                    </div>
+
+                    <div class="word-item" data-en="mention" data-zh="n. 提及；记载 vt. 提到，说起；提名表扬">
+                        <div class="word-english">mention </div>
+                        <div class="word-chinese">n. 提及；记载 vt. 提到，说起；提名表扬</div>
+                    </div>
+
+                    <div class="word-item" data-en="menu" data-zh="n. 菜单">
+                        <div class="word-english">menu </div>
+                        <div class="word-chinese">n. 菜单</div>
+                    </div>
+
+                    <div class="word-item" data-en="merchant" data-zh="a. 商业的；商人的 n. 商人；生意人">
+                        <div class="word-english">merchant </div>
+                        <div class="word-chinese">a. 商业的；商人的 n. 商人；生意人</div>
+                    </div>
+
+                    <div class="word-item" data-en="merciful" data-zh="a. 仁慈的；宽大的">
+                        <div class="word-english">merciful </div>
+                        <div class="word-chinese">a. 仁慈的；宽大的</div>
+                    </div>
+
+                    <div class="word-item" data-en="mercy" data-zh="n. 怜悯">
+                        <div class="word-english">mercy </div>
+                        <div class="word-chinese">n. 怜悯</div>
+                    </div>
+
+                    <div class="word-item" data-en="merely" data-zh="ad. 仅仅，只不过">
+                        <div class="word-english">merely </div>
+                        <div class="word-chinese">ad. 仅仅，只不过</div>
+                    </div>
+
+                    <div class="word-item" data-en="merry" data-zh="a. 高兴的，愉快的">
+                        <div class="word-english">merry </div>
+                        <div class="word-chinese">a. 高兴的，愉快的</div>
+                    </div>
+
+                    <div class="word-item" data-en="mess" data-zh="n. 凌乱">
+                        <div class="word-english">mess </div>
+                        <div class="word-chinese">n. 凌乱</div>
+                    </div>
+
+                    <div class="word-item" data-en="message" data-zh="n. 消息，音信">
+                        <div class="word-english">message </div>
+                        <div class="word-chinese">n. 消息，音信</div>
+                    </div>
+
+                    <div class="word-item" data-en="messy" data-zh="a. 乱七八糟的">
+                        <div class="word-english">messy </div>
+                        <div class="word-chinese">a. 乱七八糟的</div>
+                    </div>
+
+                    <div class="word-item" data-en="metal" data-zh="n. 金属 a. 金属制成的">
+                        <div class="word-english">metal </div>
+                        <div class="word-chinese">n. 金属 a. 金属制成的</div>
+                    </div>
+
+                    <div class="word-item" data-en="method" data-zh="n. 方法，办法">
+                        <div class="word-english">method </div>
+                        <div class="word-chinese">n. 方法，办法</div>
+                    </div>
+
+                    <div class="word-item" data-en="metre (美meter)" data-zh="n. 米，公尺">
+                        <div class="word-english">metre (美meter) </div>
+                        <div class="word-chinese">n. 米，公尺</div>
+                    </div>
+
+                    <div class="word-item" data-en="mexican" data-zh="a. 墨西哥的">
+                        <div class="word-english">Mexican </div>
+                        <div class="word-chinese">a. 墨西哥的</div>
+                    </div>
+
+                    <div class="word-item" data-en="mexico" data-zh="n. 墨西哥">
+                        <div class="word-english">Mexico </div>
+                        <div class="word-chinese">n. 墨西哥</div>
+                    </div>
+
+                    <div class="word-item" data-en="microcomputer" data-zh="n. 微机">
+                        <div class="word-english">microcomputer </div>
+                        <div class="word-chinese">n. 微机</div>
+                    </div>
+
+                    <div class="word-item" data-en="microscope" data-zh="n. 显微镜">
+                        <div class="word-english">microscope </div>
+                        <div class="word-chinese">n. 显微镜</div>
+                    </div>
+
+                    <div class="word-item" data-en="microwave" data-zh="n. 微波">
+                        <div class="word-english">microwave </div>
+                        <div class="word-chinese">n. 微波</div>
+                    </div>
+
+                    <div class="word-item" data-en="mid-autumn" data-zh="n. 中秋">
+                        <div class="word-english">mid-autumn </div>
+                        <div class="word-chinese">n. 中秋</div>
+                    </div>
+
+                    <div class="word-item" data-en="midday" data-zh="n. 中午,正午">
+                        <div class="word-english">midday </div>
+                        <div class="word-chinese">n. 中午,正午</div>
+                    </div>
+
+                    <div class="word-item" data-en="middle" data-zh="n. 中间;当中;中级">
+                        <div class="word-english">middle </div>
+                        <div class="word-chinese">n. 中间;当中;中级</div>
+                    </div>
+
+                    <div class="word-item" data-en="midfield" data-zh="n. 中场（指足球场等的）">
+                        <div class="word-english">midfield </div>
+                        <div class="word-chinese">n. 中场（指足球场等的）</div>
+                    </div>
+
+                    <div class="word-item" data-en="midnight" data-zh="n. 午夜">
+                        <div class="word-english">midnight </div>
+                        <div class="word-chinese">n. 午夜</div>
+                    </div>
+
+                    <div class="word-item" data-en="might" data-zh="modal v. (may的过去式，助动词) 可以，也许，可能">
+                        <div class="word-english">might </div>
+                        <div class="word-chinese">modal v. (may的过去式，助动词) 可以，也许，可能</div>
+                    </div>
+
+                    <div class="word-item" data-en="mild" data-zh="a. 温和的，暖和的，凉爽的">
+                        <div class="word-english">mild </div>
+                        <div class="word-chinese">a. 温和的，暖和的，凉爽的</div>
+                    </div>
+
+                    <div class="word-item" data-en="mile" data-zh="n. 英里">
+                        <div class="word-english">mile </div>
+                        <div class="word-chinese">n. 英里</div>
+                    </div>
+
+                    <div class="word-item" data-en="milk" data-zh="n. 牛奶 vt. 挤奶">
+                        <div class="word-english">milk </div>
+                        <div class="word-chinese">n. 牛奶 vt. 挤奶</div>
+                    </div>
+
+                    <div class="word-item" data-en="millimetre (美millimeter)" data-zh="n. 毫米">
+                        <div class="word-english">millimetre (美millimeter) </div>
+                        <div class="word-chinese">n. 毫米</div>
+                    </div>
+
+                    <div class="word-item" data-en="million" data-zh="num. 百万 n. 百万个（人或物）">
+                        <div class="word-english">million </div>
+                        <div class="word-chinese">num. 百万 n. 百万个（人或物）</div>
+                    </div>
+
+                    <div class="word-item" data-en="millionaire" data-zh="n. 百万富翁">
+                        <div class="word-english">millionaire </div>
+                        <div class="word-chinese">n. 百万富翁</div>
+                    </div>
+
+                    <div class="word-item" data-en="mind" data-zh="n. 思想，想法 v. 介意，关心">
+                        <div class="word-english">mind </div>
+                        <div class="word-chinese">n. 思想，想法 v. 介意，关心</div>
+                    </div>
+
+                    <div class="word-item" data-en="mine" data-zh="n. 矿藏，矿山 vt. 开采（矿物） pron. 我的(名词性物主代词)">
+                        <div class="word-english">mine </div>
+                        <div class="word-chinese">n. 矿藏，矿山 vt. 开采（矿物） pron. 我的(名词性物主代词)</div>
+                    </div>
+
+                    <div class="word-item" data-en="mineral" data-zh="n. 矿物质，矿物">
+                        <div class="word-english">mineral </div>
+                        <div class="word-chinese">n. 矿物质，矿物</div>
+                    </div>
+
+                    <div class="word-item" data-en="minibus" data-zh="n. 小型公共汽车">
+                        <div class="word-english">minibus </div>
+                        <div class="word-chinese">n. 小型公共汽车</div>
+                    </div>
+
+                    <div class="word-item" data-en="minimum" data-zh="a. 最小的">
+                        <div class="word-english">minimum </div>
+                        <div class="word-chinese">a. 最小的</div>
+                    </div>
+
+                    <div class="word-item" data-en="minister" data-zh="n. 部长；牧师">
+                        <div class="word-english">minister </div>
+                        <div class="word-chinese">n. 部长；牧师</div>
+                    </div>
+
+                    <div class="word-item" data-en="minority" data-zh="n. 少数；少数民族">
+                        <div class="word-english">minority </div>
+                        <div class="word-chinese">n. 少数；少数民族</div>
+                    </div>
+
+                    <div class="word-item" data-en="minus" data-zh="prep. & a. 负的，减去的">
+                        <div class="word-english">minus </div>
+                        <div class="word-chinese">prep. & a. 负的，减去的</div>
+                    </div>
+
+                    <div class="word-item" data-en="minute" data-zh="n. 分钟；一会儿，瞬间">
+                        <div class="word-english">minute </div>
+                        <div class="word-chinese">n. 分钟；一会儿，瞬间</div>
+                    </div>
+
+                    <div class="word-item" data-en="mirror" data-zh="n. 镜子">
+                        <div class="word-english">mirror </div>
+                        <div class="word-chinese">n. 镜子</div>
+                    </div>
+
+                    <div class="word-item" data-en="missile" data-zh="n. 导弹">
+                        <div class="word-english">missile </div>
+                        <div class="word-chinese">n. 导弹</div>
+                    </div>
+
+                    <div class="word-item" data-en="missing" data-zh="a. 缺掉的，失踪的">
+                        <div class="word-english">missing </div>
+                        <div class="word-chinese">a. 缺掉的，失踪的</div>
+                    </div>
+
+                    <div class="word-item" data-en="mission" data-zh="n. 使命，任务">
+                        <div class="word-english">mission </div>
+                        <div class="word-chinese">n. 使命，任务</div>
+                    </div>
+
+                    <div class="word-item" data-en="mist" data-zh="n. 雾">
+                        <div class="word-english">mist </div>
+                        <div class="word-chinese">n. 雾</div>
+                    </div>
+
+                    <div class="word-item" data-en="mistake (mistook, mistaken)" data-zh="n. 错误 vt. 弄错">
+                        <div class="word-english">mistake (mistook, mistaken) </div>
+                        <div class="word-chinese">n. 错误 vt. 弄错</div>
+                    </div>
+
+                    <div class="word-item" data-en="mistaken" data-zh="a. 错误的">
+                        <div class="word-english">mistaken </div>
+                        <div class="word-chinese">a. 错误的</div>
+                    </div>
+
+                    <div class="word-item" data-en="misunderstand (misunderstood, misunderstood)" data-zh="v. 误会；不理解">
+                        <div class="word-english">misunderstand (misunderstood, misunderstood) </div>
+                        <div class="word-chinese">v. 误会；不理解</div>
+                    </div>
+
+                    <div class="word-item" data-en="mix" data-zh="v. 混合，搅拌">
+                        <div class="word-english">mix </div>
+                        <div class="word-chinese">v. 混合，搅拌</div>
+                    </div>
+
+                    <div class="word-item" data-en="mixture" data-zh="n. 混合物">
+                        <div class="word-english">mixture </div>
+                        <div class="word-chinese">n. 混合物</div>
+                    </div>
+
+                    <div class="word-item" data-en="mobile" data-zh="a. 活动的，可移动的">
+                        <div class="word-english">mobile </div>
+                        <div class="word-chinese">a. 活动的，可移动的</div>
+                    </div>
+
+                    <div class="word-item" data-en="mobile phone" data-zh="手提电话，手机">
+                        <div class="word-english">mobile phone </div>
+                        <div class="word-chinese">手提电话，手机</div>
+                    </div>
+
+                    <div class="word-item" data-en="model" data-zh="n. 模型，原形；范例；模范">
+                        <div class="word-english">model </div>
+                        <div class="word-chinese">n. 模型，原形；范例；模范</div>
+                    </div>
+
+                    <div class="word-item" data-en="modern" data-zh="a. 现代的">
+                        <div class="word-english">modern </div>
+                        <div class="word-chinese">a. 现代的</div>
+                    </div>
+
+                    <div class="word-item" data-en="modest" data-zh="a. 谦虚的；谦逊的">
+                        <div class="word-english">modest </div>
+                        <div class="word-chinese">a. 谦虚的；谦逊的</div>
+                    </div>
+
+                    <div class="word-item" data-en="mom = mummy" data-zh="n. 妈妈">
+                        <div class="word-english">Mom = Mummy </div>
+                        <div class="word-chinese">n. 妈妈</div>
+                    </div>
+
+                    <div class="word-item" data-en="moment" data-zh="n. 片刻，瞬间">
+                        <div class="word-english">moment </div>
+                        <div class="word-chinese">n. 片刻，瞬间</div>
+                    </div>
+
+                    <div class="word-item" data-en="money" data-zh="n. 钱；货币">
+                        <div class="word-english">money </div>
+                        <div class="word-chinese">n. 钱；货币</div>
+                    </div>
+
+                    <div class="word-item" data-en="monitor" data-zh="n. （班级内的）班长；纠察生；监视器">
+                        <div class="word-english">monitor </div>
+                        <div class="word-chinese">n. （班级内的）班长；纠察生；监视器</div>
+                    </div>
+
+                    <div class="word-item" data-en="monkey" data-zh="n. 猴子">
+                        <div class="word-english">monkey </div>
+                        <div class="word-chinese">n. 猴子</div>
+                    </div>
+
+                    <div class="word-item" data-en="month" data-zh="n. 月，月份">
+                        <div class="word-english">month </div>
+                        <div class="word-chinese">n. 月，月份</div>
+                    </div>
+
+                    <div class="word-item" data-en="moon" data-zh="n. 月球；月光；月状物">
+                        <div class="word-english">moon </div>
+                        <div class="word-chinese">n. 月球；月光；月状物</div>
+                    </div>
+
+                    <div class="word-item" data-en="moon cake" data-zh="n. 月饼">
+                        <div class="word-english">moon cake </div>
+                        <div class="word-chinese">n. 月饼</div>
+                    </div>
+
+                    <div class="word-item" data-en="mop" data-zh="n. & v. 拖把 拖地">
+                        <div class="word-english">mop </div>
+                        <div class="word-chinese">n. & v. 拖把 拖地</div>
+                    </div>
+
+                    <div class="word-item" data-en="moral" data-zh="a. 道德的 n. 寓意，道德启示">
+                        <div class="word-english">moral </div>
+                        <div class="word-chinese">a. 道德的 n. 寓意，道德启示</div>
+                    </div>
+
+                    <div class="word-item" data-en="morning" data-zh="n. 早晨，上午">
+                        <div class="word-english">morning </div>
+                        <div class="word-chinese">n. 早晨，上午</div>
+                    </div>
+
+                    <div class="word-item" data-en="moslem" data-zh="n. 伊斯兰教徒，回教徒">
+                        <div class="word-english">Moslem </div>
+                        <div class="word-chinese">n. 伊斯兰教徒，回教徒</div>
+                    </div>
+
+                    <div class="word-item" data-en="mosquito" data-zh="n. 蚊子">
+                        <div class="word-english">mosquito </div>
+                        <div class="word-chinese">n. 蚊子</div>
+                    </div>
+
+                    <div class="word-item" data-en="mother" data-zh="n. 母亲">
+                        <div class="word-english">mother </div>
+                        <div class="word-chinese">n. 母亲</div>
+                    </div>
+
+                    <div class="word-item" data-en="motherland" data-zh="n. 祖国">
+                        <div class="word-english">motherland </div>
+                        <div class="word-chinese">n. 祖国</div>
+                    </div>
+
+                    <div class="word-item" data-en="motion" data-zh="n. 运动，移动">
+                        <div class="word-english">motion </div>
+                        <div class="word-chinese">n. 运动，移动</div>
+                    </div>
+
+                    <div class="word-item" data-en="motivate" data-zh="vt. 使有动机，促动">
+                        <div class="word-english">motivate </div>
+                        <div class="word-chinese">vt. 使有动机，促动</div>
+                    </div>
+
+                    <div class="word-item" data-en="motivation" data-zh="n. 动机，动力">
+                        <div class="word-english">motivation </div>
+                        <div class="word-chinese">n. 动机，动力</div>
+                    </div>
+
+                    <div class="word-item" data-en="motor" data-zh="n. 发动机，马达">
+                        <div class="word-english">motor </div>
+                        <div class="word-chinese">n. 发动机，马达</div>
+                    </div>
+
+                    <div class="word-item" data-en="motorcycle" data-zh="n. 摩托车">
+                        <div class="word-english">motorcycle </div>
+                        <div class="word-chinese">n. 摩托车</div>
+                    </div>
+
+                    <div class="word-item" data-en="motto" data-zh="n. 箴言，格言">
+                        <div class="word-english">motto </div>
+                        <div class="word-chinese">n. 箴言，格言</div>
+                    </div>
+
+                    <div class="word-item" data-en="mountain" data-zh="n. 山，山脉">
+                        <div class="word-english">mountain </div>
+                        <div class="word-chinese">n. 山，山脉</div>
+                    </div>
+
+                    <div class="word-item" data-en="mountainous" data-zh="a. 多山的">
+                        <div class="word-english">mountainous </div>
+                        <div class="word-chinese">a. 多山的</div>
+                    </div>
+
+                    <div class="word-item" data-en="mourn" data-zh="vt. 哀痛； 哀悼">
+                        <div class="word-english">mourn </div>
+                        <div class="word-chinese">vt. 哀痛； 哀悼</div>
+                    </div>
+
+                    <div class="word-item" data-en="mouse (复 mice)" data-zh="n. 鼠，耗子；（计算机）鼠标">
+                        <div class="word-english">mouse (复 mice) </div>
+                        <div class="word-chinese">n. 鼠，耗子；（计算机）鼠标</div>
+                    </div>
+
+                    <div class="word-item" data-en="moustache" data-zh="n. 小胡子">
+                        <div class="word-english">moustache </div>
+                        <div class="word-chinese">n. 小胡子</div>
+                    </div>
+
+                    <div class="word-item" data-en="mouth" data-zh="n. 嘴，口">
+                        <div class="word-english">mouth </div>
+                        <div class="word-chinese">n. 嘴，口</div>
+                    </div>
+
+                    <div class="word-item" data-en="mouthful" data-zh="n. 满口，一口">
+                        <div class="word-english">mouthful </div>
+                        <div class="word-chinese">n. 满口，一口</div>
+                    </div>
+
+                    <div class="word-item" data-en="move" data-zh="v. 移动，搬动，搬家">
+                        <div class="word-english">move </div>
+                        <div class="word-chinese">v. 移动，搬动，搬家</div>
+                    </div>
+
+                    <div class="word-item" data-en="movement" data-zh="n. 运动，活动">
+                        <div class="word-english">movement </div>
+                        <div class="word-chinese">n. 运动，活动</div>
+                    </div>
+
+                    <div class="word-item" data-en="movie" data-zh="n. （口语）电影">
+                        <div class="word-english">movie </div>
+                        <div class="word-chinese">n. （口语）电影</div>
+                    </div>
+
+                    <div class="word-item" data-en="mr (mister)" data-zh="n. 先生（用于姓名前）">
+                        <div class="word-english">Mr (mister) </div>
+                        <div class="word-chinese">n. 先生（用于姓名前）</div>
+                    </div>
+
+                    <div class="word-item" data-en="mrs (mistress)" data-zh="n. 夫人,太太（称呼已婚妇女）">
+                        <div class="word-english">Mrs (mistress) </div>
+                        <div class="word-chinese">n. 夫人,太太（称呼已婚妇女）</div>
+                    </div>
+
+                    <div class="word-item" data-en="ms" data-zh="n. 女士(用在婚姻状况不明的女子姓名前)">
+                        <div class="word-english">Ms </div>
+                        <div class="word-chinese">n. 女士(用在婚姻状况不明的女子姓名前)</div>
+                    </div>
+
+                    <div class="word-item" data-en="much (more, most)" data-zh="a. 许多的，大量的 ad. 非常；更加 n. 许多，大量，非常">
+                        <div class="word-english">much (more, most) </div>
+                        <div class="word-chinese">a. 许多的，大量的 ad. 非常；更加 n. 许多，大量，非常</div>
+                    </div>
+
+                    <div class="word-item" data-en="mud" data-zh="n. 泥，泥浆">
+                        <div class="word-english">mud </div>
+                        <div class="word-chinese">n. 泥，泥浆</div>
+                    </div>
+
+                    <div class="word-item" data-en="muddy" data-zh="a. 泥泞的">
+                        <div class="word-english">muddy </div>
+                        <div class="word-chinese">a. 泥泞的</div>
+                    </div>
+
+                    <div class="word-item" data-en="multiply" data-zh="vt. 乘；使相乘">
+                        <div class="word-english">multiply </div>
+                        <div class="word-chinese">vt. 乘；使相乘</div>
+                    </div>
+
+                    <div class="word-item" data-en="murder" data-zh="vt. 谋杀">
+                        <div class="word-english">murder </div>
+                        <div class="word-chinese">vt. 谋杀</div>
+                    </div>
+
+                    <div class="word-item" data-en="museum" data-zh="n. 博物馆，博物院">
+                        <div class="word-english">museum </div>
+                        <div class="word-chinese">n. 博物馆，博物院</div>
+                    </div>
+
+                    <div class="word-item" data-en="mushroom" data-zh="n. 蘑菇">
+                        <div class="word-english">mushroom </div>
+                        <div class="word-chinese">n. 蘑菇</div>
+                    </div>
+
+                    <div class="word-item" data-en="music" data-zh="n. 音乐，乐曲">
+                        <div class="word-english">music </div>
+                        <div class="word-chinese">n. 音乐，乐曲</div>
+                    </div>
+
+                    <div class="word-item" data-en="musical" data-zh="a. 音乐的，爱好音乐的 n. 音乐片">
+                        <div class="word-english">musical </div>
+                        <div class="word-chinese">a. 音乐的，爱好音乐的 n. 音乐片</div>
+                    </div>
+
+                    <div class="word-item" data-en="musician" data-zh="n. 音乐家，乐师">
+                        <div class="word-english">musician </div>
+                        <div class="word-chinese">n. 音乐家，乐师</div>
+                    </div>
+
+                    <div class="word-item" data-en="must" data-zh="modal v. 必须，应当；必定是，一定">
+                        <div class="word-english">must </div>
+                        <div class="word-chinese">modal v. 必须，应当；必定是，一定</div>
+                    </div>
+
+                    <div class="word-item" data-en="mustard" data-zh="n. 芥末，芥子粉">
+                        <div class="word-english">mustard </div>
+                        <div class="word-chinese">n. 芥末，芥子粉</div>
+                    </div>
+
+                    <div class="word-item" data-en="mutton" data-zh="n. 羊肉">
+                        <div class="word-english">mutton </div>
+                        <div class="word-chinese">n. 羊肉</div>
+                    </div>
+
+                    <div class="word-item" data-en="my" data-zh="pron. 我的">
+                        <div class="word-english">my </div>
+                        <div class="word-chinese">pron. 我的</div>
+                    </div>
+
+                    <div class="word-item" data-en="myself" data-zh="pron. 我自己">
+                        <div class="word-english">myself </div>
+                        <div class="word-chinese">pron. 我自己</div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+        <div class="footer">
+            <p>🎯 复习计划：当天、睡前、次日早上</p>
+            <p>📅 进度：Day 6 / 7</p>
+            
+        </div>
+    </div>
+
+    <script>
+        const searchInput = document.getElementById('searchInput');
+        const wordItems = document.querySelectorAll('.word-item');
+        const letterSections = document.querySelectorAll('.letter-section');
+
+        searchInput.addEventListener('input', function() {
+            const searchTerm = this.value.toLowerCase().trim();
+            
+            if (!searchTerm) {
+                wordItems.forEach(item => item.classList.remove('hidden'));
+                letterSections.forEach(section => section.classList.remove('hidden'));
+                return;
+            }
+            
+            letterSections.forEach(section => {
+                let hasVisible = false;
+                const items = section.querySelectorAll('.word-item');
+                items.forEach(item => {
+                    const en = item.dataset.en;
+                    const zh = item.dataset.zh;
+                    if (en.includes(searchTerm) || zh.includes(searchTerm)) {
+                        item.classList.remove('hidden');
+                        hasVisible = true;
+                    } else {
+                        item.classList.add('hidden');
+                    }
+                });
+                section.classList.toggle('hidden', !hasVisible);
+            });
+        });
+    </script>
+</body>
+</html>
