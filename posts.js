@@ -1,6 +1,56 @@
 // 博客文章数据
 const posts = [
     {
+        id: 2,
+        title: "医学+AI 学习规划思维导图",
+        date: "2026-04-15",
+        category: "学习",
+        tags: ["医学", "AI", "学习规划", "思维导图"],
+        summary: "作为一名医生，如何将人工智能与医学结合？这里有一份完整的学习规划，从基础入门到职业发展，帮助你成为医学AI专家！",
+        content: `
+            <p>作为一名医生，想要将人工智能与医学结合是一个非常有前景的方向！这也是未来医疗发展的重要趋势。</p>
+            
+            <h2>🎯 学习规划概览</h2>
+            <p>这份学习规划分为四个阶段，帮助你从零基础开始，逐步成为医学AI专家：</p>
+            <ul>
+                <li><strong>第一阶段：基础入门</strong>（1-3个月）- Python编程、数学基础</li>
+                <li><strong>第二阶段：机器学习核心</strong>（3-6个月）- 机器学习、深度学习</li>
+                <li><strong>第三阶段：实战进阶</strong>（6-12个月）- 项目实战、学术前沿</li>
+                <li><strong>第四阶段：职业发展</strong>（12个月以上）- 职业选择、持续学习</li>
+            </ul>
+            
+            <h2>📚 完整的交互式思维导图</h2>
+            <p>我为你准备了一份完整的交互式思维导图，包含：</p>
+            <ul>
+                <li>详细的学习路径</li>
+                <li>分月学习计划</li>
+                <li>推荐资源清单（课程、书籍、工具、数据集）</li>
+                <li>医学AI三大方向详细介绍</li>
+                <li>关键学习建议</li>
+            </ul>
+            
+            <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 30px; border-radius: 15px; text-align: center; margin: 30px 0;">
+                <h3 style="color: white; margin-bottom: 20px;">🧠 查看完整学习规划</h3>
+                <a href="医学AI学习规划.html" style="display: inline-block; background: white; color: #667eea; padding: 15px 40px; border-radius: 10px; text-decoration: none; font-weight: bold; font-size: 1.2em; box-shadow: 0 5px 20px rgba(0,0,0,0.2);">
+                    🚀 打开交互式思维导图
+                </a>
+            </div>
+            
+            <h2>💡 关键建议</h2>
+            <ul>
+                <li><strong>边学边做</strong> - 不要等"准备好"，理论和实践结合</li>
+                <li><strong>保持医学专业优势</strong> - 这是你最大的竞争力</li>
+                <li><strong>加入社区</strong> - 多交流，认识志同道合的朋友</li>
+                <li><strong>关注伦理和法规</strong> - 医疗AI有特殊要求</li>
+                <li><strong>耐心坚持</strong> - 这是一个长期的过程</li>
+            </ul>
+            
+            <p style="background: #fff3cd; border: 1px solid #ffc107; padding: 20px; border-radius: 10px; margin-top: 30px;">
+                <strong>💪 加油！</strong>医学+AI是一个充满机遇的领域！你既有医学专业背景，又对AI感兴趣，这是非常好的组合。慢慢来，先从基础开始，逐步深入！
+            </p>
+        `
+    },
+    {
         id: 1,
         title: "你好，世界！",
         date: "2026-04-14",

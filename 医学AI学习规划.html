@@ -1,0 +1,773 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>医学+AI 学习规划思维导图</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Microsoft YaHei', 'PingFang SC', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+            color: #333;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            overflow: hidden;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        
+        .header p {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+        
+        .nav-tabs {
+            display: flex;
+            background: #f8f9fa;
+            border-bottom: 2px solid #e9ecef;
+            flex-wrap: wrap;
+        }
+        
+        .nav-tab {
+            padding: 15px 25px;
+            cursor: pointer;
+            border: none;
+            background: none;
+            font-size: 1em;
+            font-weight: 500;
+            color: #666;
+            transition: all 0.3s;
+            border-bottom: 3px solid transparent;
+        }
+        
+        .nav-tab:hover {
+            background: #e9ecef;
+            color: #667eea;
+        }
+        
+        .nav-tab.active {
+            color: #667eea;
+            border-bottom-color: #667eea;
+            background: white;
+        }
+        
+        .content {
+            padding: 40px;
+        }
+        
+        .tab-content {
+            display: none;
+        }
+        
+        .tab-content.active {
+            display: block;
+            animation: fadeIn 0.5s ease-in;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .mindmap {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+        
+        .level-1 {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 25px 40px;
+            border-radius: 15px;
+            font-size: 1.5em;
+            font-weight: bold;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);
+        }
+        
+        .level-2-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+        
+        .level-2 {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            padding: 20px 30px;
+            border-radius: 12px;
+            font-size: 1.2em;
+            font-weight: bold;
+            min-width: 200px;
+            text-align: center;
+            cursor: pointer;
+            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 5px 15px rgba(240, 147, 251, 0.4);
+        }
+        
+        .level-2:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(240, 147, 251, 0.5);
+        }
+        
+        .level-3-container {
+            display: none;
+            flex-wrap: wrap;
+            gap: 15px;
+            justify-content: center;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 10px;
+            margin-top: 15px;
+        }
+        
+        .level-3-container.active {
+            display: flex;
+        }
+        
+        .level-3 {
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            color: white;
+            padding: 15px 25px;
+            border-radius: 10px;
+            font-size: 1em;
+            font-weight: 500;
+            cursor: pointer;
+            transition: transform 0.3s;
+            box-shadow: 0 3px 10px rgba(79, 172, 254, 0.4);
+        }
+        
+        .level-3:hover {
+            transform: translateY(-3px);
+        }
+        
+        .level-4-container {
+            display: none;
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+            margin-top: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        
+        .level-4-container.active {
+            display: block;
+        }
+        
+        .level-4 {
+            padding: 10px 0;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .level-4:last-child {
+            border-bottom: none;
+        }
+        
+        .card {
+            background: #f8f9fa;
+            border-radius: 12px;
+            padding: 25px;
+            margin-bottom: 20px;
+            border-left: 4px solid #667eea;
+        }
+        
+        .card h3 {
+            color: #667eea;
+            margin-bottom: 15px;
+            font-size: 1.3em;
+        }
+        
+        .card ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .card li {
+            padding: 8px 0;
+            padding-left: 25px;
+            position: relative;
+        }
+        
+        .card li:before {
+            content: "▸";
+            position: absolute;
+            left: 0;
+            color: #667eea;
+            font-weight: bold;
+        }
+        
+        .timeline {
+            position: relative;
+            padding-left: 40px;
+        }
+        
+        .timeline:before {
+            content: '';
+            position: absolute;
+            left: 15px;
+            top: 0;
+            bottom: 0;
+            width: 3px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        
+        .timeline-item {
+            position: relative;
+            margin-bottom: 30px;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+        
+        .timeline-item:before {
+            content: '';
+            position: absolute;
+            left: -33px;
+            top: 25px;
+            width: 15px;
+            height: 15px;
+            background: #667eea;
+            border-radius: 50%;
+            border: 3px solid white;
+            box-shadow: 0 0 0 3px #667eea;
+        }
+        
+        .timeline-month {
+            color: #667eea;
+            font-weight: bold;
+            font-size: 1.1em;
+            margin-bottom: 10px;
+        }
+        
+        .resource-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        
+        .resource-card {
+            background: white;
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            border-top: 4px solid #667eea;
+        }
+        
+        .resource-card h4 {
+            color: #667eea;
+            margin-bottom: 15px;
+        }
+        
+        .tag {
+            display: inline-block;
+            background: #e9ecef;
+            color: #495057;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.85em;
+            margin: 3px;
+        }
+        
+        .tag.course { background: #d4edda; color: #155724; }
+        .tag.book { background: #cce5ff; color: #004085; }
+        .tag.tool { background: #fff3cd; color: #856404; }
+        .tag.data { background: #f8d7da; color: #721c24; }
+        .tag.community { background: #e2e3e5; color: #383d41; }
+        
+        .tips-box {
+            background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+            border-radius: 12px;
+            padding: 25px;
+            margin: 20px 0;
+        }
+        
+        .tips-box h4 {
+            color: #c0392b;
+            margin-bottom: 15px;
+        }
+        
+        .tips-box ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .tips-box li {
+            padding: 8px 0;
+            padding-left: 25px;
+            position: relative;
+        }
+        
+        .tips-box li:before {
+            content: "💡";
+            position: absolute;
+            left: 0;
+        }
+        
+        .footer {
+            text-align: center;
+            padding: 30px;
+            background: #f8f9fa;
+            color: #666;
+        }
+        
+        @media (max-width: 768px) {
+            .header h1 { font-size: 1.8em; }
+            .content { padding: 20px; }
+            .level-2-container { flex-direction: column; }
+            .level-2 { width: 100%; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🧠 医学+AI 学习规划</h1>
+            <p>从医生到医学AI专家的完整学习路径</p>
+        </div>
+        
+        <div class="nav-tabs">
+            <button class="nav-tab active" onclick="switchTab('mindmap')">思维导图</button>
+            <button class="nav-tab" onclick="switchTab('timeline')">分月计划</button>
+            <button class="nav-tab" onclick="switchTab('resources')">资源推荐</button>
+            <button class="nav-tab" onclick="switchTab('directions')">方向选择</button>
+            <button class="nav-tab" onclick="switchTab('tips')">关键建议</button>
+        </div>
+        
+        <div class="content">
+            <!-- 思维导图 -->
+            <div id="mindmap" class="tab-content active">
+                <div class="mindmap">
+                    <div class="level-1">🎯 医学+AI 学习总体规划</div>
+                    
+                    <div class="level-2-container">
+                        <div class="level-2" onclick="toggleLevel3('phase1')">
+                            📚 第一阶段：基础入门<br><small>1-3个月</small>
+                        </div>
+                        <div class="level-2" onclick="toggleLevel3('phase2')">
+                            🤖 第二阶段：机器学习核心<br><small>3-6个月</small>
+                        </div>
+                        <div class="level-2" onclick="toggleLevel3('phase3')">
+                            🚀 第三阶段：实战进阶<br><small>6-12个月</small>
+                        </div>
+                        <div class="level-2" onclick="toggleLevel3('phase4')">
+                            💼 第四阶段：职业发展<br><small>12个月以上</small>
+                        </div>
+                    </div>
+                    
+                    <!-- 第一阶段详情 -->
+                    <div id="phase1" class="level-3-container">
+                        <div class="level-3" onclick="toggleLevel4('python')">🐍 Python编程基础</div>
+                        <div class="level-3" onclick="toggleLevel4('math')">📐 数学基础</div>
+                        <div class="level-3" onclick="toggleLevel4('tools')">🛠️ 工具准备</div>
+                    </div>
+                    
+                    <div id="python" class="level-4-container">
+                        <div class="level-4"><strong>推荐学习资源：</strong></div>
+                        <div class="level-4">• 廖雪峰Python教程</div>
+                        <div class="level-4">• 《Python编程从入门到实践》</div>
+                        <div class="level-4">• NumPy、Pandas、Matplotlib</div>
+                        <div class="level-4"><strong>目标：</strong>掌握Python基础语法和数据科学生态</div>
+                    </div>
+                    
+                    <div id="math" class="level-4-container">
+                        <div class="level-4"><strong>线性代数：</strong>MIT线性代数公开课</div>
+                        <div class="level-4"><strong>概率统计：</strong>可汗学院统计学</div>
+                        <div class="level-4"><strong>微积分（可选）：</strong>重点掌握导数和梯度</div>
+                    </div>
+                    
+                    <div id="tools" class="level-4-container">
+                        <div class="level-4"><strong>开发环境：</strong>Anaconda + Jupyter + VS Code</div>
+                        <div class="level-4"><strong>版本控制：</strong>Git + GitHub</div>
+                    </div>
+                    
+                    <!-- 第二阶段详情 -->
+                    <div id="phase2" class="level-3-container">
+                        <div class="level-3" onclick="toggleLevel4('ml')">📊 机器学习基础</div>
+                        <div class="level-3" onclick="toggleLevel4('dl')">🧠 深度学习基础</div>
+                        <div class="level-3" onclick="toggleLevel4('direction')">🎯 选择具体方向</div>
+                    </div>
+                    
+                    <div id="ml" class="level-4-container">
+                        <div class="level-4"><strong>课程：</strong>Andrew Ng《机器学习》、李沐《动手学深度学习》</div>
+                        <div class="level-4"><strong>书籍：</strong>《机器学习》周志华、《统计学习方法》李航</div>
+                        <div class="level-4"><strong>实践：</strong>Kaggle入门竞赛、经典数据集练习</div>
+                    </div>
+                    
+                    <div id="dl" class="level-4-container">
+                        <div class="level-4"><strong>核心概念：</strong>神经网络、反向传播、优化算法</div>
+                        <div class="level-4"><strong>框架推荐：</strong>PyTorch（医学影像领域使用广泛）</div>
+                    </div>
+                    
+                    <div id="direction" class="level-4-container">
+                        <div class="level-4"><strong>A. 医学影像分析：</strong>CNN、U-Net、MONAI</div>
+                        <div class="level-4"><strong>B. 临床数据与NLP：</strong>Transformers、BioBERT</div>
+                        <div class="level-4"><strong>C. 药物发现与基因组学：</strong>DeepChem、RDKit</div>
+                    </div>
+                    
+                    <!-- 第三阶段详情 -->
+                    <div id="phase3" class="level-3-container">
+                        <div class="level-3" onclick="toggleLevel4('project')">💻 项目实战</div>
+                        <div class="level-3" onclick="toggleLevel4('research')">📖 学术与前沿</div>
+                        <div class="level-3" onclick="toggleLevel4('portfolio')">📁 建立作品集</div>
+                    </div>
+                    
+                    <div id="project" class="level-4-container">
+                        <div class="level-4"><strong>入门项目：</strong>公开数据集疾病分类</div>
+                        <div class="level-4"><strong>进阶项目：</strong>Kaggle竞赛、医院合作项目</div>
+                        <div class="level-4"><strong>开源贡献：</strong>MONAI、DeepChem等</div>
+                    </div>
+                    
+                    <div id="research" class="level-4-container">
+                        <div class="level-4"><strong>顶会：</strong>NeurIPS、ICML、CVPR、MICCAI</div>
+                        <div class="level-4"><strong>顶刊：</strong>Nature Machine Intelligence等</div>
+                        <div class="level-4"><strong>跟踪前沿：</strong>arXiv、MedAI、MLHC</div>
+                    </div>
+                    
+                    <div id="portfolio" class="level-4-container">
+                        <div class="level-4"><strong>GitHub：</strong>整理项目代码、撰写README</div>
+                        <div class="level-4"><strong>技术博客：</strong>记录学习心得、分享经验</div>
+                        <div class="level-4"><strong>LinkedIn：</strong>建立专业档案</div>
+                    </div>
+                    
+                    <!-- 第四阶段详情 -->
+                    <div id="phase4" class="level-3-container">
+                        <div class="level-3" onclick="toggleLevel4('career')">🎯 职业路径选择</div>
+                        <div class="level-3" onclick="toggleLevel4('continue')">📚 持续学习</div>
+                    </div>
+                    
+                    <div id="career" class="level-4-container">
+                        <div class="level-4"><strong>A. 医院/医疗机构：</strong>AI部门、医学影像科</div>
+                        <div class="level-4"><strong>B. 医疗科技公司：</strong>AI医疗创业公司</div>
+                        <div class="level-4"><strong>C. 科研机构：</strong>大学、研究所</div>
+                        <div class="level-4"><strong>D. 自主创业：</strong>开发医疗AI产品</div>
+                    </div>
+                    
+                    <div id="continue" class="level-4-container">
+                        <div class="level-4"><strong>保持医学专业优势：</strong>不放弃临床实践</div>
+                        <div class="level-4"><strong>AI技术更新：</strong>持续学习新技术</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 分月计划 -->
+            <div id="timeline" class="tab-content">
+                <h2 style="color: #667eea; margin-bottom: 30px;">📅 分月学习计划</h2>
+                
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-month">第1个月：Python基础</div>
+                        <ul>
+                            <li>第1-2周：Python语法基础</li>
+                            <li>第3周：NumPy和Pandas</li>
+                            <li>第4周：小项目练习</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-month">第2个月：数学基础</div>
+                        <ul>
+                            <li>第1-2周：线性代数</li>
+                            <li>第3-4周：概率统计</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-month">第3个月：机器学习入门</div>
+                        <ul>
+                            <li>第1-2周：Andrew Ng课程前半部分</li>
+                            <li>第3-4周：完成课程，做小项目</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-month">第4-5个月：深度学习</div>
+                        <ul>
+                            <li>学习PyTorch</li>
+                            <li>学习CNN、RNN等基础网络</li>
+                            <li>选择医学影像或其他方向</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-month">第6个月：第一个医学AI项目</div>
+                        <ul>
+                            <li>用公开数据集做一个疾病分类项目</li>
+                            <li>整理代码，写README</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-month">第7-9个月：深入学习</div>
+                        <ul>
+                            <li>学习相关领域专业知识</li>
+                            <li>参加一个Kaggle竞赛</li>
+                            <li>读10-20篇相关论文</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-month">第10-12个月：实战与职业准备</div>
+                        <ul>
+                            <li>做一个更完整的项目</li>
+                            <li>建立作品集</li>
+                            <li>开始找相关工作或实习</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 资源推荐 -->
+            <div id="resources" class="tab-content">
+                <h2 style="color: #667eea; margin-bottom: 30px;">📚 推荐资源清单</h2>
+                
+                <div class="card">
+                    <h3>🎓 在线课程</h3>
+                    <span class="tag course">Andrew Ng机器学习 - Coursera</span>
+                    <span class="tag course">李沐《动手学深度学习》</span>
+                    <span class="tag course">CS231n计算机视觉 - Stanford</span>
+                    <span class="tag course">CS224n自然语言处理 - Stanford</span>
+                    <span class="tag course">fast.ai实用深度学习</span>
+                </div>
+                
+                <div class="card">
+                    <h3>📖 推荐书籍</h3>
+                    <span class="tag book">《机器学习》周志华（西瓜书）</span>
+                    <span class="tag book">《统计学习方法》李航</span>
+                    <span class="tag book">《深度学习》Goodfellow（花书）</span>
+                    <span class="tag book">《Python机器学习》Raschka</span>
+                    <span class="tag book">《利用Python进行数据分析》</span>
+                </div>
+                
+                <div class="card">
+                    <h3>🛠️ 框架与工具</h3>
+                    <span class="tag tool">PyTorch</span>
+                    <span class="tag tool">MONAI（医学影像AI）</span>
+                    <span class="tag tool">Transformers（Hugging Face）</span>
+                    <span class="tag tool">OpenCV</span>
+                    <span class="tag tool">SimpleITK</span>
+                </div>
+                
+                <div class="card">
+                    <h3>📊 数据集平台</h3>
+                    <span class="tag data">Kaggle</span>
+                    <span class="tag data">PhysioNet</span>
+                    <span class="tag data">TCIA（癌症影像）</span>
+                    <span class="tag data">MIMIC-III（重症监护）</span>
+                    <span class="tag data">CheXpert（胸部X光）</span>
+                </div>
+                
+                <div class="card">
+                    <h3>👥 社区与论坛</h3>
+                    <span class="tag community">GitHub</span>
+                    <span class="tag community">Kaggle</span>
+                    <span class="tag community">Reddit r/MachineLearning</span>
+                    <span class="tag community">知乎</span>
+                    <span class="tag community">MICCAI</span>
+                </div>
+            </div>
+            
+            <!-- 方向选择 -->
+            <div id="directions" class="tab-content">
+                <h2 style="color: #667eea; margin-bottom: 30px;">🎯 医学AI方向选择</h2>
+                
+                <div class="resource-grid">
+                    <div class="resource-card">
+                        <h4>🖼️ 医学影像分析</h4>
+                        <p style="margin-bottom: 15px; color: #666;">最热门、最成熟的方向</p>
+                        <div style="background: #f8f9fa; padding: 15px; border-radius: 8px;">
+                            <strong>学习内容：</strong>
+                            <ul style="margin-top: 10px; padding-left: 20px;">
+                                <li>计算机视觉基础</li>
+                                <li>卷积神经网络（CNN）</li>
+                                <li>U-Net（医学影像分割）</li>
+                                <li>医学影像预处理</li>
+                            </ul>
+                        </div>
+                        <div style="margin-top: 15px;">
+                            <strong>推荐框架：</strong>
+                            <span class="tag tool">MONAI</span>
+                            <span class="tag tool">PyTorch</span>
+                        </div>
+                        <div style="margin-top: 15px;">
+                            <strong>数据集：</strong>
+                            <span class="tag data">ChestX-ray14</span>
+                            <span class="tag data">BraTS</span>
+                            <span class="tag data">ISIC</span>
+                        </div>
+                    </div>
+                    
+                    <div class="resource-card">
+                        <h4>📝 临床数据与NLP</h4>
+                        <p style="margin-bottom: 15px; color: #666;">电子病历分析、医学文本挖掘</p>
+                        <div style="background: #f8f9fa; padding: 15px; border-radius: 8px;">
+                            <strong>学习内容：</strong>
+                            <ul style="margin-top: 10px; padding-left: 20px;">
+                                <li>自然语言处理基础</li>
+                                <li>电子病历（EMR）分析</li>
+                                <li>医学文本挖掘</li>
+                            </ul>
+                        </div>
+                        <div style="margin-top: 15px;">
+                            <strong>推荐框架：</strong>
+                            <span class="tag tool">Transformers</span>
+                            <span class="tag tool">BioBERT</span>
+                        </div>
+                        <div style="margin-top: 15px;">
+                            <strong>数据集：</strong>
+                            <span class="tag data">MIMIC-III</span>
+                            <span class="tag data">PubMed</span>
+                        </div>
+                    </div>
+                    
+                    <div class="resource-card">
+                        <h4>💊 药物发现与基因组学</h4>
+                        <p style="margin-bottom: 15px; color: #666;">AI辅助药物设计、生物信息学</p>
+                        <div style="background: #f8f9fa; padding: 15px; border-radius: 8px;">
+                            <strong>学习内容：</strong>
+                            <ul style="margin-top: 10px; padding-left: 20px;">
+                                <li>生物信息学基础</li>
+                                <li>分子表征</li>
+                                <li>药物-靶点相互作用</li>
+                            </ul>
+                        </div>
+                        <div style="margin-top: 15px;">
+                            <strong>推荐框架：</strong>
+                            <span class="tag tool">RDKit</span>
+                            <span class="tag tool">DeepChem</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card" style="margin-top: 30px;">
+                    <h3>💡 方向选择建议</h3>
+                    <ul>
+                        <li><strong>医学影像分析</strong>：入门门槛相对较低，资料丰富，就业机会多</li>
+                        <li><strong>临床数据NLP</strong>：需要更多临床背景，数据获取相对困难</li>
+                        <li><strong>药物发现</strong>：需要更多生物学、化学背景</li>
+                        <li><strong>建议</strong>：从医学影像分析入手，有基础后再考虑其他方向</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- 关键建议 -->
+            <div id="tips" class="tab-content">
+                <h2 style="color: #667eea; margin-bottom: 30px;">💡 关键建议</h2>
+                
+                <div class="tips-box">
+                    <h4>1. 边学边做，不要等"准备好"</h4>
+                    <ul>
+                        <li>理论学习和实践要结合</li>
+                        <li>从小项目开始，逐步复杂</li>
+                    </ul>
+                </div>
+                
+                <div class="tips-box">
+                    <h4>2. 保持医学专业优势</h4>
+                    <ul>
+                        <li>这是你最大的竞争力</li>
+                        <li>不要变成纯码农，要做懂医学的AI专家</li>
+                    </ul>
+                </div>
+                
+                <div class="tips-box">
+                    <h4>3. 加入社区，多交流</h4>
+                    <ul>
+                        <li>参加线上线下活动</li>
+                        <li>认识志同道合的朋友</li>
+                    </ul>
+                </div>
+                
+                <div class="tips-box">
+                    <h4>4. 关注伦理和法规</h4>
+                    <ul>
+                        <li>医疗AI有特殊的伦理要求</li>
+                        <li>了解相关法律法规</li>
+                    </ul>
+                </div>
+                
+                <div class="tips-box">
+                    <h4>5. 耐心坚持</h4>
+                    <ul>
+                        <li>这是一个长期的过程</li>
+                        <li>不要指望一蹴而就</li>
+                    </ul>
+                </div>
+                
+                <div class="card" style="margin-top: 30px;">
+                    <h3>🎯 总结</h3>
+                    <p style="line-height: 1.8;">
+                        医学+AI是一个充满机遇的领域！你既有医学专业背景，又对AI感兴趣，这是非常好的组合。
+                        慢慢来，先从基础开始，逐步深入。记住，<strong>保持你的医学专业优势</strong>，这是你比纯AI从业者更大的竞争力！
+                    </p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p>💪 加油！从医生到医学AI专家的旅程，现在开始！</p>
+            <p style="margin-top: 10px; font-size: 0.9em; color: #999;">
+                最后更新：2026年4月 | 小李老师编制
+            </p>
+        </div>
+    </div>
+    
+    <script>
+        function switchTab(tabName) {
+            document.querySelectorAll('.tab-content').forEach(tab => {
+                tab.classList.remove('active');
+            });
+            document.querySelectorAll('.nav-tab').forEach(tab => {
+                tab.classList.remove('active');
+            });
+            
+            document.getElementById(tabName).classList.add('active');
+            event.target.classList.add('active');
+        }
+        
+        function toggleLevel3(level3Id) {
+            const container = document.getElementById(level3Id);
+            const wasActive = container.classList.contains('active');
+            
+            document.querySelectorAll('.level-3-container').forEach(c => {
+                c.classList.remove('active');
+            });
+            document.querySelectorAll('.level-4-container').forEach(c => {
+                c.classList.remove('active');
+            });
+            
+            if (!wasActive) {
+                container.classList.add('active');
+            }
+        }
+        
+        function toggleLevel4(level4Id) {
+            event.stopPropagation();
+            const container = document.getElementById(level4Id);
+            const wasActive = container
