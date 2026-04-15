@@ -770,4 +770,18 @@
         function toggleLevel4(level4Id) {
             event.stopPropagation();
             const container = document.getElementById(level4Id);
-            const wasActive = container
+            const wasActive = container.classList.contains('active');
+            
+            document.querySelectorAll('.level-4-container').forEach(c => {
+                c.classList.remove('active');
+            });
+            
+            if (!wasActive) {
+                container.classList.add('active');
+            }
+        }
+    </script>
+</body>
+</html>
+            
+            document.querySelectorAll('.level-4-container').forEach(c => {
