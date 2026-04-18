@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day1 AI基础概念+数学基础词汇 | 共492个</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Microsoft YaHei', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: #fff;
+            border-radius: 15px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            overflow: hidden;
+        }
+        .header {
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+        .header h1 {
+            font-size: 2.2rem;
+            margin-bottom: 10px;
+        }
+        .header p {
+            font-size: 1.1rem;
+            opacity: 0.95;
+        }
+        .content {
+            padding: 30px;
+        }
+        .section {
+            margin-bottom: 30px;
+        }
+        .section h2 {
+            color: #667eea;
+            font-size: 1.6rem;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #667eea;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+            background: white;
+        }
+        th, td {
+            padding: 10px 12px;
+            text-align: left;
+            border: 1px solid #e0e0e0;
+        }
+        th {
+            background: #667eea;
+            color: white;
+            font-weight: bold;
+        }
+        tr:nth-child(even) {
+            background: #f8f9fa;
+        }
+        tr:hover {
+            background: #f0f4ff;
+        }
+        .footer {
+            text-align: center;
+            padding: 20px;
+            background: #f8f9fa;
+            color: #666;
+            font-size: 0.9rem;
+        }
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 1.6rem;
+            }
+            .content {
+                padding: 20px;
+            }
+            table {
+                display: block;
+                overflow-x: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>📅 Day1：AI基础概念+数学基础词汇</h1>
+            <p>总词汇量：492个 | 适用阶段：AI入门学习</p>
+            <p>生成时间：2026-04-14 | 生成者：小杨</p>
+        </div>
+        <div class="content">
+            <div class="section">
+                <h2>▌一、AI通用基础词汇（215个）</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>单词/词组</th>
+                            <th>词性</th>
+                            <th>AI领域释义</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>artificial intelligence</td><td>n.</td><td>人工智能（简称AI，整个领域统称）</td></tr>
+                        <tr><td>machine learning</td><td>n.</td><td>机器学习（AI核心分支）</td></tr>
+                        <tr><td>deep learning</td><td>n.</td><td>深度学习（机器学习的子分支）</td></tr>
+                        <tr><td>algorithm</td><td>n.</td><td>算法</td></tr>
+                        <tr><td>model</td><td>n.</td><td>模型</td></tr>
+                        <tr><td>data</td><td>n.</td><td>数据</td></tr>
+                        <tr><td>dataset</td><td>n.</td><td>数据集</td></tr>
+                        <tr><td>train</td><td>v.</td><td>训练（模型）</td></tr>
+                        <tr><td>test</td><td>v./n.</td><td>测试（模型/数据集）</td></tr>
+                        <tr><td>validate</td><td>v.</td><td>验证（模型效果）</td></tr>
+                        <tr><td>inference</td><td>n.</td><td>推理（模型运行输出结果的过程）</td></tr>
+                        <tr><td>accuracy</td><td>n.</td><td>准确率</td></tr>
+                        <tr><td>precision</td><td>n.</td><td>精确率</td></tr>
+                        <tr><td>recall</td><td>n.</td><td>召回率</td></tr>
+                        <tr><td>prediction</td><td>n.</td><td>预测（模型输出的结果）</td></tr>
+                        <tr><td>feature</td><td>n.</td><td>特征（数据的属性）</td></tr>
+                        <tr><td>label</td><td>n.</td><td>标签（监督学习中数据的标准答案）</td></tr>
+                        <tr><td>supervised learning</td><td>n.</td><td>监督学习</td></tr>
+                        <tr><td>unsupervised learning</td><td>n.</td><td>无监督学习</td></tr>
+                        <tr><td>reinforcement learning</td><td>n.</td><td>强化学习</td></tr>
+                        <tr><td>semi-supervised learning</td><td>n.</td><td>半监督学习</td></tr>
+                        <tr><td>self-supervised learning</td><td>n.</td><td>自监督学习</td></tr>
+                        <tr><td>transfer learning</td><td>n.</td><td>迁移学习</td></tr>
+                        <tr><td>few-shot learning</td><td>n.</td><td>小样本学习</td></tr>
+                        <tr><td>zero-shot learning</td><td>n.</td><td>零样本学习</td></tr>
+                        <tr><td>one-shot learning</td><td>n.</td><td>单样本学习</td></tr>
+                        <tr><td>online learning</td><td>n.</td><td>在线学习</td></tr>
+                        <tr><td>offline learning</td><td>n.</td><td>离线学习</td></tr>
+                        <tr><td>batch learning</td><td>n.</td><td>批量学习</td></tr>
+                        <tr><td>incremental learning</td><td>n.</td><td>增量学习</td></tr>
+                        <tr><td>lifelong learning</td><td>n.</td><td>终身学习</td></tr>
+                        <tr><td>meta learning</td><td>n.</td><td>元学习（学会如何学习）</td></tr>
+                        <tr><td>agent</td><td>n.</td><td>智能体（强化学习中执行动作的主体）</td></tr>
+                        <tr><td>environment</td><td>n.</td><td>环境（强化学习中智能体所处的外部环境）</td></tr>
+                        <tr><td>action</td><td>n.</td><td>动作（强化学习中智能体做出的行为）</td></tr>
+                        <tr><td>reward</td><td>n.</td><td>奖励（强化学习中环境给智能体的反馈）</td></tr>
+                        <tr><td>state</td><td>n.</td><td>状态（强化学习中环境当前的情况）</td></tr>
+                        <tr><td>policy</td><td>n.</td><td>策略（强化学习中智能体选择动作的规则）</td></tr>
+                        <tr><td>value function</td><td>n.</td><td>价值函数（强化学习中衡量状态/动作价值的函数）</td></tr>
+                        <tr><td>Q-learning</td><td>n.</td><td>经典的强化学习算法</td></tr>
+                        <tr><td>overfitting</td><td>n.</td><td>过拟合（模型在训练集表现好，测试集表现差）</td></tr>
+                        <tr><td>underfitting</td><td>n.</td><td>欠拟合（模型在训练集和测试集表现都差）</td></tr>
+                        <tr><td>generalization</td><td>n.</td><td>泛化能力（模型在未见过的数据上的表现能力）</td></tr>
+                        <tr><td>regularization</td><td>n.</td><td>正则化（防止过拟合的技术）</td></tr>
+                        <tr><td>dropout</td><td>n.</td><td>随机失活（深度学习中常用的正则化方法）</td></tr>
+                        <tr><td>batch normalization</td><td>n.</td><td>批量归一化（加速模型训练的技术）</td></tr>
+                        <tr><td>layer normalization</td><td>n.</td><td>层归一化</td></tr>
+                        <tr><td>weight decay</td><td>n.</td><td>权重衰减（正则化方法的一种）</td></tr>
+                        <tr><td>early stopping</td><td>n.</td><td>早停（训练过程中提前停止防止过拟合）</td></tr>
+                        <tr><td>epoch</td><td>n.</td><td>轮次（模型把整个训练集过一遍的次数）</td></tr>
+                        <tr><td>batch size</td><td>n.</td><td>批量大小（每次训练输入的样本数量）</td></tr>
+                        <tr><td>iteration</td><td>n.</td><td>迭代（一次参数更新的过程）</td></tr>
+                        <tr><td>learning rate</td><td>n.</td><td>学习率（参数更新的步长，非常重要的超参数）</td></tr>
+                        <tr><td>hyperparameter</td><td>n.</td><td>超参数（训练前人工设置的参数，不是模型学习得到的）</td></tr>
+                        <tr><td>parameter</td><td>n.</td><td>参数（模型学习得到的权重、偏置等）</td></tr>
+                        <tr><td>weight</td><td>n.</td><td>权重</td></tr>
+                        <tr><td>bias</td><td>n.</td><td>偏置</td></tr>
+                        <tr><td>gradient</td><td>n.</td><td>梯度</td></tr>
+                        <tr><td>gradient descent</td><td>n.</td><td>梯度下降（最常用的模型优化算法）</td></tr>
+                        <tr><td>stochastic gradient descent</td><td>n.</td><td>随机梯度下降（SGD）</td></tr>
+                        <tr><td>mini-batch gradient descent</td><td>n.</td><td>小批量梯度下降</td></tr>
+                        <tr><td>momentum</td><td>n.</td><td>动量（优化算法的加速技术）</td></tr>
+                        <tr><td>Adam</td><td>n.</td><td>最常用的自适应学习率优化算法</td></tr>
+                        <tr><td>Adagrad</td><td>n.</td><td>自适应学习率优化算法的一种</td></tr>
+                        <tr><td>RMSprop</td><td>n.</td><td>自适应学习率优化算法的一种</td></tr>
+                        <tr><td>optimizer</td><td>n.</td><td>优化器（执行参数更新的算法）</td></tr>
+                        <tr><td>loss function</td><td>n.</td><td>损失函数（衡量模型预测结果和真实值差距的函数）</td></tr>
+                        <tr><td>cost function</td><td>n.</td><td>代价函数（整个数据集上的平均损失）</td></tr>
+                        <tr><td>objective function</td><td>n.</td><td>目标函数（模型优化的目标）</td></tr>
+                        <tr><td>cross entropy</td><td>n.</td><td>交叉熵（分类任务最常用的损失函数）</td></tr>
+                        <tr><td>mean squared error</td><td>n.</td><td>均方误差（MSE，回归任务最常用的损失函数）</td></tr>
+                        <tr><td>mean absolute error</td><td>n.</td><td>平均绝对误差（MAE）</td></tr>
+                        <tr><td>activation function</td><td>n.</td><td>激活函数（神经网络中引入非线性的函数）</td></tr>
+                        <tr><td>ReLU</td><td>n.</td><td>线性整流单元（最常用的激活函数）</td></tr>
+                        <tr><td>sigmoid</td><td>n.</td><td>S型激活函数，常用于二分类输出层</td></tr>
+                        <tr><td>tanh</td><td>n.</td><td>双曲正切激活函数</td></tr>
+                        <tr><td>softmax</td><td>n.</td><td>多分类输出层常用的激活函数，输出概率分布</td></tr>
+                        <tr><td>leaky ReLU</td><td>n.</td><td>带泄露的ReLU激活函数</td></tr>
+                        <tr><td>GELU</td><td>n.</td><td>高斯误差线性单元，大模型常用的激活函数</td></tr>
+                        <tr><td>Swish</td><td>n.</td><td>Swish激活函数</td></tr>
+                        <tr><td>neural network</td><td>n.</td><td>神经网络</td></tr>
+                        <tr><td>artificial neural network</td><td>n.</td><td>人工神经网络（ANN）</td></tr>
+                        <tr><td>deep neural network</td><td>n.</td><td>深度神经网络（DNN）</td></tr>
+                        <tr><td>layer</td><td>n.</td><td>层（神经网络的组成部分）</td></tr>
+                        <tr><td>input layer</td><td>n.</td><td>输入层</td></tr>
+                        <tr><td>hidden layer</td><td>n.</td><td>隐藏层</td></tr>
+                        <tr><td>output layer</td><td>n.</td><td>输出层</td></tr>
+                        <tr><td>dense layer</td><td>n.</td><td>全连接层</td></tr>
+                        <tr><td>fully connected layer</td><td>n.</td><td>全连接层</td></tr>
+                        <tr><td>convolutional layer</td><td>n.</td><td>卷积层</td></tr>
+                        <tr><td>pooling layer</td><td>n.</td><td>池化层</td></tr>
+                        <tr><td>recurrent layer</td><td>n.</td><td>循环层</td></tr>
+                        <tr><td>attention layer</td><td>n.</td><td>注意力层</td></tr>
+                        <tr><td>feed forward</td><td>n.</td><td>前向传播（输入从输入层传到输出层的过程）</td></tr>
+                        <tr><td>back propagation</td><td>n.</td><td>反向传播（根据损失更新参数的过程，神经网络训练的核心）</td></tr>
+                        <tr><td>chain rule</td><td>n.</td><td>链式法则（反向传播的数学基础）</td></tr>
+                        <tr><td>vanishing gradient</td><td>n.</td><td>梯度消失（训练深度网络时常见的问题，梯度变得太小无法更新参数）</td></tr>
+                        <tr><td>exploding gradient</td><td>n.</td><td>梯度爆炸（梯度变得太大，参数更新步长太大导致训练不稳定）</td></tr>
+                        <tr><td>checkpoint</td><td>n.</td><td>检查点（训练过程中保存的模型快照，防止训练中断丢失成果）</td></tr>
+                        <tr><td>fine-tune</td><td>v.</td><td>微调（在预训练模型的基础上用小数据继续训练）</td></tr>
+                        <tr><td>pre-trained model</td><td>n.</td><td>预训练模型（已经在大数据集上训练好的模型，可以直接用或者微调）</td></tr>
+                        <tr><td>embedding</td><td>n.</td><td>嵌入（把离散的符号转换成连续的向量表示，比如词嵌入）</td></tr>
+                        <tr><td>representation</td><td>n.</td><td>表示（数据的向量表示形式）</td></tr>
+                        <tr><td>feature engineering</td><td>n.</td><td>特征工程（人工设计特征的过程，传统机器学习中非常重要）</td></tr>
+                        <tr><td>feature extraction</td><td>n.</td><td>特征提取</td></tr>
+                        <tr><td>feature selection</td><td>n.</td><td>特征选择</td></tr>
+                        <tr><td>data preprocessing</td><td>n.</td><td>数据预处理</td></tr>
+                        <tr><td>data cleaning</td><td>n.</td><td>数据清洗</td></tr>
+                        <tr><td>data augmentation</td><td>n.</td><td>数据增强（扩充数据集的技术，提升模型泛化能力）</td></tr>
+                        <tr><td>normalization</td><td>n.</td><td>归一化（把数据缩放到特定范围）</td></tr>
+                        <tr><td>standardization</td><td>n.</td><td>标准化（把数据转换成均值为0，方差为1的分布）</td></tr>
+                        <tr><td>scaling</td><td>n.</td><td>缩放</td></tr>
+                        <tr><td>encoding</td><td>n.</td><td>编码（把离散数据转换成数值形式）</td></tr>
+                        <tr><td>one-hot encoding</td><td>n.</td><td>独热编码</td></tr>
+                        <tr><td>label encoding</td><td>n.</td><td>标签编码</td></tr>
+                        <tr><td>train test split</td><td>n.</td><td>训练集测试集划分</td></tr>
+                        <tr><td>cross validation</td><td>n.</td><td>交叉验证</td></tr>
+                        <tr><td>k-fold cross validation</td><td>n.</td><td>K折交叉验证</td></tr>
+                        <tr><td>confusion matrix</td><td>n.</td><td>混淆矩阵（分类任务的评估工具）</td></tr>
+                        <tr><td>F1 score</td><td>n.</td><td>F1分数（精确率和召回率的调和平均）</td></tr>
+                        <tr><td>ROC curve</td><td>n.</td><td>ROC曲线（分类模型评估曲线）</td></tr>
+                        <tr><td>AUC</td><td>n.</td><td>ROC曲线下的面积，衡量分类模型的性能</td></tr>
+                        <tr><td>mean average precision</td><td>n.</td><td>平均精度均值（mAP）</td></tr>
+                        <tr><td>metric</td><td>n.</td><td>评估指标</td></tr>
+                        <tr><td>performance</td><td>n.</td><td>性能（模型的表现）</td></tr>
+                        <tr><td>benchmark</td><td>n.</td><td>基准测试（用来对比模型性能的标准测试集/任务）</td></tr>
+                        <tr><td>baseline</td><td>n.</td><td>基线（用来对比的最低标准模型/方法）</td></tr>
+                        <tr><td>state-of-the-art</td><td>adj.</td><td>最先进的（SOTA，某个任务当前最好的方法/模型）</td></tr>
+                        <tr><td>ablation study</td><td>n.</td><td>消融实验（验证某个模块/技术是否有效的实验方法）</td></tr>
+                        <tr><td>experiment</td><td>n.</td><td>实验</td></tr>
+                        <tr><td>result</td><td>n.</td><td>结果</td></tr>
+                        <tr><td>analysis</td><td>n.</td><td>分析</td></tr>
+                        <tr><td>conclusion</td><td>n.</td><td>结论</td></tr>
+                        <tr><td>paper</td><td>n.</td><td>论文</td></tr>
+                        <tr><td>conference</td><td>n.</td><td>会议（AI领域顶会比如NeurIPS、ICML、CVPR等）</td></tr>
+                        <tr><td>journal</td><td>n.</td><td>期刊</td></tr>
+                        <tr><td>arXiv</td><td>n.</td><td>常用的预印本平台，研究者会提前把未发表的论文放到上面</td></tr>
+                        <tr><td>open source</td><td>adj.</td><td>开源</td></tr>
+                        <tr><td>code</td><td>n.</td><td>代码</td></tr>
+                        <tr><td>implementation</td><td>n.</td><td>实现（算法的代码实现）</td></tr>
+                        <tr><td>reproduce</td><td>v.</td><td>复现（重复别人的实验得到相同的结果）</td></tr>
+                        <tr><td>reproducibility</td><td>n.</td><td>可复现性</td></tr>
+                        <tr><td>deployment</td><td>n.</td><td>部署（把训练好的模型放到生产环境中使用）</td></tr>
+                        <tr><td>inference speed</td><td>n.</td><td>推理速度</td></tr>
+                        <tr><td>latency</td><td>n.</td><td>延迟（模型推理一次的时间）</td></tr>
+                        <tr><td>throughput</td><td>n.</td><td>吞吐量（单位时间内能处理的请求数量）</td></tr>
+                        <tr><td>quantization</td><td>n.</td><td>量化（减小模型体积、加速推理的技术）</td></tr>
+                        <tr><td>pruning</td><td>n.</td><td>剪枝（删除模型中不重要的参数，减小模型体积）</td></tr>
+                        <tr><td>distillation</td><td>n.</td><td>蒸馏（用大模型训练小模型的技术）</td></tr>
+                        <tr><td>compression</td><td>n.</td><td>模型压缩</td></tr>
+                        <tr><td>edge device</td><td>n.</td><td>边缘设备（手机、摄像头等端侧设备）</td></tr>
+                        <tr><td>cloud</td><td>n.</td><td>云端</td></tr>
+                        <tr><td>GPU</td><td>n.</td><td>图形处理器，AI训练和推理常用的加速硬件</td></tr>
+                        <tr><td>CPU</td><td>n.</td><td>中央处理器</td></tr>
+                        <tr><td>TPU</td><td>n.</td><td>张量处理器，谷歌专门为AI训练设计的硬件</td></tr>
+                        <tr><td>NPU</td><td>n.</td><td>神经网络处理器</td></tr>
+                        <tr><td>CUDA</td><td>n.</td><td>英伟达推出的GPU并行计算平台</td></tr>
+                        <tr><td>PyTorch</td><td>n.</td><td>目前最常用的深度学习框架</td></tr>
+                        <tr><td>TensorFlow</td><td>n.</td><td>谷歌推出的深度学习框架</td></tr>
+                        <tr><td>Keras</td><td>n.</td><td>高层深度学习API</td></tr>
+                        <tr><td>JAX</td><td>n.</td><td>谷歌推出的高性能数值计算框架，多用于大模型训练</td></tr>
+                        <tr><td>scikit-learn</td><td>n.</td><td>最常用的传统机器学习Python库</td></tr>
+                        <tr><td>NumPy</td><td>n.</td><td>Python数值计算基础库</td></tr>
+                        <tr><td>Pandas</td><td>n.</td><td>Python数据处理库</td></tr>
+                        <tr><td>Matplotlib</td><td>n.</td><td>Python绘图库</td></tr>
+                        <tr><td>Seaborn</td><td>n.</td><td>Python统计绘图库</td></tr>
+                        <tr><td>Hugging Face</td><td>n.</td><td>最知名的大模型开源社区，提供Transformers等常用库</td></tr>
+                        <tr><td>Transformers</td><td>n.</td><td>Hugging Face推出的大模型开发库</td></tr>
+                        <tr><td>Dataset</td><td>n.</td><td>Hugging Face推出的数据集库</td></tr>
+                        <tr><td>Diffusers</td><td>n.</td><td>Hugging Face推出的扩散模型开发库</td></tr>
+                        <tr><td>pipeline</td><td>n.</td><td>流水线（把多个步骤组合起来的流程）</td></tr>
+                        <tr><td>workflow</td><td>n.</td><td>工作流</td></tr>
+                        <tr><td>version control</td><td>n.</td><td>版本控制</td></tr>
+                        <tr><td>Git</td><td>n.</td><td>最常用的版本控制工具</td></tr>
+                        <tr><td>GitHub</td><td>n.</td><td>最大的代码托管平台</td></tr>
+                        <tr><td>repository</td><td>n.</td><td>代码仓库</td></tr>
+                        <tr><td>commit</td><td>v./n.</td><td>提交（代码版本的一次更新）</td></tr>
+                        <tr><td>branch</td><td>n.</td><td>分支（代码的不同开发版本）</td></tr>
+                        <tr><td>merge</td><td>v.</td><td>合并（把不同分支的代码合并起来）</td></tr>
+                        <tr><td>pull request</td><td>n.</td><td>拉取请求（PR，代码合并的请求）</td></tr>
+                        <tr><td>issue</td><td>n.</td><td>问题（代码仓库中提交的bug、需求等）</td></tr>
+                        <tr><td>release</td><td>n.</td><td>发布（软件的正式版本发布）</td></tr>
+                        <tr><td>documentation</td><td>n.</td><td>文档</td></tr>
+                        <tr><td>tutorial</td><td>n.</td><td>教程</td></tr>
+                        <tr><td>demo</td><td>n.</td><td>演示（模型/软件的功能演示）</td></tr>
+                        <tr><td>use case</td><td>n.</td><td>用例（实际应用场景）</td></tr>
+                        <tr><td>application</td><td>n.</td><td>应用</td></tr>
+                        <tr><td>use scenario</td><td>n.</td><td>使用场景</td></tr>
+                        <tr><td>business value</td><td>n.</td><td>商业价值</td></tr>
+                        <tr><td>ROI</td><td>n.</td><td>投资回报率</td></tr>
+                        <tr><td>bias</td><td>n.</td><td>偏见（模型输出的不公平性）</td></tr>
+                        <tr><td>fairness</td><td>n.</td><td>公平性</td></tr>
+                        <tr><td>ethics</td><td>n.</td><td>伦理（AI伦理）</td></tr>
+                        <tr><td>safety</td><td>n.</td><td>安全（AI安全）</td></tr>
+                        <tr><td>alignment</td><td>n.</td><td>对齐（AI对齐，让AI的目标和人类价值观保持一致）</td></tr>
+                        <tr><td>hallucination</td><td>n.</td><td>幻觉（大模型生成虚假信息的问题）</td></tr>
+                        <tr><td>toxicity</td><td>n.</td><td>毒性（AI生成有害内容的程度）</td></tr>
+                        <tr><td>privacy</td><td>n.</td><td>隐私</td></tr>
+                        <tr><td>data privacy</td><td>n.</td><td>数据隐私</td></tr>
+                        <tr><td>GDPR</td><td>n.</td><td>通用数据保护条例，欧盟的隐私法规</td></tr>
+                        <tr><td>copyright</td><td>n.</td><td>版权</td></tr>
+                        <tr><td>intellectual property</td><td>n.</td><td>知识产权</td></tr>
+                        <tr><td>license</td><td>n.</td><td>开源协议</td></tr>
+                        <tr><td>MIT license</td><td>n.</td><td>最宽松的开源协议之一</td></tr>
+                        <tr><td>Apache license</td><td>n.</td><td>常用的开源协议</td></tr>
+                        <tr><td>GPL license</td><td>n.</td><td>传染性开源协议</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="section">
+                <h2>▌二、AI数学基础词汇（277个）</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>单词/词组</th>
+                            <th>词性</th>
+                            <th>AI领域释义</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>linear algebra</td><td>n.</td><td>线性代数</td></tr>
+                        <tr><td>matrix</td><td>n.</td><td>矩阵</td></tr>
+                        <tr><td>vector</td><td>n.</td><td>向量</td></tr>
+                        <tr><td>tensor</td><td>n.</td><td>张量（深度学习中数据的基本存储形式）</td></tr>
+                        <tr><td>scalar</td><td>n.</td><td>标量（单个数值）</td></tr>
+                        <tr><td>dimension</td><td>n.</td><td>维度</td></tr>
+                        <tr><td>shape</td><td>n.</td><td>形状（张量的各个维度大小）</td></tr>
+                        <tr><td>rank</td><td>n.</td><td>秩（矩阵的秩，张量的阶数）</td></tr>
+                        <tr><td>transpose</td><td>v./n.</td><td>转置（矩阵/张量的转置操作）</td></tr>
+                        <tr><td>inverse</td><td>n.</td><td>逆矩阵</td></tr>
+                        <tr><td>pseudoinverse</td><td>n.</td><td>伪逆矩阵</td></tr>
+                        <tr><td>determinant</td><td>n.</td><td>行列式</td></tr>
+                        <tr><td>trace</td><td>n.</td><td>迹（矩阵对角线元素之和）</td></tr>
+                        <tr><td>dot product

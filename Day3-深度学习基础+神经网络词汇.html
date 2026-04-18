@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day3 深度学习基础+神经网络词汇 | 共497个</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Microsoft YaHei', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: #fff;
+            border-radius: 15px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            overflow: hidden;
+        }
+        .header {
+            background: linear-gradient(135deg, #38f9d7 0%, #4facfe 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+        .header h1 {
+            font-size: 2.2rem;
+            margin-bottom: 10px;
+        }
+        .header p {
+            font-size: 1.1rem;
+            opacity: 0.95;
+        }
+        .content {
+            padding: 30px;
+        }
+        .section {
+            margin-bottom: 30px;
+        }
+        .section h2 {
+            color: #43e97b;
+            font-size: 1.6rem;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #43e97b;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+            background: white;
+        }
+        th, td {
+            padding: 10px 12px;
+            text-align: left;
+            border: 1px solid #e0e0e0;
+        }
+        th {
+            background: #43e97b;
+            color: white;
+            font-weight: bold;
+        }
+        tr:nth-child(even) {
+            background: #f8f9fa;
+        }
+        tr:hover {
+            background: #f0fff0;
+        }
+        .footer {
+            text-align: center;
+            padding: 20px;
+            background: #f8f9fa;
+            color: #666;
+            font-size: 0.9rem;
+        }
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 1.6rem;
+            }
+            .content {
+                padding: 20px;
+            }
+            table {
+                display: block;
+                overflow-x: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>📅 Day3：深度学习基础+神经网络词汇</h1>
+            <p>总词汇量：497个 | 适用阶段：深度学习入门学习</p>
+            <p>生成时间：2026-04-14 | 生成者：小杨</p>
+        </div>
+        <div class="content">
+            <div class="section">
+                <h2>▌一、深度神经网络基础词汇（242个）</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>单词/词组</th>
+                            <th>词性</th>
+                            <th>AI领域释义</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>artificial neural network</td><td>n.</td><td>人工神经网络（ANN），简称神经网络</td></tr>
+                        <tr><td>deep neural network</td><td>n.</td><td>深度神经网络（DNN），有多个隐藏层的神经网络</td></tr>
+                        <tr><td>perceptron</td><td>n.</td><td>感知机，最简单的神经网络，只有输入层和输出层</td></tr>
+                        <tr><td>multi-layer perceptron</td><td>n.</td><td>多层感知机（MLP），有至少一个隐藏层的全连接神经网络</td></tr>
+                        <tr><td>neuron</td><td>n.</td><td>神经元，神经网络的基本单元</td></tr>
+                        <tr><td>connection</td><td>n.</td><td>连接，神经元之间的连接，对应权重参数</td></tr>
+                        <tr><td>activation</td><td>n.</td><td>激活值，神经元的输出值</td></tr>
+                        <tr><td>activation function</td><td>n.</td><td>激活函数，给神经网络引入非线性的函数</td></tr>
+                        <tr><td>ReLU</td><td>n.</td><td>线性整流单元，最常用的激活函数，公式是max(0, x)</td></tr>
+                        <tr><td>leaky ReLU</td><td>n.</td><td>带泄露的ReLU，解决ReLU的神经元死亡问题，x<0时输出ax而不是0</td></tr>
+                        <tr><td>parametric ReLU</td><td>n.</td><td>参数化ReLU，a也是可学习的参数</td></tr>
+                        <tr><td>randomized ReLU</td><td>n.</td><td>随机ReLU，训练时a是随机的，推理时固定</td></tr>
+                        <tr><td>GELU</td><td>n.</td><td>高斯误差线性单元，大模型最常用的激活函数，公式是x*Φ(x)，Φ是高斯分布的累积分布函数</td></tr>
+                        <tr><td>Swish</td><td>n.</td><td>Swish激活函数，公式是x*sigmoid(βx)，β是可学习参数</td></tr>
+                        <tr><td>SiLU</td><td>n.</td><td>Sigmoid线性单元，Swish的特殊情况β=1</td></tr>
+                        <tr><td>sigmoid</td><td>n.</td><td>S型激活函数，公式是1/(1+e^-x)，输出范围0到1，常用于二分类输出层</td></tr>
+                        <tr><td>tanh</td><td>n.</td><td>双曲正切激活函数，公式是(e^x - e^-x)/(e^x + e^-x)，输出范围-1到1</td></tr>
+                        <tr><td>softmax</td><td>n.</td><td>Softmax激活函数，把输出转换成概率分布，总和为1，常用于多分类输出层</td></tr>
+                        <tr><td>softplus</td><td>n.</td><td>Softplus激活函数，公式是ln(1+e^x)，是ReLU的平滑版本</td></tr>
+                        <tr><td>mish</td><td>n.</td><td>Mish激活函数，公式是x*tanh(softplus(x))，性能比ReLU好</td></tr>
+                        <tr><td>feedforward neural network</td><td>n.</td><td>前馈神经网络，信号从输入层向前传到输出层，没有反馈连接</td></tr>
+                        <tr><td>fully connected layer</td><td>n.</td><td>全连接层，每个神经元和上一层所有神经元都连接</td></tr>
+                        <tr><td>dense layer</td><td>n.</td><td>全连接层的另一种叫法</td></tr>
+                        <tr><td>linear layer</td><td>n.</td><td>线性层，不带激活函数的全连接层</td></tr>
+                        <tr><td>input layer</td><td>n.</td><td>输入层，接收原始数据</td></tr>
+                        <tr><td>hidden layer</td><td>n.</td><td>隐藏层，输入层和输出层之间的层，其值在训练数据中没有标注</td></tr>
+                        <tr><td>output layer</td><td>n.</td><td>输出层，输出最终的预测结果</td></tr>
+                        <tr><td>depth</td><td>n.</td><td>深度，神经网络的层数</td></tr>
+                        <tr><td>width</td><td>n.</td><td>宽度，神经网络每层的神经元数量</td></tr>
+                        <tr><td>receptive field</td><td>n.</td><td>感受野，神经网络中某个神经元能看到的输入区域大小</td></tr>
+                        <tr><td>forward propagation</td><td>n.</td><td>前向传播，输入数据从输入层经过各层计算得到输出的过程</td></tr>
+                        <tr><td>backward propagation</td><td>n.</td><td>反向传播，根据损失函数计算梯度，从输出层往回更新各层参数的过程</td></tr>
+                        <tr><td>chain rule</td><td>n.</td><td>链式法则，反向传播的数学基础，用来计算复合函数的导数</td></tr>
+                        <tr><td>gradient</td><td>n.</td><td>梯度，损失函数对参数的导数，指示参数更新的方向</td></tr>
+                        <tr><td>vanishing gradient</td><td>n.</td><td>梯度消失，梯度在反向传播过程中变得越来越小，导致浅层网络参数无法更新的问题</td></tr>
+                        <tr><td>exploding gradient</td><td>n.</td><td>梯度爆炸，梯度在反向传播过程中变得越来越大，导致参数更新步长太大，训练不稳定的问题</td></tr>
+                        <tr><td>gradient clipping</td><td>n.</td><td>梯度裁剪，把梯度的范数限制在某个阈值内，解决梯度爆炸问题</td></tr>
+                        <tr><td>batch normalization</td><td>n.</td><td>批量归一化（BN），在每一层的激活前对小批量数据做归一化，加速训练，缓解梯度消失</td></tr>
+                        <tr><td>layer normalization</td><td>n.</td><td>层归一化（LN），对每个样本的所有特征做归一化，适合NLP任务和循环神经网络</td></tr>
+                        <tr><td>instance normalization</td><td>n.</td><td>实例归一化（IN），对每个样本的每个通道单独做归一化，适合图像生成任务</td></tr>
+                        <tr><td>group normalization</td><td>n.</td><td>组归一化（GN），把通道分成组，在组内做归一化，适合小批量的情况</td></tr>
+                        <tr><td>weight normalization</td><td>n.</td><td>权重归一化，对权重参数做归一化，加速训练</td></tr>
+                        <tr><td>residual connection</td><td>n.</td><td>残差连接，把输入直接加到输出上，解决深度网络的退化问题，是ResNet的核心</td></tr>
+                        <tr><td>skip connection</td><td>n.</td><td>跳跃连接，残差连接的另一种叫法，也指U-Net中的编码器到解码器的连接</td></tr>
+                        <tr><td>highway network</td><td>n.</td><td> highway网络，引入门控机制的残差连接，允许信息直接通过</td></tr>
+                        <tr><td>gated mechanism</td><td>n.</td><td>门控机制，控制信息流动的机制，比如LSTM中的门</td></tr>
+                        <tr><td>dropout</td><td>n.</td><td>随机失活，训练时随机让一部分神经元失活，防止过拟合的正则化技术</td></tr>
+                        <tr><td>dropout rate</td><td>n.</td><td>失活率，dropout中神经元失活的概率</td></tr>
+                        <tr><td>dropconnect</td><td>n.</td><td>DropConnect，和dropout类似，但随机失活的是连接而不是神经元</td></tr>
+                        <tr><td>SpatialDropout</td><td>n.</td><td>空间dropout，随机失活整个特征图而不是单个神经元，适合卷积神经网络</td></tr>
+                        <tr><td>DropPath</td><td>n.</td><td>路径丢弃，随机丢弃整个残差路径，常用在大模型中</td></tr>
+                        <tr><td>stochastic depth</td><td>n.</td><td>随机深度，训练时随机丢弃一些层，本质和DropPath类似</td></tr>
+                        <tr><td>weight decay</td><td>n.</td><td>权重衰减，L2正则化，在损失函数中加入权重的L2范数，防止过拟合</td></tr>
+                        <tr><td>L1 regularization</td><td>n.</td><td>L1正则化，在损失函数中加入权重的L1范数，能让权重变得稀疏</td></tr>
+                        <tr><td>L2 regularization</td><td>n.</td><td>L2正则化，即权重衰减</td></tr>
+                        <tr><td>elastic net regularization</td><td>n.</td><td>弹性网络正则化，同时使用L1和L2正则化</td></tr>
+                        <tr><td>early stopping</td><td>n.</td><td>早停，当验证集损失不再下降时提前停止训练，防止过拟合</td></tr>
+                        <tr><td>data augmentation</td><td>n.</td><td>数据增强，通过对原始数据做变换来扩充数据集，防止过拟合，提升泛化能力</td></tr>
+                        <tr><td>training set</td><td>n.</td><td>训练集，用来训练模型的数据集</td></tr>
+                        <tr><td>validation set</td><td>n.</td><td>验证集，训练过程中用来评估模型性能，调整超参数的数据集</td></tr>
+                        <tr><td>test set</td><td>n.</td><td>测试集，训练完成后用来最终评估模型泛化能力的数据集，不能用来调整超参数</td></tr>
+                        <tr><td>batch</td><td>n.</td><td>批次，训练时一次输入的样本集合</td></tr>
+                        <tr><td>batch size</td><td>n.</td><td>批次大小，一个批次中的样本数量</td></tr>
+                        <tr><td>mini-batch</td><td>n.</td><td>小批次，比较小的批次大小，是现在最常用的训练方式</td></tr>
+                        <tr><td>epoch</td><td>n.</td><td>轮次，把整个训练集全部训练一遍的过程</td></tr>
+                        <tr><td>iteration</td><td>n.</td><td>迭代，一次参数更新的过程，即一个批次的前向传播加反向传播</td></tr>
+                        <tr><td>optimizer</td><td>n.</td><td>优化器，根据梯度更新参数的算法</td></tr>
+                        <tr><td>Stochastic Gradient Descent</td><td>n.</td><td>随机梯度下降（SGD），最基础的优化算法，每次用一个样本的梯度更新参数</td></tr>
+                        <tr><td>Mini-batch Gradient Descent</td><td>n.</td><td>小批量梯度下降，每次用一个批次的样本梯度更新参数，是最常用的SGD变体</td></tr>
+                        <tr><td>Momentum</td><td>n.</td><td>动量，在SGD中加入之前的梯度的指数移动平均，加速收敛，减少震荡</td></tr>
+                        <tr><td>Nesterov Accelerated Gradient</td><td>n.</td><td>NAG，涅斯捷罗夫加速梯度，动量的改进版，先更新参数再计算梯度</td></tr>
+                        <tr><td>AdaGrad</td><td>n.</td><td>自适应梯度算法，对每个参数自适应调整学习率，适合稀疏数据</td></tr>
+                        <tr><td>RMSProp</td><td>n.</td><td>均方根传播，AdaGrad的改进版，用梯度平方的指数移动平均来调整学习率</td></tr>
+                        <tr><td>Adadelta</td><td>n.</td><td>Adadelta，RMSProp的改进版，不需要手动设置学习率</td></tr>
+                        <tr><td>Adam</td><td>n.</td><td>自适应矩估计，最常用的优化算法，结合了Momentum和RMSProp的优点</td></tr>
+                        <tr><td>AdamW</td><td>n.</td><td>Adam的改进版，修正了权重衰减的实现，现在是大模型训练的标准优化器</td></tr>
+                        <tr><td>Adamax</td><td>n.</td><td>Adam的变体，基于无穷范数，更稳定</td></tr>
+                        <tr><td>Nadam</td><td>n.</td><td>结合了NAG和Adam的优化算法</td></tr>
+                        <tr><td>Lion</td><td>n.</td><td>最近提出的优化算法，比AdamW更省内存，性能更好，大模型训练中逐渐开始使用</td></tr>
+                        <tr><td>learning rate</td><td>n.</td><td>学习率，参数更新的步长，是最重要的超参数之一</td></tr>
+                        <tr><td>learning rate scheduling</td><td>n.</td><td>学习率调度，训练过程中动态调整学习率的策略</td></tr>
+                        <tr><td>step decay</td><td>n.</td><td>步长衰减，每隔几个epoch把学习率乘以一个衰减因子</td></tr>
+                        <tr><td>exponential decay</td><td>n.</td><td>指数衰减，学习率随训练步数指数下降</td></tr>
+                        <tr><td>cosine annealing</td><td>n.</td><td>余弦退火，学习率按照余弦函数的形式下降，效果很好，常用在大模型训练中</td></tr>
+                        <tr><td>cosine annealing with warm restarts</td><td>n.</td><td>带热重启的余弦退火，学习率下降到最低点后会重新升高，再下降，能跳出局部最优</td></tr>
+                        <tr><td>warmup</td><td>n.</td><td>学习率预热，训练刚开始的时候学习率从0慢慢升高到初始学习率，防止训练初期不稳定</td></tr>
+                        <tr><td>linear warmup</td><td>n.</td><td>线性预热，学习率线性升高</td></tr>
+                        <tr><td>constant warmup</td><td>n.</td><td>固定预热，前几步学习率固定</td></tr>
+                        <tr><td>learning rate finder</td><td>n.</td><td>学习率查找器，通过训练一小段时间观察不同学习率下的损失，找到最合适的初始学习率</td></tr>
+                        <tr><td>loss function</td><td>n.</td><td>损失函数，衡量模型预测结果和真实标签之间差距的函数</td></tr>
+                        <tr><td>cost function</td><td>n.</td><td>代价函数，整个训练集上的平均损失</td></tr>
+                        <tr><td>objective function</td><td>n.</td><td>目标函数，模型要最小化或者最大化的函数</td></tr>
+                        <tr><td>Mean Squared Error</td><td>n.</td><td>均方误差（MSE），回归任务最常用的损失函数，预测值和真实值差的平方的平均值</td></tr>
+                        <tr><td>Mean Absolute Error</td><td>n.</td><td>平均绝对误差（MAE），预测值和真实值差的绝对值的平均值，对异常点更鲁棒</td></tr>
+                        <tr><td>Huber loss</td><td>n.</td><td>Huber损失，结合了MSE和MAE的优点，误差小的时候是MSE，误差大的时候是MAE，对异常点鲁棒</td></tr>
+                        <tr><td>Cross Entropy loss</td><td>n.</td><td>交叉熵损失，分类任务最常用的损失函数</td></tr>
+                        <tr><td>Binary Cross Entropy</td><td>n.</td><td>二分类交叉熵（BCE），二分类任务的损失函数</td></tr>
+                        <tr><td>Categorical Cross Entropy</td><td>n.</td><td>多分类交叉熵，多分类任务的损失函数，标签是one-hot编码</td></tr>
+                        <tr><td>Sparse Categorical Cross Entropy</td><td>n.</td><td>稀疏多分类交叉熵，多分类任务的损失函数，标签是整数编码，不需要one-hot</td></tr>
+                        <tr><td>Focal loss</td><td>n.</td><td>焦点损失，交叉熵的改进版，降低易分类样本的权重，重点关注难分类样本，解决类别不平衡问题</td></tr>
+                        <tr><td>Dice loss</td><td>n.</td><td>Dice损失，基于Dice系数的损失函数，常用在图像分割任务中，对类别不平衡鲁棒</td></tr>
+                        <tr><td>IoU loss</td><td>n.</td><td>交并比损失，基于IoU的损失函数，常用在目标检测和分割任务中</td></tr>
+                        <tr><td>Contrastive loss</td><td>n.</td><td>对比损失，自监督学习中常用的损失函数，让相似样本的表示更近，不相似样本的表示更远</td></tr>
+                        <tr><td>Triplet loss</td><td>n.</td><td>三元组损失，对比损失的一种，由锚点、正样本、负样本组成，让锚点和正样本的距离小于锚点和负样本的距离</td></tr>
+                        <tr><td>Margin loss</td><td>n.</td><td>间隔损失，常用在人脸识别等任务中</td></tr>
+                        <tr><td>KL divergence</td><td>n.</td><td>KL散度，衡量两个概率分布之间的差异，常用在生成模型和知识蒸馏中</td></tr>
+                        <tr><td>JS divergence</td><td>n.</td><td>JS散度，KL散度的对称版本</td></tr>
+                        <tr><td>Wasserstein distance</td><td>n.</td><td>推土机距离（W距离），衡量两个概率分布之间的距离，比KL/JS散度更适合生成模型，是WGAN的基础</td></tr>
+                        <tr><td>perplexity</td><td>n.</td><td>困惑度，语言模型的评估指标，等于交叉熵的指数形式，越低越好</td></tr>
+                        <tr><td>metric</td><td>n.</td><td>评估指标，用来衡量模型性能的指标</td></tr>
+                        <tr><td>accuracy</td><td>n.</td><td>准确率，分类正确的样本占总样本的比例</td></tr>
+                        <tr><td>precision</td><td>n.</td><td>精确率，预测为正的样本中真实为正的比例</td></tr>
+                        <tr><td>recall</td><td>n.</td><td>召回率，真实为正的样本中被预测为正的比例</td></tr>
+                        <tr><td>F1 score</td><td>n.</td><td>F1分数，精确率和召回率的调和平均，综合衡量分类性能</td></tr>
+                        <tr><td>ROC curve</td><td>n.</td><td>ROC曲线，以假阳性率为x轴，真阳性率为y轴的曲线，衡量二分类模型的性能</td></tr>
+                        <tr><td>AUC</td><td>n.</td><td>ROC曲线下的面积，取值0到1，越大越好</td></tr>
+                        <tr><td>confusion matrix</td><td>n.</td><td>混淆矩阵，分类任务中真实标签和预测标签的对应矩阵</td></tr>
+                        <tr><td>true positive</td><td>n.</td><td>真正例（TP），真实为正，预测也为正的样本</td></tr>
+                        <tr><td>true negative</td><td>n.</td><td>真负例（TN），真实为负，预测也为负的样本</td></tr>
+                        <tr><td>false positive</td><td>n.</td><td>假正例（FP），真实为负，预测为正的样本，也叫误报</td></tr>
+                        <tr><td>false negative</td><td>n.</td><td>假负例（FN），真实为正，预测为负的样本，也叫漏报</td></tr>
+                        <tr><td>true positive rate</td><td>n.</td><td>真阳性率（TPR），即召回率</td></tr>
+                        <tr><td>false positive rate</td><td>n.</td><td>假阳性率（FPR），真实为负的样本中被预测为正的比例</td></tr>
+                        <tr><td>mean Average Precision</td><td>n.</td><td>平均精度均值（mAP），目标检测、信息检索等任务的常用指标</td></tr>
+                        <tr><td>Intersection over Union</td><td>n.</td><td>交并比（IoU），两个框的交集和并集的比值，目标检测和分割任务的常用指标</td></tr>
+                        <tr><td>Dice coefficient</td><td>n.</td><td>Dice系数，和IoU类似，衡量两个集合的相似性，常用在分割任务中</td></tr>
+                        <tr><td>Root Mean Squared Error</td><td>n.</td><td>均方根误差（RMSE），MSE的平方根，回归任务的常用指标</td></tr>
+                        <tr><td>Mean Absolute Percentage Error</td><td>n.</td><td>平均绝对百分比误差（MAPE），相对误差，回归任务的常用指标</td></tr>
+                        <tr><td>R-squared</td><td>n.</td><td>R²，决定系数，衡量回归模型拟合程度的指标，取值0到1，越大越好</td></tr>
+                        <tr><td>BLEU score</td><td>n.</td><td>BLEU分数，机器翻译任务的常用评估指标，衡量生成译文和参考译文的相似度</td></tr>
+                        <tr><td>ROUGE score</td><td>n.</td><td>ROUGE分数，文本摘要任务的常用评估指标</td></tr>
+                        <tr><td>perplexity</td><td>n.</td><td>困惑度，语言模型的常用评估指标，越低越好</td></tr>
+                        <tr><td>top-k accuracy</td><td>n.</td><td>top-k准确率，预测的前k个结果中包含正确标签的样本比例</td></tr>
+                        <tr><td>transfer learning</td><td>n.</td><td>迁移学习，把在一个任务上学到的知识迁移到另一个相关任务上，减少训练数据需求，提升性能</td></tr>
+                        <tr><td>pre-trained model</td><td>n.</td><td>预训练模型，在大规模数据集上预先训练好的模型，可以直接用或者微调</td></tr>
+                        <tr><td>fine-tuning</td><td>v./n.</td><td>微调，在预训练模型的基础上，用目标任务的小数据集继续训练，调整参数适配目标任务</td></tr>
+                        <tr><td>feature extraction</td><td>n.</td><td>特征提取，冻结预训练模型的参数，只用预训练模型提取特征，然后训练一个新的分类器</td></tr>
+                        <tr><td>domain adaptation</td><td>n.</td><td>领域自适应，解决源领域和目标领域数据分布不一致的问题，让模型在目标领域也能有好的性能</td></tr>
+                        <tr><td>domain shift</td><td>n.</td><td>领域偏移，源领域和目标领域数据分布不一致的问题</td></tr>
+                        <tr><td>few-shot learning</td><td>n.</td><td>小样本学习，只用很少的标注样本就能训练出好的模型</td></tr>
+                        <tr><td>one-shot learning</td><td>n.</td><td>单样本学习，只用一个标注样本就能训练模型</td></tr>
+                        <tr><td>zero-shot learning</td><td>n.</td><td>零样本学习，不需要目标任务的标注样本就能让模型完成任务</td></tr>
+                        <tr><td>prompt learning</td><td>n.</td><td>提示学习，大模型时代的新学习范式，通过设计合适的提示来引导大模型完成任务，不需要微调或者只需要很少的参数调整</td></tr>
+                        <tr><td>soft prompt</td><td>n.</td><td>软提示，可学习的提示向量，不需要修改模型参数，只需要调整提示向量</td></tr>
+                        <tr><td>hard prompt</td><td>n.</td><td>硬提示，自然语言形式的提示，比如给模型的问题描述</td></tr>
+                        <tr><td>prefix tuning</td><td>n.</td><td>前缀微调，只调整Transformer每层的前缀向量，其他参数冻结</td></tr>
+                        <tr><td>LoRA</td><td>n.</td><td>低秩适配，大模型高效微调技术，只调整注意力层的低秩矩阵，参数效率很高</td></tr>
+                        <tr><td>parameter efficient fine-tuning</td><td>n.</td><td>参数高效微调（PEFT），只调整很少的参数就能完成微调的技术，比如LoRA、前缀微调等</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="section">
+                <h2>▌二、常见神经网络架构词汇（255个）</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>单词/词组</th>
+                            <th>词性</th>
+                            <th>AI领域释义</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Convolutional Neural Network</td><td>n.</td><td>卷积神经网络（CNN），适合处理网格结构数据，比如图像、语音</td></tr>
+                        <tr><td>convolution</td><td>n.</td><td>卷积操作，CNN的核心操作，用卷积核在输入上滑动计算得到特征图</td></tr>
+                        <tr><td>convolutional kernel</td><td>n.</td><td>卷积核/滤波器，CNN的参数，用来提取特征</td></tr>
+                        <tr><td>filter</td><td>n.</td><td>滤波器，即卷积核</td></tr>
+                        <tr><td>kernel size</td><td>n.</td><td>卷积核大小，比如3x3、5x5</td></tr>
+                        <tr><td>stride</td><td>n.</td><td>步长，卷积核滑动的步长</td></tr>
+                        <tr><td>padding</td><td>n.</td><td>填充，在输入的边缘填充0，保持输出尺寸和输入一致</td></tr>
+                        <tr><td>same padding</td><td>n.</td><td>same填充，填充后输出尺寸等于输入尺寸除以步长向上取整</td></tr>
+                        <tr><td>valid padding</td><td>n.</td><td>valid填充，不填充，输出尺寸会缩小</td></tr>
+                        <tr><td>feature map</td><td>n.</td><td>特征图，卷积操作的输出，每个通道对应一个特征图</td></tr>
+                        <tr><td>channel</td><td>n.</td><td>通道，比如RGB图像有3个通道，特征图的通道数等于卷积核的数量</td></tr>
+                        <tr><td>depthwise convolution</td><td>n.</td><td>深度可分离卷积，对每个通道单独做卷积，然后用1x1卷积融合通道，计算量比普通卷积小很多</td></tr>
+                        <tr><td>pointwise convolution</td><td>n.</td><td>逐点卷积，即1x1卷积，用来融合通道信息，调整通道数</td></tr>
+                        <tr><td>dilated convolution</td><td>n.</td><td>空洞卷积/扩张卷积，卷积核的元素之间有间隔，在不增加计算量的情况下增大感受野，常用在分割任务中</td></tr

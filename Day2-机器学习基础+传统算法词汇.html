@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day2 机器学习基础+传统算法词汇 | 共503个</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Microsoft YaHei', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: #fff;
+            border-radius: 15px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            overflow: hidden;
+        }
+        .header {
+            background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+        .header h1 {
+            font-size: 2.2rem;
+            margin-bottom: 10px;
+        }
+        .header p {
+            font-size: 1.1rem;
+            opacity: 0.95;
+        }
+        .content {
+            padding: 30px;
+        }
+        .section {
+            margin-bottom: 30px;
+        }
+        .section h2 {
+            color: #f5576c;
+            font-size: 1.6rem;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #f5576c;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+            background: white;
+        }
+        th, td {
+            padding: 10px 12px;
+            text-align: left;
+            border: 1px solid #e0e0e0;
+        }
+        th {
+            background: #f5576c;
+            color: white;
+            font-weight: bold;
+        }
+        tr:nth-child(even) {
+            background: #f8f9fa;
+        }
+        tr:hover {
+            background: #fff0f0;
+        }
+        .footer {
+            text-align: center;
+            padding: 20px;
+            background: #f8f9fa;
+            color: #666;
+            font-size: 0.9rem;
+        }
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 1.6rem;
+            }
+            .content {
+                padding: 20px;
+            }
+            table {
+                display: block;
+                overflow-x: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>📅 Day2：机器学习基础+传统算法词汇</h1>
+            <p>总词汇量：503个 | 适用阶段：机器学习入门学习</p>
+            <p>生成时间：2026-04-14 | 生成者：小杨</p>
+        </div>
+        <div class="content">
+            <div class="section">
+                <h2>▌一、传统机器学习算法分类词汇（187个）</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>单词/词组</th>
+                            <th>词性</th>
+                            <th>AI领域释义</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>classification</td><td>n.</td><td>分类任务（预测离散标签的任务）</td></tr>
+                        <tr><td>regression</td><td>n.</td><td>回归任务（预测连续数值的任务）</td></tr>
+                        <tr><td>clustering</td><td>n.</td><td>聚类任务（无监督学习，把相似样本分组）</td></tr>
+                        <tr><td>dimensionality reduction</td><td>n.</td><td>降维任务（减少数据的特征维度）</td></tr>
+                        <tr><td>anomaly detection</td><td>n.</td><td>异常检测任务（识别和正常样本不同的异常点）</td></tr>
+                        <tr><td>recommendation system</td><td>n.</td><td>推荐系统</td></tr>
+                        <tr><td>time series forecasting</td><td>n.</td><td>时间序列预测</td></tr>
+                        <tr><td>supervised algorithm</td><td>n.</td><td>监督学习算法</td></tr>
+                        <tr><td>unsupervised algorithm</td><td>n.</td><td>无监督学习算法</td></tr>
+                        <tr><td>semi-supervised algorithm</td><td>n.</td><td>半监督学习算法</td></tr>
+                        <tr><td>linear regression</td><td>n.</td><td>线性回归（最基础的回归算法）</td></tr>
+                        <tr><td>logistic regression</td><td>n.</td><td>逻辑回归（最基础的二分类算法，虽然名字叫回归）</td></tr>
+                        <tr><td>polynomial regression</td><td>n.</td><td>多项式回归</td></tr>
+                        <tr><td>ridge regression</td><td>n.</td><td>岭回归（带L2正则化的线性回归）</td></tr>
+                        <tr><td>lasso regression</td><td>n.</td><td>Lasso回归（带L1正则化的线性回归，可以做特征选择）</td></tr>
+                        <tr><td>elastic net</td><td>n.</td><td>弹性网络（同时带L1和L2正则化的回归算法）</td></tr>
+                        <tr><td>support vector machine</td><td>n.</td><td>支持向量机（SVM，经典的分类/回归算法）</td></tr>
+                        <tr><td>kernel trick</td><td>n.</td><td>核技巧（SVM中用来处理非线性可分数据的技术）</td></tr>
+                        <tr><td>linear kernel</td><td>n.</td><td>线性核</td></tr>
+                        <tr><td>polynomial kernel</td><td>n.</td><td>多项式核</td></tr>
+                        <tr><td>RBF kernel</td><td>n.</td><td>径向基核函数，SVM最常用的核函数</td></tr>
+                        <tr><td>sigmoid kernel</td><td>n.</td><td>Sigmoid核</td></tr>
+                        <tr><td>margin</td><td>n.</td><td>间隔（SVM中两类样本之间的距离）</td></tr>
+                        <tr><td>hard margin</td><td>n.</td><td>硬间隔（SVM要求所有样本都分类正确）</td></tr>
+                        <tr><td>soft margin</td><td>n.</td><td>软间隔（SVM允许少量样本分类错误，提升泛化能力）</td></tr>
+                        <tr><td>support vector</td><td>n.</td><td>支持向量（SVM中决定分类边界的样本点）</td></tr>
+                        <tr><td>decision tree</td><td>n.</td><td>决策树（经典的分类/回归算法，可解释性强）</td></tr>
+                        <tr><td>root node</td><td>n.</td><td>根节点（决策树的最顶端节点）</td></tr>
+                        <tr><td>internal node</td><td>n.</td><td>内部节点（决策树中的中间节点，对应特征判断）</td></tr>
+                        <tr><td>leaf node</td><td>n.</td><td>叶节点（决策树的输出节点，对应预测结果）</td></tr>
+                        <tr><td>split</td><td>v./n.</td><td>分裂（决策树中把节点分成子节点的操作）</td></tr>
+                        <tr><td>prune</td><td>v.</td><td>剪枝（决策树中防止过拟合的技术，删除不重要的分支）</td></tr>
+                        <tr><td>information gain</td><td>n.</td><td>信息增益（ID3决策树的分裂指标）</td></tr>
+                        <tr><td>information gain ratio</td><td>n.</td><td>信息增益比（C4.5决策树的分裂指标）</td></tr>
+                        <tr><td>Gini impurity</td><td>n.</td><td>基尼不纯度（CART决策树的分裂指标）</td></tr>
+                        <tr><td>entropy</td><td>n.</td><td>熵（衡量数据混乱程度的指标）</td></tr>
+                        <tr><td>ID3</td><td>n.</td><td>经典的决策树算法</td></tr>
+                        <tr><td>C4.5</td><td>n.</td><td>改进版的决策树算法</td></tr>
+                        <tr><td>CART</td><td>n.</td><td>分类回归树，目前最常用的决策树实现</td></tr>
+                        <tr><td>ensemble learning</td><td>n.</td><td>集成学习（把多个弱模型组合成一个强模型的方法）</td></tr>
+                        <tr><td>weak learner</td><td>n.</td><td>弱学习器（性能略好于随机猜测的模型）</td></tr>
+                        <tr><td>strong learner</td><td>n.</td><td>强学习器（性能很好的模型）</td></tr>
+                        <tr><td>bagging</td><td>n.</td><td>并行集成方法，多个独立模型投票得到结果，代表是随机森林</td></tr>
+                        <tr><td>boosting</td><td>n.</td><td>串行集成方法，前一个模型重点关注分类错误的样本，代表是GBDT、XGBoost</td></tr>
+                        <tr><td>stacking</td><td>n.</td><td>堆叠集成方法，用多个模型的输出作为新特征训练元模型</td></tr>
+                        <tr><td>random forest</td><td>n.</td><td>随机森林，最常用的bagging集成算法，由多棵决策树组成</td></tr>
+                        <tr><td>extra trees</td><td>n.</td><td>极端随机树，比随机森林随机性更强的集成算法</td></tr>
+                        <tr><td>gradient boosting decision tree</td><td>n.</td><td>GBDT，梯度提升决策树，经典的boosting算法</td></tr>
+                        <tr><td>XGBoost</td><td>n.</td><td>极限梯度提升，GBDT的高性能实现，比赛常用</td></tr>
+                        <tr><td>LightGBM</td><td>n.</td><td>微软推出的轻量级GBDT实现，速度快性能好</td></tr>
+                        <tr><td>CatBoost</td><td>n.</td><td>Yandex推出的GBDT实现，自动处理类别特征</td></tr>
+                        <tr><td>AdaBoost</td><td>n.</td><td>自适应提升，经典的boosting算法</td></tr>
+                        <tr><td>voting classifier</td><td>n.</td><td>投票分类器，多个模型投票得到最终结果</td></tr>
+                        <tr><td>majority voting</td><td>n.</td><td>多数投票</td></tr>
+                        <tr><td>weighted voting</td><td>n.</td><td>加权投票</td></tr>
+                        <tr><td>blending</td><td>n.</td><td>混合集成方法，和stacking类似但更简单</td></tr>
+                        <tr><td>k-nearest neighbors</td><td>n.</td><td>K近邻算法（KNN），最简单的机器学习算法之一</td></tr>
+                        <tr><td>distance metric</td><td>n.</td><td>距离度量（KNN中衡量样本之间距离的方法）</td></tr>
+                        <tr><td>Euclidean distance</td><td>n.</td><td>欧氏距离，最常用的距离度量</td></tr>
+                        <tr><td>Manhattan distance</td><td>n.</td><td>曼哈顿距离，L1距离</td></tr>
+                        <tr><td>Cosine similarity</td><td>n.</td><td>余弦相似度，衡量向量之间的夹角</td></tr>
+                        <tr><td>Minkowski distance</td><td>n.</td><td>闵可夫斯基距离，欧氏距离和曼哈顿距离的泛化</td></tr>
+                        <tr><td>Chebyshev distance</td><td>n.</td><td>切比雪夫距离</td></tr>
+                        <tr><td>Jaccard similarity</td><td>n.</td><td>杰卡德相似度，衡量集合之间的相似性</td></tr>
+                        <tr><td>naive Bayes</td><td>n.</td><td>朴素贝叶斯，基于贝叶斯定理的分类算法，速度快</td></tr>
+                        <tr><td>Bayes theorem</td><td>n.</td><td>贝叶斯定理</td></tr>
+                        <tr><td>prior probability</td><td>n.</td><td>先验概率</td></tr>
+                        <tr><td>posterior probability</td><td>n.</td><td>后验概率</td></tr>
+                        <tr><td>conditional probability</td><td>n.</td><td>条件概率</td></tr>
+                        <tr><td>likelihood</td><td>n.</td><td>似然</td></tr>
+                        <tr><td>Gaussian naive Bayes</td><td>n.</td><td>高斯朴素贝叶斯，适合连续特征</td></tr>
+                        <tr><td>Multinomial naive Bayes</td><td>n.</td><td>多项式朴素贝叶斯，适合文本分类</td></tr>
+                        <tr><td>Bernoulli naive Bayes</td><td>n.</td><td>伯努利朴素贝叶斯，适合二值特征</td></tr>
+                        <tr><td>Bayesian network</td><td>n.</td><td>贝叶斯网络，概率图模型的一种</td></tr>
+                        <tr><td>hidden Markov model</td><td>n.</td><td>隐马尔可夫模型（HMM），经典的序列模型</td></tr>
+                        <tr><td>Markov chain</td><td>n.</td><td>马尔可夫链</td></tr>
+                        <tr><td>Markov property</td><td>n.</td><td>马尔可夫性（下一个状态只和当前状态有关，和历史无关）</td></tr>
+                        <tr><td>state transition matrix</td><td>n.</td><td>状态转移矩阵</td></tr>
+                        <tr><td>emission probability</td><td>n.</td><td>发射概率（HMM中状态生成观测值的概率）</td></tr>
+                        <tr><td>Viterbi algorithm</td><td>n.</td><td>维特比算法（HMM中求最优状态序列的算法）</td></tr>
+                        <tr><td>forward algorithm</td><td>n.</td><td>前向算法（HMM中求观测序列概率的算法）</td></tr>
+                        <tr><td>Baum-Welch algorithm</td><td>n.</td><td>鲍姆-韦尔奇算法（HMM的参数估计算法）</td></tr>
+                        <tr><td>conditional random field</td><td>n.</td><td>条件随机场（CRF），经典的序列标注模型</td></tr>
+                        <tr><td>graphical model</td><td>n.</td><td>图模型</td></tr>
+                        <tr><td>probabilistic graphical model</td><td>n.</td><td>概率图模型</td></tr>
+                        <tr><td>Bayesian inference</td><td>n.</td><td>贝叶斯推理</td></tr>
+                        <tr><td>MCMC</td><td>n.</td><td>马尔可夫链蒙特卡洛方法，贝叶斯推理常用的采样方法</td></tr>
+                        <tr><td>Monte Carlo method</td><td>n.</td><td>蒙特卡洛方法，通过随机采样来近似计算的方法</td></tr>
+                        <tr><td>sampling</td><td>n.</td><td>采样</td></tr>
+                        <tr><td>importance sampling</td><td>n.</td><td>重要性采样</td></tr>
+                        <tr><td>rejection sampling</td><td>n.</td><td>拒绝采样</td></tr>
+                        <tr><td>Gibbs sampling</td><td>n.</td><td>吉布斯采样</td></tr>
+                        <tr><td>clustering algorithm</td><td>n.</td><td>聚类算法</td></tr>
+                        <tr><td>K-means</td><td>n.</td><td>K均值聚类，最常用的聚类算法</td></tr>
+                        <tr><td>centroid</td><td>n.</td><td>质心（K-means中每个簇的中心）</td></tr>
+                        <tr><td>cluster</td><td>n.</td><td>簇（聚类得到的分组）</td></tr>
+                        <tr><td>elbow method</td><td>n.</td><td>手肘法（K-means中选择K值的方法）</td></tr>
+                        <tr><td>silhouette coefficient</td><td>n.</td><td>轮廓系数（衡量聚类效果的指标）</td></tr>
+                        <tr><td>K-means++</td><td>n.</td><td>K-means的改进版，优化初始质心的选择</td></tr>
+                        <tr><td>K-medoids</td><td>n.</td><td>K中心点聚类，和K-means类似但质心是真实样本点</td></tr>
+                        <tr><td>hierarchical clustering</td><td>n.</td><td>层次聚类</td></tr>
+                        <tr><td>agglomerative clustering</td><td>n.</td><td>凝聚式层次聚类（自底向上，从小簇合并成大簇）</td></tr>
+                        <tr><td>divisive clustering</td><td>n.</td><td>分裂式层次聚类（自顶向下，从大簇分成小簇）</td></tr>
+                        <tr><td>dendrogram</td><td>n.</td><td>树状图（层次聚类的可视化结果）</td></tr>
+                        <tr><td>linkage method</td><td>n.</td><td>链接方法（层次聚类中衡量簇之间距离的方法）</td></tr>
+                        <tr><td>single linkage</td><td>n.</td><td>单链接（两个簇中最近的样本之间的距离作为簇距离）</td></tr>
+                        <tr><td>complete linkage</td><td>n.</td><td>全链接（两个簇中最远的样本之间的距离作为簇距离）</td></tr>
+                        <tr><td>average linkage</td><td>n.</td><td>平均链接（两个簇中所有样本对之间的平均距离作为簇距离）</td></tr>
+                        <tr><td>Ward's method</td><td>n.</td><td>沃德法（层次聚类的一种链接方法，最小化簇内平方和）</td></tr>
+                        <tr><td>DBSCAN</td><td>n.</td><td>基于密度的聚类算法，不需要提前指定簇的数量，能识别任意形状的簇和异常点</td></tr>
+                        <tr><td>density reachable</td><td>adj.</td><td>密度可达（DBSCAN中的核心概念）</td></tr>
+                        <tr><td>density connected</td><td>adj.</td><td>密度相连（DBSCAN中的核心概念）</td></tr>
+                        <tr><td>core point</td><td>n.</td><td>核心点（DBSCAN中半径范围内样本数超过阈值的点）</td></tr>
+                        <tr><td>border point</td><td>n.</td><td>边界点（DBSCAN中不是核心点，但在核心点的半径范围内）</td></tr>
+                        <tr><td>noise point</td><td>n.</td><td>噪声点（DBSCAN中既不是核心点也不是边界点的点，即异常点）</td></tr>
+                        <tr><td>eps</td><td>n.</td><td>DBSCAN的半径参数</td></tr>
+                        <tr><td>min_samples</td><td>n.</td><td>DBSCAN的核心点样本数阈值参数</td></tr>
+                        <tr><td>OPTICS</td><td>n.</td><td>改进的基于密度的聚类算法，不需要提前指定eps参数</td></tr>
+                        <tr><td>spectral clustering</td><td>n.</td><td>谱聚类，基于图论的聚类算法，适合复杂形状的数据</td></tr>
+                        <tr><td>affinity matrix</td><td>n.</td><td>相似度矩阵（谱聚类中样本之间的相似度矩阵）</td></tr>
+                        <tr><td>Laplacian matrix</td><td>n.</td><td>拉普拉斯矩阵（谱聚类的核心）</td></tr>
+                        <tr><td>eigenvalue</td><td>n.</td><td>特征值</td></tr>
+                        <tr><td>eigenvector</td><td>n.</td><td>特征向量</td></tr>
+                        <tr><td>Gaussian mixture model</td><td>n.</td><td>高斯混合模型（GMM），基于概率分布的聚类算法，同时能做异常检测</td></tr>
+                        <tr><td>mixture model</td><td>n.</td><td>混合模型</td></tr>
+                        <tr><td>Gaussian distribution</td><td>n.</td><td>高斯分布（正态分布）</td></tr>
+                        <tr><td>expectation maximization</td><td>n.</td><td>期望最大化算法（EM算法，GMM的参数估计算法）</td></tr>
+                        <tr><td>E-step</td><td>n.</td><td>EM算法的E步（期望步）</td></tr>
+                        <tr><td>M-step</td><td>n.</td><td>EM算法的M步（最大化步）</td></tr>
+                        <tr><td>latent variable</td><td>n.</td><td>隐变量（观测不到的变量，GMM中的样本所属簇就是隐变量）</td></tr>
+                        <tr><td>dimensionality reduction algorithm</td><td>n.</td><td>降维算法</td></tr>
+                        <tr><td>principal component analysis</td><td>n.</td><td>主成分分析（PCA），最常用的线性降维算法</td></tr>
+                        <tr><td>principal component</td><td>n.</td><td>主成分（PCA得到的新特征）</td></tr>
+                        <tr><td>explained variance ratio</td><td>n.</td><td>解释方差比（PCA中每个主成分能解释的数据方差比例）</td></tr>
+                        <tr><td>singular value decomposition</td><td>n.</td><td>奇异值分解（SVD，PCA的数学基础）</td></tr>
+                        <tr><td>linear discriminant analysis</td><td>n.</td><td>线性判别分析（LDA），有监督的线性降维算法，同时能做分类</td></tr>
+                        <tr><td>t-distributed stochastic neighbor embedding</td><td>n.</td><td>t-SNE，最常用的非线性降维算法，用于可视化高维数据</td></tr>
+                        <tr><td>perplexity</td><td>n.</td><td>困惑度（t-SNE的重要参数，控制近邻的数量）</td></tr>
+                        <tr><td>UMAP</td><td>n.</td><td>均匀流形近似与投影，比t-SNE更快的非线性降维算法，保留全局结构更好</td></tr>
+                        <tr><td>ISOMAP</td><td>n.</td><td>等距映射，经典的流形学习算法</td></tr>
+                        <tr><td>locally linear embedding</td><td>n.</td><td>局部线性嵌入（LLE），经典的流形学习算法</td></tr>
+                        <tr><td>manifold learning</td><td>n.</td><td>流形学习，非线性降维的一类方法，假设高维数据分布在低维流形上</td></tr>
+                        <tr><td>autoencoder</td><td>n.</td><td>自编码器，基于神经网络的无监督降维/特征学习方法</td></tr>
+                        <tr><td>encoder</td><td>n.</td><td>编码器（自编码器中把高维数据编码成低维表示的部分）</td></tr>
+                        <tr><td>decoder</td><td>n.</td><td>解码器（自编码器中把低维表示重构回高维数据的部分）</td></tr>
+                        <tr><td>reconstruction error</td><td>n.</td><td>重构误差（自编码器的损失函数，衡量原始数据和重构数据之间的差距）</td></tr>
+                        <tr><td>variational autoencoder</td><td>n.</td><td>变分自编码器（VAE），生成模型的一种，同时能学习隐空间表示</td></tr>
+                        <tr><td>anomaly detection algorithm</td><td>n.</td><td>异常检测算法</td></tr>
+                        <tr><td>outlier</td><td>n.</td><td>异常点/离群点</td></tr>
+                        <tr><td>novelty detection</td><td>n.</td><td>新颖性检测（训练集都是正常样本，检测新的异常样本）</td></tr>
+                        <tr><td>Isolation Forest</td><td>n.</td><td>孤立森林，常用的异常检测算法，速度快适合高维数据</td></tr>
+                        <tr><td>One-Class SVM</td><td>n.</td><td>单类支持向量机，适合样本量小的异常检测任务</td></tr>
+                        <tr><td>Local Outlier Factor</td><td>n.</td><td>局部异常因子（LOF），基于密度的异常检测算法，衡量样本的局部孤立程度</td></tr>
+                        <tr><td>Elliptic Envelope</td><td>n.</td><td>椭圆包络，假设数据服从高斯分布的异常检测算法</td></tr>
+                        <tr><td>recommendation algorithm</td><td>n.</td><td>推荐算法</td></tr>
+                        <tr><td>collaborative filtering</td><td>n.</td><td>协同过滤，经典的推荐算法</td></tr>
+                        <tr><td>user-based collaborative filtering</td><td>n.</td><td>基于用户的协同过滤，给用户推荐和他兴趣相似的用户喜欢的物品</td></tr>
+                        <tr><td>item-based collaborative filtering</td><td>n.</td><td>基于物品的协同过滤，给用户推荐和他之前喜欢的物品相似的物品</td></tr>
+                        <tr><td>matrix factorization</td><td>n.</td><td>矩阵分解，协同过滤的常用方法，比如SVD分解</td></tr>
+                        <tr><td>latent factor model</td><td>n.</td><td>隐因子模型，基于矩阵分解的推荐模型</td></tr>
+                        <tr><td>content-based recommendation</td><td>n.</td><td>基于内容的推荐，根据物品的内容特征和用户的历史偏好推荐</td></tr>
+                        <tr><td>hybrid recommendation</td><td>n.</td><td>混合推荐，把多种推荐方法结合起来</td></tr>
+                        <tr><td>cold start</td><td>n.</td><td>冷启动（推荐系统中新用户/新物品没有历史数据的问题）</td></tr>
+                        <tr><td>sparsity</td><td>n.</td><td>稀疏性（推荐系统中用户-物品交互矩阵大部分都是空的问题）</td></tr>
+                        <tr><td>ranking</td><td>n.</td><td>排序（推荐系统中的核心任务，给用户推荐的物品排序）</td></tr>
+                        <tr><td>click through rate</td><td>n.</td><td>点击率（CTR，推荐系统/广告系统的核心指标）</td></tr>
+                        <tr><td>conversion rate</td><td>n.</td><td>转化率（CVR）</td></tr>
+                        <tr><td>personalization</td><td>n.</td><td>个性化</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="section">
+                <h2>▌二、机器学习数据处理和评估词汇（316个）</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>单词/词组</th>
+                            <th>词性</th>
+                            <th>AI领域释义</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>data type</td><td>n.</td><td>数据类型</td></tr>
+                        <tr><td>numerical feature</td><td>n.</td><td>数值特征（连续/离散的数值）</td></tr>
+                        <tr><td>categorical feature</td><td>n.</td><td>类别特征（离散的类别，比如性别、职业）</td></tr>
+                        <tr><td>ordinal feature</td><td>n.</td><td>有序特征（有顺序的类别特征，比如评分1-5星）</td></tr>
+                        <tr><td>nominal feature</td><td>n.</td><td>无序特征（没有顺序的类别特征，比如颜色、城市）</td></tr>
+                        <tr><td>text feature</td><td>n.</td><td>文本特征</td></tr>
+                        <tr><td>image feature</td><td>n.</td><td>图像特征</td></tr>
+                        <tr><td>time series feature</td><td>n.</td><td>时间序列特征</td></tr>
+                        <tr><td>missing value</td><td>n.</td><td>缺失值</td></tr>
+                        <tr><td>imputation</td><td>n.</td><td>填充（缺失值填充）</td></tr>
+                        <tr><td>mean imputation</td><td>n.</td><td>均值填充</td></tr>
+                        <tr><td>median imputation</td><td>n.</td><td>中位数填充</td></tr>
+                        <tr><td>mode imputation</td><td>n.</td><td>众数填充</td></tr>
+                        <tr><td>constant imputation</td><td>n.</td><td>常数填充</td></tr>
+                        <tr><td>KNN imputation</td><td>n.</td><td>K近邻填充</td></tr>
+                        <tr><td>MICE imputation</td><td>n.</td><td>多重插补填充</td></tr>
+                        <tr><td>outlier handling</td><td>n.</td><td>异常值处理</td></tr>
+                        <tr><td>IQR method</td><td>n.</td><td>四分位距法（检测异常值的常用方法）</td></tr>
+                        <tr><td>Z-score</td><td>n.</td><td>Z分数（标准化后的数值，大于3通常认为是异常值）</td></tr>
+                        <tr><td>winsorization</td><td>n.</td><td>缩尾处理（把极端值限制在某个百分位范围内）</td></tr>
+                        <tr><td>feature scaling</td><td>n.</td><td>特征缩放</td></tr>
+                        <tr><td>min-max scaling</td><td>

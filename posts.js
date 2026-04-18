@@ -1,6 +1,132 @@
 // 博客文章数据
 const posts = [
     {
+        id: 16,
+        title: "📝 AI专业词汇7天学习计划-Day7：AI前沿技术+伦理+行业应用",
+        date: "2026-04-18",
+        category: "英语",
+        tags: ["英语", "AI", "专业词汇", "学习计划", "前沿技术"],
+        summary: "AI专业词汇学习第7天，学习AI前沿技术、伦理规范、行业应用相关的专业英语词汇，掌握行业最新术语！",
+        content: `
+            <p>AI专业词汇7天学习计划第7天，覆盖AI前沿技术、伦理规范、行业应用领域的核心专业英语词汇，适合AI从业者、研究人员及学生学习。</p>
+            
+            <div style="background: linear-gradient(135deg, #84fab0 0%, #8fd3f4 100%); padding: 30px; border-radius: 15px; text-align: center; margin: 30px 0;">
+                <h3 style="color: white; margin-bottom: 20px;">📚 开始学习</h3>
+                <a href="Day7-AI前沿技术+伦理+行业应用词汇.html" style="display: inline-block; background: white; color: #84fab0; padding: 15px 40px; border-radius: 10px; text-decoration: none; font-weight: bold; font-size: 1.2em; box-shadow: 0 5px 20px rgba(132, 250, 176, 0.2);">
+                    🚀 打开学习资料
+                </a>
+            </div>
+        `
+    },
+    {
+        id: 15,
+        title: "📝 AI专业词汇7天学习计划-Day6：AI工程+部署+开发工具词汇",
+        date: "2026-04-18",
+        category: "英语",
+        tags: ["英语", "AI", "专业词汇", "学习计划", "AI工程"],
+        summary: "AI专业词汇学习第6天，学习AI工程化、部署、开发工具相关的专业英语词汇，掌握工程落地相关术语！",
+        content: `
+            <p>AI专业词汇7天学习计划第6天，覆盖AI工程化、部署、开发工具领域的核心专业英语词汇，适合AI开发、运维工程师学习。</p>
+            
+            <div style="background: linear-gradient(135deg, #84fab0 0%, #8fd3f4 100%); padding: 30px; border-radius: 15px; text-align: center; margin: 30px 0;">
+                <h3 style="color: white; margin-bottom: 20px;">📚 开始学习</h3>
+                <a href="Day6-AI工程+部署+开发工具词汇.html" style="display: inline-block; background: white; color: #84fab0; padding: 15px 40px; border-radius: 10px; text-decoration: none; font-weight: bold; font-size: 1.2em; box-shadow: 0 5px 20px rgba(132, 250, 176, 0.2);">
+                    🚀 打开学习资料
+                </a>
+            </div>
+        `
+    },
+    {
+        id: 14,
+        title: "📝 AI专业词汇7天学习计划-Day5：大模型+生成式AI+AIGC词汇",
+        date: "2026-04-18",
+        category: "英语",
+        tags: ["英语", "AI", "专业词汇", "学习计划", "大模型", "AIGC"],
+        summary: "AI专业词汇学习第5天，学习大模型、生成式AI、AIGC相关的专业英语词汇，掌握当前热点领域术语！",
+        content: `
+            <p>AI专业词汇7天学习计划第5天，覆盖大模型、生成式AI、AIGC领域的核心专业英语词汇，适合AI从业者、爱好者学习。</p>
+            
+            <div style="background: linear-gradient(135deg, #84fab0 0%, #8fd3f4 100%); padding: 30px; border-radius: 15px; text-align: center; margin: 30px 0;">
+                <h3 style="color: white; margin-bottom: 20px;">📚 开始学习</h3>
+                <a href="Day5-大模型+生成式AI+AIGC词汇.html" style="display: inline-block; background: white; color: #84fab0; padding: 15px 40px; border-radius: 10px; text-decoration: none; font-weight: bold; font-size: 1.2em; box-shadow: 0 5px 20px rgba(132, 250, 176, 0.2);">
+                    🚀 打开学习资料
+                </a>
+            </div>
+        `
+    },
+    {
+        id: 13,
+        title: "📝 AI专业词汇7天学习计划-Day4：自然语言处理+计算机视觉词汇",
+        date: "2026-04-18",
+        category: "英语",
+        tags: ["英语", "AI", "专业词汇", "学习计划", "NLP", "计算机视觉"],
+        summary: "AI专业词汇学习第4天，学习自然语言处理、计算机视觉相关的专业英语词汇，掌握两大核心方向术语！",
+        content: `
+            <p>AI专业词汇7天学习计划第4天，覆盖自然语言处理、计算机视觉领域的核心专业英语词汇，适合AI算法工程师、研究人员学习。</p>
+            
+            <div style="background: linear-gradient(135deg, #84fab0 0%, #8fd3f4 100%); padding: 30px; border-radius: 15px; text-align: center; margin: 30px 0;">
+                <h3 style="color: white; margin-bottom: 20px;">📚 开始学习</h3>
+                <a href="Day4-自然语言处理+计算机视觉词汇.html" style="display: inline-block; background: white; color: #84fab0; padding: 15px 40px; border-radius: 10px; text-decoration: none; font-weight: bold; font-size: 1.2em; box-shadow: 0 5px 20px rgba(132, 250, 176, 0.2);">
+                    🚀 打开学习资料
+                </a>
+            </div>
+        `
+    },
+    {
+        id: 12,
+        title: "📝 AI专业词汇7天学习计划-Day3：深度学习基础+神经网络词汇",
+        date: "2026-04-18",
+        category: "英语",
+        tags: ["英语", "AI", "专业词汇", "学习计划", "深度学习", "神经网络"],
+        summary: "AI专业词汇学习第3天，学习深度学习基础、神经网络相关的专业英语词汇，掌握核心技术术语！",
+        content: `
+            <p>AI专业词汇7天学习计划第3天，覆盖深度学习基础、神经网络领域的核心专业英语词汇，适合AI入门学习者、学生学习。</p>
+            
+            <div style="background: linear-gradient(135deg, #84fab0 0%, #8fd3f4 100%); padding: 30px; border-radius: 15px; text-align: center; margin: 30px 0;">
+                <h3 style="color: white; margin-bottom: 20px;">📚 开始学习</h3>
+                <a href="Day3-深度学习基础+神经网络词汇.html" style="display: inline-block; background: white; color: #84fab0; padding: 15px 40px; border-radius: 10px; text-decoration: none; font-weight: bold; font-size: 1.2em; box-shadow: 0 5px 20px rgba(132, 250, 176, 0.2);">
+                    🚀 打开学习资料
+                </a>
+            </div>
+        `
+    },
+    {
+        id: 11,
+        title: "📝 AI专业词汇7天学习计划-Day2：机器学习基础+传统算法词汇",
+        date: "2026-04-18",
+        category: "英语",
+        tags: ["英语", "AI", "专业词汇", "学习计划", "机器学习", "算法"],
+        summary: "AI专业词汇学习第2天，学习机器学习基础、传统算法相关的专业英语词汇，掌握算法领域核心术语！",
+        content: `
+            <p>AI专业词汇7天学习计划第2天，覆盖机器学习基础、传统算法领域的核心专业英语词汇，适合AI入门学习者、学生学习。</p>
+            
+            <div style="background: linear-gradient(135deg, #84fab0 0%, #8fd3f4 100%); padding: 30px; border-radius: 15px; text-align: center; margin: 30px 0;">
+                <h3 style="color: white; margin-bottom: 20px;">📚 开始学习</h3>
+                <a href="Day2-机器学习基础+传统算法词汇.html" style="display: inline-block; background: white; color: #84fab0; padding: 15px 40px; border-radius: 10px; text-decoration: none; font-weight: bold; font-size: 1.2em; box-shadow: 0 5px 20px rgba(132, 250, 176, 0.2);">
+                    🚀 打开学习资料
+                </a>
+            </div>
+        `
+    },
+    {
+        id: 10,
+        title: "📝 AI专业词汇7天学习计划-Day1：AI基础概念+数学基础词汇",
+        date: "2026-04-18",
+        category: "英语",
+        tags: ["英语", "AI", "专业词汇", "学习计划", "基础概念", "数学"],
+        summary: "AI专业词汇学习第1天，学习AI基础概念、数学基础相关的专业英语词汇，打好AI英语基础！",
+        content: `
+            <p>AI专业词汇7天学习计划第1天，覆盖AI基础概念、数学基础领域的核心专业英语词汇，适合AI入门初学者、学生学习。</p>
+            
+            <div style="background: linear-gradient(135deg, #84fab0 0%, #8fd3f4 100%); padding: 30px; border-radius: 15px; text-align: center; margin: 30px 0;">
+                <h3 style="color: white; margin-bottom: 20px;">📚 开始学习</h3>
+                <a href="Day1-AI基础概念+数学基础词汇.html" style="display: inline-block; background: white; color: #84fab0; padding: 15px 40px; border-radius: 10px; text-decoration: none; font-weight: bold; font-size: 1.2em; box-shadow: 0 5px 20px rgba(132, 250, 176, 0.2);">
+                    🚀 打开学习资料
+                </a>
+            </div>
+        `
+    },
+    {
         id: 5,
         title: "👶 新生儿高血糖诊疗方案",
         date: "2026-04-18",
