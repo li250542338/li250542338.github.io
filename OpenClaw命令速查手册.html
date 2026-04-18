@@ -1,0 +1,1043 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpenClaw 命令速查手册</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: "Microsoft YaHei", "PingFang SC", sans-serif;
+            line-height: 1.8;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 20px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            overflow: hidden;
+        }
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+        .header h1 {
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+        .header p {
+            opacity: 0.9;
+            font-size: 16px;
+        }
+        .nav {
+            background: #f8f9fa;
+            padding: 15px 40px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 1px solid #e9ecef;
+            overflow-x: auto;
+            white-space: nowrap;
+        }
+        .nav a {
+            color: #667eea;
+            text-decoration: none;
+            margin-right: 20px;
+            font-weight: 500;
+            transition: color 0.3s;
+            display: inline-block;
+        }
+        .nav a:hover {
+            color: #764ba2;
+        }
+        .content {
+            padding: 40px;
+        }
+        .section {
+            margin-bottom: 40px;
+        }
+        .section h2 {
+            color: #667eea;
+            font-size: 24px;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+        .section h3 {
+            color: #764ba2;
+            font-size: 20px;
+            margin: 20px 0 10px;
+        }
+        .command-card {
+            background: linear-gradient(135deg, #667eea10 0%, #764ba210 100%);
+            border: 1px solid #667eea30;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        .command-name {
+            font-family: "Consolas", "Monaco", monospace;
+            font-size: 18px;
+            font-weight: bold;
+            color: #667eea;
+            background: #667eea15;
+            padding: 8px 15px;
+            border-radius: 5px;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+        .command-desc {
+            color: #555;
+            margin-bottom: 15px;
+        }
+        .subcommands {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 10px;
+        }
+        .subcommand {
+            font-family: "Consolas", "Monaco", monospace;
+            color: #764ba2;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+        .subcommand-desc {
+            color: #666;
+            margin-left: 20px;
+            margin-bottom: 10px;
+        }
+        .info-box {
+            background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+            border-left: 5px solid #4ecdc4;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+        .warning-box {
+            background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+            border-left: 5px solid #ff6b6b;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+            background: white;
+        }
+        th, td {
+            border: 1px solid #dee2e6;
+            padding: 12px 15px;
+            text-align: left;
+        }
+        th {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            font-weight: 600;
+        }
+        tr:nth-child(even) {
+            background: #f8f9fa;
+        }
+        .code {
+            font-family: "Consolas", "Monaco", monospace;
+            background: #f4f4f4;
+            padding: 2px 8px;
+            border-radius: 4px;
+            color: #e83e8c;
+        }
+        .quick-start {
+            background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+            padding: 25px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+        }
+        .quick-start h3 {
+            color: #e67e22;
+            margin-top: 0;
+        }
+        .footer {
+            background: #495057;
+            color: white;
+            text-align: center;
+            padding: 30px;
+            margin-top: 40px;
+        }
+        @media (max-width: 768px) {
+            .content {
+                padding: 20px;
+            }
+            .header {
+                padding: 30px 20px;
+            }
+            .header h1 {
+                font-size: 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🐚 OpenClaw 命令速查手册</h1>
+            <p>清风整理 · 版本 1.0 · 适用于 OpenClaw 4.11</p>
+        </div>
+
+        <div class="nav">
+            <a href="#quickstart">🚀 快速入门</a>
+            <a href="#setup">🔧 安装配置</a>
+            <a href="#gateway">🏠 Gateway服务</a>
+            <a href="#agents">🤖 Agent管理</a>
+            <a href="#models">🧠 模型配置</a>
+            <a href="#channels">💬 聊天通道</a>
+            <a href="#skills">📚 技能管理</a>
+            <a href="#plugins">🔌 插件管理</a>
+            <a href="#memory">💾 记忆系统</a>
+            <a href="#cron">⏰ 定时任务</a>
+            <a href="#maintenance">🔨 系统维护</a>
+            <a href="#other">📋 其他命令</a>
+        </div>
+
+        <div class="content">
+            <div class="quick-start" id="quickstart">
+                <h3>🚀 快速入门 - 最常用的命令</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>命令</th>
+                            <th>作用</th>
+                            <th>使用场景</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><span class="code">openclaw status</span></td>
+                            <td>查看系统状态</td>
+                            <td>检查OpenClaw是否正常运行</td>
+                        </tr>
+                        <tr>
+                            <td><span class="code">openclaw doctor</span></td>
+                            <td>健康检查和修复</td>
+                            <td>遇到问题时诊断和修复</td>
+                        </tr>
+                        <tr>
+                            <td><span class="code">openclaw gateway start</span></td>
+                            <td>启动Gateway服务</td>
+                            <td>开机后启动服务</td>
+                        </tr>
+                        <tr>
+                            <td><span class="code">openclaw gateway stop</span></td>
+                            <td>停止Gateway服务</td>
+                            <td>需要重启服务时</td>
+                        </tr>
+                        <tr>
+                            <td><span class="code">openclaw gateway restart</span></td>
+                            <td>重启Gateway服务</td>
+                            <td>配置更改后应用</td>
+                        </tr>
+                        <tr>
+                            <td><span class="code">openclaw logs --follow</span></td>
+                            <td>实时查看日志</td>
+                            <td>调试问题时查看日志</td>
+                        </tr>
+                        <tr>
+                            <td><span class="code">openclaw dashboard</span></td>
+                            <td>打开Web控制面板</td>
+                            <td>通过浏览器管理</td>
+                        </tr>
+                        <tr>
+                            <td><span class="code">openclaw tui</span></td>
+                            <td>打开终端UI</td>
+                            <td>在终端中对话</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="section" id="setup">
+                <h2>🔧 安装配置相关命令</h2>
+
+                <div class="command-card">
+                    <div class="command-name">openclaw setup</div>
+                    <div class="command-desc">初始化配置和工作区</div>
+                    <div class="subcommands">
+                        <div class="subcommand">常用选项：</div>
+                        <div class="subcommand-desc">
+                            <span class="code">--workspace &lt;dir&gt;</span> - 指定工作区路径（默认 ~/.openclaw/workspace）<br>
+                            <span class="code">--wizard</span> - 运行向导式配置<br>
+                            <span class="code">--non-interactive</span> - 非交互式配置
+                        </div>
+                    </div>
+                </div>
+
+                <div class="command-card">
+                    <div class="command-name">openclaw onboard</div>
+                    <div class="command-desc">交互式初始化向导（Gateway、工作区、技能）</div>
+                    <div class="subcommands">
+                        <div class="subcommand">常用选项：</div>
+                        <div class="subcommand-desc">
+                            <span class="code">--reset</span> - 重置配置、凭证和会话<br>
+                            <span class="code">--mode &lt;local|remote&gt;</span> - 选择本地或远程模式
+                        </div>
+                    </div>
+                </div>
+
+                <div class="command-card">
+                    <div class="command-name">openclaw configure</div>
+                    <div class="command-desc">交互式配置向导（模型、通道、技能、Gateway）</div>
+                    <div class="subcommands">
+                        <div class="subcommand">常用选项：</div>
+                        <div class="subcommand-desc">
+                            <span class="code">--section &lt;section&gt;</span> - 只配置特定部分
+                        </div>
+                    </div>
+                </div>
+
+                <div class="command-card">
+                    <div class="command-name">openclaw config</div>
+                    <div class="command-desc">非交互式配置管理</div>
+                    <div class="subcommands">
+                        <div class="subcommand">config get &lt;path&gt;</div>
+                        <div class="subcommand-desc">读取配置值（使用点号路径，如 gateway.port）</div>
+                        
+                        <div class="subcommand">config set &lt;path&gt; &lt;value&gt;</div>
+                        <div class="subcommand-desc">设置配置值</div>
+                        
+                        <div class="subcommand">config unset &lt;path&gt;</div>
+                        <div class="subcommand-desc">删除配置值</div>
+                        
+                        <div class="subcommand">config file</div>
+                        <div class="subcommand-desc">显示配置文件路径</div>
+                        
+                        <div class="subcommand">config schema</div>
+                        <div class="subcommand-desc">显示配置JSON Schema</div>
+                        
+                        <div class="subcommand">config validate</div>
+                        <div class="subcommand-desc">验证配置是否有效</div>
+                    </div>
+                </div>
+
+                <div class="command-card">
+                    <div class="command-name">openclaw completion</div>
+                    <div class="command-desc">生成Shell自动补全脚本</div>
+                    <div class="subcommands">
+                        <div class="subcommand">常用选项：</div>
+                        <div class="subcommand-desc">
+                            <span class="code">--shell &lt;zsh|bash|powershell|fish&gt;</span> - 指定Shell类型<br>
+                            <span class="code">--install</span> - 安装到Shell配置文件
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section" id="gateway">
+                <h2>🏠 Gateway服务管理</h2>
+
+                <div class="warning-box">
+                    <strong>⚠️ Gateway是OpenClaw的核心服务！</strong><br>
+                    几乎所有功能都需要Gateway运行才能使用。
+                </div>
+
+                <div class="command-card">
+                    <div class="command-name">openclaw gateway</div>
+                    <div class="command-desc">管理Gateway服务（启动、停止、重启、状态检查）</div>
+                    <div class="subcommands">
+                        <div class="subcommand">gateway status</div>
+                        <div class="subcommand-desc">检查Gateway服务状态</div>
+                        
+                        <div class="subcommand">gateway start</div>
+                        <div class="subcommand-desc">启动Gateway服务</div>
+                        
+                        <div class="subcommand">gateway stop</div>
+                        <div class="subcommand-desc">停止Gateway服务</div>
+                        
+                        <div class="subcommand">gateway restart</div>
+                        <div class="subcommand-desc">重启Gateway服务（配置更改后使用）</div>
+                        
+                        <div class="subcommand">gateway install</div>
+                        <div class="subcommand-desc">安装Gateway为系统服务（开机自启）</div>
+                        
+                        <div class="subcommand">gateway uninstall</div>
+                        <div class="subcommand-desc">卸载Gateway系统服务</div>
+                    </div>
+                </div>
+
+                <div class="command-card">
+                    <div class="command-name">openclaw daemon</div>
+                    <div class="command-desc">Gateway服务的旧别名（功能同上）</div>
+                    <div class="subcommands">
+                        <div class="subcommand-desc">
+                            daemon status / daemon start / daemon stop / daemon restart / daemon install / daemon uninstall
+                        </div>
+                    </div>
+                </div>
+
+                <div class="command-card">
+                    <div class="command-name">openclaw logs</div>
+                    <div class="command-desc">查看Gateway日志</div>
+                    <div class="subcommands">
+                        <div class="subcommand">常用选项：</div>
+                        <div class="subcommand-desc">
+                            <span class="code">--follow</span> - 实时跟踪日志（类似 tail -f）<br>
+                            <span class="code">--limit &lt;n&gt;</span> - 只显示最后n行<br>
+                            <span class="code">--local-time</span> - 显示本地时间<br>
+                            <span class="code">--json</span> - JSON格式输出
+                        </div>
+                    </div>
+                </div>
+
+                <div class="command-card">
+                    <div class="command-name">openclaw dashboard</div>
+                    <div class="command-desc">打开Web控制面板</div>
+                    <div class="subcommands">
+                        <div class="subcommand-desc">在浏览器中打开OpenClaw的Web管理界面</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section" id="agents">
+                <h2>🤖 Agent管理</h2>
+
+                <div class="command-card">
+                    <div class="command-name">openclaw agent</div>
+                    <div class="command-desc">运行单次Agent对话</div>
+                    <div class="subcommands">
+                        <div class="subcommand">必需参数：</div>
+                        <div class="subcommand-desc">
+                            <span class="code">--message &lt;text&gt;</span> 或 <span class="code">-m &lt;text&gt;</span> - 发送的消息
+                        </div>
+                        <div class="subcommand">会话选择（必需一个）：</div>
+                        <div class="subcommand-desc">
+                            <span class="code">--to &lt;dest&gt;</span> - 目标会话<br>
+                            <span class="code">--session-id &lt;id&gt;</span> - 会话ID<br>
+                            <span class="code">--agent &lt;id&gt;</span> - Agent ID
+                        </div>
+                    </div>
+                </div>
+
+                <div class="command-card">
+                    <div class="command-name">openclaw agents</div>
+                    <div class="command-desc">管理独立Agent（工作区、认证、路由）</div>
+                    <div class="subcommands">
+                        <div class="subcommand">agents list</div>
+                        <div class="subcommand-desc">列出所有配置的Agent</div>
+                        
+                        <div class="subcommand">agents add [name]</div>
+                        <div class="subcommand-desc">添加新的独立Agent</div>
+                        
+                        <div class="subcommand">agents delete &lt;id&gt;</div>
+                        <div class="subcommand-desc">删除Agent及其工作区和状态</div>
+                        
+                        <div class="subcommand">agents bindings</div>
+                        <div class="subcommand-desc">列出路由绑定</div>
+                        
+                        <div class="subcommand">agents bind</div>
+                        <div class="subcommand-desc">添加Agent的路由绑定</div>
+                        
+                        <div class="subcommand">agents unbind</div>
+                        <div class="subcommand-desc">移除Agent的路由绑定</div>
+                    </div>
+                </div>
+
+                <div class="command-card">
+                    <div class="command-name">openclaw sessions</div>
+                    <div class="command-desc">管理对话会话</div>
+                    <div class="subcommands">
+                        <div class="subcommand">常用选项：</div>
+                        <div class="subcommand-desc">
+                            <span class="code">--active &lt;minutes&gt;</span> - 显示最近活跃的会话<br>
+                            <span class="code">--agent &lt;id&gt;</span> - 按Agent过滤<br>
+                            <span class="code">--all-agents</span> - 显示所有Agent的会话
+                        </div>
+                        <div class="subcommand">sessions cleanup</div>
+                        <div class="subcommand-desc">清理过期或孤立的会话</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section" id="models">
+                <h2>🧠 模型配置</h2>
+
+                <div class="command-card">
+                    <div class="command-name">openclaw models</div>
+                    <div class="command-desc">管理AI模型配置</div>
+                    <div class="subcommands">
+                        <div class="subcommand">models list</div>
+                        <div class="subcommand-desc">列出可用模型</div>
+                        
+                        <div class="subcommand">models status</div>
+                        <div class="subcommand-desc">查看模型状态和认证概况</div>
+                        
+                        <div class="subcommand">models set &lt;model&gt;</div>
+                        <div class="subcommand-desc">设置默认主模型</div>
+                        
+                        <div class="subcommand">models set-image &lt;model&gt;</div>
+                        <div class="subcommand-desc">设置默认图像模型</div>
+                        
+                        <div class="subcommand">models scan</div>
+                        <div class="subcommand-desc">扫描并设置模型（推荐首次使用）</div>
+                        
+                        <div class="subcommand">models auth add</div>
+                        <div class="subcommand-desc">添加模型认证</div>
+                    </div>
+                </div>
+
+                <div class="command-card">
+                    <div class="command-name">openclaw infer</div>
+                    <div class="command-desc">能力检查（别名：capability）</div>
+                    <div class="subcommands">
+                        <div class="subcommand">infer list</div>
+                        <div class="subcommand-desc">列出可用能力</div>
+                        
+                        <div class="subcommand">infer model run|list|inspect</div>
+                        <div class="subcommand-desc">模型相关操作</div>
+                        
+                        <div class="subcommand">infer image generate|edit|describe</div>
+                        <div class="subcommand-desc">图像生成和编辑</div>
+                        
+                        <div class="subcommand">infer audio transcribe</div>
+                        <div class="subcommand-desc">音频转录</div>
+                        
+                        <div class="subcommand">infer tts convert</div>
+                        <div class="subcommand-desc">文字转语音</div>
+                        
+                        <div class="subcommand">infer web search|fetch</div>
+                        <div class="subcommand-desc">网页搜索和获取</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section" id="channels">
+                <h2>💬 聊天通道管理</h2>
+
+                <div class="command-card">
+                    <div class="command-name">openclaw channels</div>
+                    <div class="command-desc">管理聊天通道（WhatsApp、Telegram、Discord等）</div>
+                    <div class="subcommands">
+                        <div class="subcommand">channels list</div>
+                        <div class="subcommand-desc">列出配置的通道和认证配置</div>
+                        
+                        <div class="subcommand">channels status</div>
+                        <div class="subcommand-desc">检查通道健康状态（加 --probe 进行实时探测）</div>
+                        
+                        <div class="subcommand">channels add</div>
+                        <div class="subcommand-desc">添加新通道（向导式或非交互式）</div>
+                        
+                        <div class="subcommand">channels remove</div>
+                        <div class="subcommand-desc">移除通道配置</div>
+                        
+                        <div class="subcommand">channels login</div>
+                        <div class="subcommand-desc">交互式登录（仅WhatsApp Web）</div>
+                        
+                        <div class="subcommand">channels logout</div>
+                        <div class="subcommand-desc">退出通道会话</div>
+                        
+                        <div class="subcommand">channels logs</div>
+                        <div class="subcommand-desc">查看通道日志</div>
+                    </div>
+                </div>
+
+                <div class="command-card">
+                    <div class="command-name">openclaw message</div>
+                    <div class="command-desc">统一发送消息和通道操作</div>
+                    <div class="subcommands">
+                        <div class="subcommand">message send</div>
+                        <div class="subcommand-desc">发送消息</div>
+                        
+                        <div class="subcommand">message poll</div>
+                        <div class="subcommand-desc">发送投票</div>
+                        
+                        <div class="subcommand">message react</div>
+                        <div class="subcommand-desc">添加表情反应</div>
+                        
+                        <div class="subcommand">message pin / unpin</div>
+                        <div class="subcommand-desc">固定/取消固定消息</div>
+                        
+                        <div class="subcommand">message thread create|list|reply</div>
+                        <div class="subcommand-desc">管理消息线程</div>
+                    </div>
+                </div>
+
+                <div class="command-card">
+                    <div class="command-name">openclaw pairing</div>
+                    <div class="command-desc">审批DM配对请求</div>
+                    <div class="subcommands">
+                        <div class="subcommand">pairing list</div>
+                        <div class="subcommand-desc">列出配对请求</div>
+                        
+                        <div class="subcommand">pairing approve &lt;channel&gt; &lt;code&gt;</div>
+                        <div class="subcommand-desc">批准配对请求</div>
+                    </div>
+                </div>
+
+                <div class="command-card">
+                    <div class="command-name">openclaw qr</div>
+                    <div class="command-desc">生成移动配对QR码和设置代码</div>
+                    <div class="subcommands">
+                        <div class="subcommand-desc">从当前Gateway配置生成QR码，用于手机App配对</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section" id="skills">
+                <h2>📚 技能管理</h2>
+
+                <div class="command-card">
+                    <div class="command-name">openclaw skills</div>
+                    <div class="command-desc">管理ClawHub技能</div>
+                    <div class="subcommands">
+                        <div class="subcommand">skills search [query...]</div>
+                        <div class="subcommand-desc">搜索ClawHub技能</div>
+                        
+                        <div class="subcommand">skills install &lt;slug&gt;</div>
+                        <div class="subcommand-desc">从ClawHub安装技能</div>
+                        
+                        <div class="subcommand">skills update &lt;slug|--all&gt;</div>
+                        <div class="subcommand-desc">更新已安装的技能</div>
+                        
+                        <div class="subcommand">skills list</div>
+                        <div class="subcommand-desc">列出技能（默认命令）</div>
+                        
+                        <div class="subcommand">skills info &lt;name&gt;</div>
+                        <div class="subcommand-desc">显示技能详情</div>
+                        
+                        <div class="subcommand">skills check</div>
+                        <div class="subcommand-desc">检查技能就绪状态</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section" id="plugins">
+                <h2>🔌 插件管理</h2>
+
+                <div class="command-card">
+                    <div class="command-name">openclaw plugins</div>
+                    <div class="command-desc">管理扩展插件</div>
+                    <div class="subcommands">
+                        <div class="subcommand">plugins list</div>
+                        <div class="subcommand-desc">发现插件</div>
+                        
+                        <div class="subcommand">plugins inspect &lt;id&gt;</div>
+                        <div class="subcommand-desc">显示插件详情</div>
+                        
+                        <div class="subcommand">plugins install &lt;path|.tgz|npm-spec&gt;</div>
+                        <div class="subcommand-desc">安装插件</div>
+                        
+                        <div class="subcommand">plugins uninstall &lt;id&gt;</div>
+                        <div class="subcommand-desc">卸载插件</div>
+                        
+                        <div class="subcommand">plugins enable &lt;id&gt; / disable &lt;id&gt;</div>
+                        <div class="subcommand-desc">启用/禁用插件</div>
+                        
+                        <div class="subcommand">plugins doctor</div>
+                        <div class="subcommand-desc">检查插件加载错误</div>
+                        
+                        <div class="subcommand">plugins marketplace list &lt;marketplace&gt;</div>
+                        <div class="subcommand-desc">列出市场插件</div>
+                    </div>
+                    <div class="info-box">
+                        <strong>💡 提示：</strong><br>
+                        大多数插件更改需要重启Gateway才能生效！
+                    </div>
+                </div>
+            </div>
+
+            <div class="section" id="memory">
+                <h2>💾 记忆系统</h2>
+
+                <div class="command-card">
+                    <div class="command-name">openclaw memory</div>
+                    <div class="command-desc">管理记忆文件的向量搜索</div>
+                    <div class="subcommands">
+                        <div class="subcommand">memory status</div>
+                        <div class="subcommand-desc">显示索引状态（加 --deep 进行深度检查，加 --fix 修复）</div>
+                        
+                        <div class="subcommand">memory index</div>
+                        <div class="subcommand-desc">重新索引记忆文件</div>
+                        
+                        <div class="subcommand">memory search "&lt;query&gt;"</div>
+                        <div class="subcommand-desc">语义搜索记忆</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section" id="cron">
+                <h2>⏰ 定时任务（Cron）</h2>
+
+                <div class="command-card">
+                    <div class="command-name">openclaw cron</div>
+                    <div class="command-desc">管理定时任务</div>
+                    <div class="subcommands">
+                        <div class="subcommand">cron status</div>
+                        <div class="subcommand-desc">查看定时任务状态</div>
+                        
+                        <div class="subcommand">cron list [--all]</div>
+                        <div class="subcommand-desc">列出定时任务</div>
+                        
+                        <div class="subcommand">cron add</div>
+                        <div class="subcommand-desc">添加定时任务（需要 --name 和时间、负载）</div>
+                        
+                        <div class="subcommand">cron edit &lt;id&gt;</div>
+                        <div class="subcommand-desc">编辑定时任务</div>
+                        
+                        <div class="subcommand">cron rm &lt;id&gt;</div>
+                        <div class="subcommand-desc">删除定时任务</div>
+                        
+                        <div class="subcommand">cron enable &lt;id&gt; / disable &lt;id&gt;</div>
+                        <div class="subcommand-desc">启用/禁用定时任务</div>
+                        
+                        <div class="subcommand">cron run &lt;id&gt;</div>
+                        <div class="subcommand-desc">立即运行定时任务</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section" id="maintenance">
+                <h2>🔨 系统维护</h2>
+
+                <div class="command-card">
+                    <div class="command-name">openclaw status</div>
+                    <div class="command-desc">显示会话健康状态和最近联系人</div>
+                    <div class="subcommands">
+                        <div class="subcommand">常用选项：</div>
+                        <div class="subcommand-desc">
+                            <span class="code">--deep</span> - 深度健康探测<br>
+                            <span class="code">--usage</span> - 显示模型提供商使用情况<br>
+                            <span class="code">--all</span> - 完整诊断
+                        </div>
+                    </div>
+                </div>
+
+                <div class="command-card">
+                    <div class="command-name">openclaw health</div>
+                    <div class="command-desc">获取Gateway运行健康状态</div>
+                    <div class="subcommands">
+                        <div class="subcommand">常用选项：</div>
+                        <div class="subcommand-desc">
+                            <span class="code">--verbose</span> - 强制实时探测并显示连接详情
+                        </div>
+                    </div>
+                </div>
+
+                <div class="command-card">
+                    <div class="command-name">openclaw doctor</div>
+                    <div class="command-desc">健康检查和快速修复</div>
+                    <div class="subcommands">
+                        <div class="subcommand">常用选项：</div>
+                        <div class="subcommand-desc">
+                            <span class="code">--repair</span> 或 <span class="code">--fix</span> - 尝试自动修复检测到的问题<br>
+                            <span class="code">--deep</span> - 扫描系统服务查找额外的Gateway安装<br>
+                            <span class="code">--yes</span> - 接受默认值不提示
+                        </div>
+                    </div>
+                </div>
+
+                <div class="command-card">
+                    <div class="command-name">openclaw backup</div>
+                    <div class="command-desc">创建和验证OpenClaw状态的本地备份</div>
+                    <div class="subcommands">
+                        <div class="subcommand">backup create</div>
+                        <div class="subcommand-desc">创建备份归档</div>
+                        
+                        <div class="subcommand">backup verify &lt;archive&gt;</div>
+                        <div class="subcommand-desc">验证备份归档</div>
+                    </div>
+                </div>
+
+                <div class="command-card">
+                    <div class="command-name">openclaw update</div>
+                    <div class="command-desc">更新已安装的CLI</div>
+                    <div class="subcommands">
+                        <div class="subcommand">update status</div>
+                        <div class="subcommand-desc">检查更新状态</div>
+                        
+                        <div class="subcommand">update wizard</div>
+                        <div class="subcommand-desc">运行更新向导</div>
+                    </div>
+                </div>
+
+                <div class="command-card">
+                    <div class="command-name">openclaw reset</div>
+                    <div class="command-desc">重置本地配置/状态（保留CLI安装）</div>
+                    <div class="subcommands">
+                        <div class="subcommand">常用选项：</div>
+                        <div class="subcommand-desc">
+                            <span class="code">--scope &lt;config|config+creds+sessions|full&gt;</span> - 重置范围<br>
+                            <span class="code">--yes</span> - 确认不提示<br>
+                            <span class="code">--dry-run</span> - 预览不执行
+                        </div>
+                    </div>
+                </div>
+
+                <div class="command-card">
+                    <div class="command-name">openclaw uninstall</div>
+                    <div class="command-desc">卸载Gateway服务和本地数据（保留CLI）</div>
+                    <div class="subcommands">
+                        <div class="subcommand">常用选项：</div>
+                        <div class="subcommand-desc">
+                            <span class="code">--service</span> - 仅卸载服务<br>
+                            <span class="code">--state</span> - 仅卸载状态<br>
+                            <span class="code">--workspace</span> - 仅卸载工作区<br>
+                            <span class="code">--all</span> - 全部卸载<br>
+                            <span class="code">--yes</span> - 确认不提示<br>
+                            <span class="code">--dry-run</span> - 预览不执行
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section" id="other">
+                <h2>📋 其他命令</h2>
+
+                <div class="command-card">
+                    <div class="command-name">openclaw browser</div>
+                    <div class="command-desc">浏览器控制（Chrome/Brave/Edge/Chromium）</div>
+                    <div class="subcommands">
+                        <div class="subcommand">browser status / start / stop</div>
+                        <div class="subcommand-desc">浏览器状态管理</div>
+                        
+                        <div class="subcommand">browser tabs</div>
+                        <div class="subcommand-desc">列出标签页</div>
+                        
+                        <div class="subcommand">browser open &lt;url&gt;</div>
+                        <div class="subcommand-desc">打开URL</div>
+                        
+                        <div class="subcommand">browser screenshot</div>
+                        <div class="subcommand-desc">截图</div>
+                        
+                        <div class="subcommand">browser snapshot</div>
+                        <div class="subcommand-desc">获取UI快照</div>
+                        
+                        <div class="subcommand">browser click / type / press</div>
+                        <div class="subcommand-desc">浏览器操作</div>
+                    </div>
+                </div>
+
+                <div class="command-card">
+                    <div class="command-name">openclaw nodes</div>
+                    <div class="command-desc">与配对的节点设备交互</div>
+                    <div class="subcommands">
+                        <div class="subcommand">nodes status / list</div>
+                        <div class="subcommand-desc">查看节点状态</div>
+                        
+                        <div class="subcommand">nodes pending / approve / reject</div>
+                        <div class="subcommand-desc">管理配对请求</div>
+                        
+                        <div class="subcommand">nodes notify</div>
+                        <div class="subcommand-desc">发送通知</div>
+                        
+                        <div class="subcommand">nodes camera list / snap / clip</div>
+                        <div class="subcommand-desc">相机操作</div>
+                        
+                        <div class="subcommand">nodes canvas snapshot / present</div>
+                        <div class="subcommand-desc">画布操作</div>
+                        
+                        <div class="subcommand">nodes screen record</div>
+                        <div class="subcommand-desc">屏幕录制</div>
+                        
+                        <div class="subcommand">nodes location get</div>
+                        <div class="subcommand-desc">获取位置</div>
+                    </div>
+                </div>
+
+                <div class="command-card">
+                    <div class="command-name">openclaw devices</div>
+                    <div class="command-desc">管理Gateway设备配对</div>
+                    <div class="subcommands">
+                        <div class="subcommand">devices list</div>
+                        <div class="subcommand-desc">列出设备</div>
+                        
+                        <div class="subcommand">devices approve / reject</div>
+                        <div class="subcommand-desc">审批配对请求</div>
+                        
+                        <div class="subcommand">devices remove / clear</div>
+                        <div class="subcommand-desc">移除设备</div>
+                    </div>
+                </div>
+
+                <div class="command-card">
+                    <div class="command-name">openclaw tasks</div>
+                    <div class="command-desc">管理后台任务</div>
+                    <div class="subcommands">
+                        <div class="subcommand">tasks list</div>
+                        <div class="subcommand-desc">列出任务</div>
+                        
+                        <div class="subcommand">tasks show &lt;id&gt;</div>
+                        <div class="subcommand-desc">显示任务详情</div>
+                        
+                        <div class="subcommand">tasks cancel &lt;id&gt;</div>
+                        <div class="subcommand-desc">取消任务</div>
+                        
+                        <div class="subcommand">tasks audit</div>
+                        <div class="subcommand-desc">审计任务</div>
+                    </div>
+                </div>
+
+                <div class="command-card">
+                    <div class="command-name">openclaw system</div>
+                    <div class="command-desc">系统事件和心跳</div>
+                    <div class="subcommands">
+                        <div class="subcommand">system event --text &lt;text&gt;</div>
+                        <div class="subcommand-desc">发送系统事件</div>
+                        
+                        <div class="subcommand">system heartbeat last|enable|disable</div>
+                        <div class="subcommand-desc">心跳控制</div>
+                    </div>
+                </div>
+
+                <div class="command-card">
+                    <div class="command-name">openclaw security</div>
+                    <div class="command-desc">安全审计</div>
+                    <div class="subcommands">
+                        <div class="subcommand">security audit</div>
+                        <div class="subcommand-desc">审计配置和本地状态的安全隐患</div>
+                    </div>
+                </div>
+
+                <div class="command-card">
+                    <div class="command-name">openclaw secrets</div>
+                    <div class="command-desc">管理密钥引用</div>
+                    <div class="subcommands">
+                        <div class="subcommand">secrets reload</div>
+                        <div class="subcommand-desc">重新加载密钥</div>
+                        
+                        <div class="subcommand">secrets audit</div>
+                        <div class="subcommand-desc">审计密钥</div>
+                        
+                        <div class="subcommand">secrets configure</div>
+                        <div class="subcommand-desc">配置密钥</div>
+                    </div>
+                </div>
+
+                <div class="command-card">
+                    <div class="command-name">openclaw sandbox</div>
+                    <div class="command-desc">管理沙箱运行时</div>
+                    <div class="subcommands">
+                        <div class="subcommand">sandbox list</div>
+                        <div class="subcommand-desc">列出沙箱</div>
+                        
+                        <div class="subcommand">sandbox recreate</div>
+                        <div class="subcommand-desc">重建沙箱</div>
+                    </div>
+                </div>
+
+                <div class="command-card">
+                    <div class="command-name">openclaw approvals</div>
+                    <div class="command-desc">管理执行审批</div>
+                    <div class="subcommands">
+                        <div class="subcommand">approvals get / set</div>
+                        <div class="subcommand-desc">获取/设置审批</div>
+                        
+                        <div class="subcommand">approvals allowlist add|remove</div>
+                        <div class="subcommand-desc">编辑白名单</div>
+                    </div>
+                </div>
+
+                <div class="command-card">
+                    <div class="command-name">openclaw tui</div>
+                    <div class="command-desc">打开终端UI</div>
+                    <div class="subcommands">
+                        <div class="subcommand-desc">在终端中打开OpenClaw的交互界面</div>
+                    </div>
+                </div>
+
+                <div class="command-card">
+                    <div class="command-name">openclaw docs</div>
+                    <div class="command-desc">搜索文档</div>
+                    <div class="subcommands">
+                        <div class="subcommand-desc">搜索OpenClaw文档索引</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>💡 实用技巧与故障排除</h2>
+
+                <div class="info-box">
+                    <h3>🔧 常见问题排查流程</h3>
+                    <ol>
+                        <li><strong>第一步：</strong> 运行 <span class="code">openclaw status</span> 查看基本状态</li>
+                        <li><strong>第二步：</strong> 运行 <span class="code">openclaw doctor --repair</span> 自动修复</li>
+                        <li><strong>第三步：</strong> 查看日志 <span class="code">openclaw logs --follow</span></li>
+                        <li><strong>第四步：</strong> 重启Gateway <span class="code">openclaw gateway restart</span></li>
+                    </ol>
+                </div>
+
+                <div class="warning-box">
+                    <h3>⚠️ 全局标志（所有命令通用）</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>标志</th>
+                                <th>作用</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><span class="code">--dev</span></td>
+                                <td>在 ~/.openclaw-dev 下隔离状态</td>
+                            </tr>
+                            <tr>
+                                <td><span class="code">--profile &lt;name&gt;</span></td>
+                                <td>使用指定配置文件</td>
+                            </tr>
+                            <tr>
+                                <td><span class="code">--no-color</span></td>
+                                <td>禁用颜色输出</td>
+                            </tr>
+                            <tr>
+                                <td><span class="code">--json</span></td>
+                                <td>JSON格式输出</td>
+                            </tr>
+                            <tr>
+                                <td><span class="code">--version</span> / <span class="code">-v</span></td>
+                                <td>显示版本并退出</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="info-box">
+                    <h3>📋 日常使用检查清单</h3>
+                    <ul>
+                        <li>✅ 开机后：<span class="code">openclaw gateway start</span></li>
+                        <li>✅ 遇到问题：<span class="code">openclaw doctor --repair</span></li>
+                        <li>✅ 配置更改后：<span class="code">openclaw gateway restart</span></li>
+                        <li>✅ 查看状态：<span class="code">openclaw status --deep</span></li>
+                        <li>✅ 调试问题：<span class="code">openclaw logs --follow</span></li>
+                        <li>✅ 更新软件：<span class="code">openclaw update</span></li>
+                    </ul>
+                </div>
+
+                <div class="warning-box">
+                    <h3>🔄 重新安装/重置流程</h3>
+                    <ol>
+                        <li><strong>备份数据：</strong> <span class="code">openclaw backup create</span></li>
+                        <li><strong>重置配置：</strong> <span class="code">openclaw reset --scope config</span></li>
+                        <li><strong>重新配置：</strong> <span class="code">openclaw onboard</span></li>
+                        <li><strong>重启服务：</strong> <span class="code">openclaw gateway restart</span></li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>🐚 OpenClaw 命令速查手册</p>
+            <p>清风整理 · 版本 1.0 · 适用于 OpenClaw 4.11</p>
+            <p style="margin-top: 15px; opacity: 0.8; font-size: 14px;">保存位置: ~/.openclaw/workspace/OpenClaw命令速查手册.html</p>
+        </div>
+    </div>
+</body>
+</html>
+

@@ -1,7 +1,97 @@
 // 博客文章数据
 const posts = [
     {
-        id: 3,
+        id: 5,
+        title: "👶 新生儿高血糖诊疗方案",
+        date: "2026-04-18",
+        category: "医学",
+        tags: ["医学", "儿科", "新生儿", "高血糖", "诊疗规范"],
+        summary: "最新新生儿高血糖诊疗规范，包含诊断标准、病因分析、治疗方案、并发症防治及管理指南，儿科新生儿科医生必备参考！",
+        content: `
+            <p>新生儿高血糖是新生儿期常见代谢紊乱，这份诊疗方案基于最新临床指南编写，包含完整的诊断流程、治疗方案及并发症防治方法。</p>
+            
+            <div style="background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%); padding: 30px; border-radius: 15px; text-align: center; margin: 30px 0;">
+                <h3 style="color: white; margin-bottom: 20px;">📄 查看诊疗方案</h3>
+                <a href="neonatal-hyperglycemia-summary.html" style="display: inline-block; background: white; color: #ff9a9e; padding: 15px 40px; border-radius: 10px; text-decoration: none; font-weight: bold; font-size: 1.2em; box-shadow: 0 5px 20px rgba(255, 154, 158, 0.2);">
+                    🚀 打开详细资料
+                </a>
+            </div>
+        `
+    },
+    {
+        id: 4,
+        title: "👶 儿童肥胖症诊疗方案",
+        date: "2026-04-18",
+        category: "医学",
+        tags: ["医学", "儿科", "肥胖症", "诊疗规范", "临床指南"],
+        summary: "最新儿童肥胖症诊疗规范，包含诊断标准、评估方法、并发症防治、随访方案等完整内容，符合国际最新诊疗指南！",
+        content: `
+            <p>这份儿童肥胖症诊疗方案基于最新国际指南编写，包含完整的诊断流程、评估方法、并发症防治及随访管理方案，是儿科医生临床工作的重要参考。</p>
+            
+            <div style="background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%); padding: 30px; border-radius: 15px; text-align: center; margin: 30px 0;">
+                <h3 style="color: white; margin-bottom: 20px;">📄 查看诊疗规范</h3>
+                <a href="儿童肥胖症诊疗方案.html" style="display: inline-block; background: white; color: #ff9a9e; padding: 15px 40px; border-radius: 10px; text-decoration: none; font-weight: bold; font-size: 1.2em; box-shadow: 0 5px 20px rgba(255, 154, 158, 0.2);">
+                    🚀 打开详细资料
+                </a>
+            </div>
+        `
+    },
+    {
+        id: 9,
+        title: "⚡ OpenClaw命令速查手册",
+        date: "2026-04-18",
+        category: "AI",
+        tags: ["编程", "OpenClaw", "AI开发", "命令手册", "工具"],
+        summary: "OpenClaw最新命令速查手册，包含所有常用命令、参数说明、使用案例，开发AI助手必备参考资料！",
+        content: `
+            <p>这份OpenClaw命令速查手册整理了所有常用的命令、参数及使用案例，方便在开发AI助手时快速查阅，提高工作效率。</p>
+            
+            <div style="background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%); padding: 30px; border-radius: 15px; text-align: center; margin: 30px 0;">
+                <h3 style="color: #333; margin-bottom: 20px;">📄 查看完整手册</h3>
+                <a href="OpenClaw命令速查手册.html" style="display: inline-block; background: white; color: #667eea; padding: 15px 40px; border-radius: 10px; text-decoration: none; font-weight: bold; font-size: 1.2em; box-shadow: 0 5px 20px rgba(102, 126, 234, 0.2);">
+                    🚀 打开速查手册
+                </a>
+            </div>
+        `
+    },
+    {
+        id: 8,
+        title: "📋 Python列表（List）速查表",
+        date: "2026-04-18",
+        category: "AI",
+        tags: ["编程", "Python", "列表", "速查表", "开发工具"],
+        summary: "Python列表操作最全速查表，包含创建、增删改查、常用方法、切片操作、推导式等所有常用语法，开发必备！",
+        content: `
+            <p>Python列表是最常用的数据结构之一，这份速查表整理了所有常用的列表操作，方便开发时快速查阅。</p>
+            
+            <div style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); padding: 30px; border-radius: 15px; text-align: center; margin: 30px 0;">
+                <h3 style="color: white; margin-bottom: 20px;">📄 查看完整速查表</h3>
+                <a href="python-list-cheatsheet.html" style="display: inline-block; background: white; color: #4facfe; padding: 15px 40px; border-radius: 10px; text-decoration: none; font-weight: bold; font-size: 1.2em; box-shadow: 0 5px 20px rgba(79, 172, 254, 0.2);">
+                    🚀 打开速查表
+                </a>
+            </div>
+        `
+    },
+    {
+        id: 7,
+        title: "📋 Python字典（Dictionary）速查表",
+        date: "2026-04-18",
+        category: "AI",
+        tags: ["编程", "Python", "字典", "速查表", "开发工具"],
+        summary: "Python字典操作最全速查表，包含创建、增删改查、常用方法、遍历技巧、推导式等所有常用语法，开发必备！",
+        content: `
+            <p>Python字典是键值对存储的核心数据结构，这份速查表整理了所有常用的字典操作，方便开发时快速查阅。</p>
+            
+            <div style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); padding: 30px; border-radius: 15px; text-align: center; margin: 30px 0;">
+                <h3 style="color: white; margin-bottom: 20px;">📄 查看完整速查表</h3>
+                <a href="python-dictionary-cheatsheet.html" style="display: inline-block; background: white; color: #4facfe; padding: 15px 40px; border-radius: 10px; text-decoration: none; font-weight: bold; font-size: 1.2em; box-shadow: 0 5px 20px rgba(79, 172, 254, 0.2);">
+                    🚀 打开速查表
+                </a>
+            </div>
+        `
+    },
+    {
+        id: 6,
         title: "📚 高中英语3500词速记（7天版）",
         date: "2026-04-18",
         category: "英语",

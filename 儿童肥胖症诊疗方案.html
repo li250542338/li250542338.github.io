@@ -1,0 +1,1155 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>儿童肥胖症诊断与治疗方案</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: "Microsoft YaHei", "PingFang SC", sans-serif;
+            line-height: 1.8;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 20px;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            overflow: hidden;
+        }
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+        .header h1 {
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+        .header p {
+            opacity: 0.9;
+            font-size: 16px;
+        }
+        .nav {
+            background: #f8f9fa;
+            padding: 15px 40px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 1px solid #e9ecef;
+        }
+        .nav a {
+            color: #667eea;
+            text-decoration: none;
+            margin-right: 20px;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        .nav a:hover {
+            color: #764ba2;
+        }
+        .content {
+            padding: 40px;
+        }
+        .section {
+            margin-bottom: 40px;
+        }
+        .section h2 {
+            color: #667eea;
+            font-size: 24px;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+        .section h3 {
+            color: #764ba2;
+            font-size: 20px;
+            margin: 20px 0 10px;
+        }
+        .section h4 {
+            color: #495057;
+            font-size: 18px;
+            margin: 15px 0 8px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+            background: white;
+        }
+        th, td {
+            border: 1px solid #dee2e6;
+            padding: 12px 15px;
+            text-align: left;
+        }
+        th {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            font-weight: 600;
+        }
+        tr:nth-child(even) {
+            background: #f8f9fa;
+        }
+        .highlight-box {
+            background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+            border-left: 5px solid #ff6b6b;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+        .info-box {
+            background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+            border-left: 5px solid #4ecdc4;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+        .warning-box {
+            background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+            border-left: 5px solid #ff9f43;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+        ul, ol {
+            margin-left: 25px;
+            margin-bottom: 15px;
+        }
+        li {
+            margin-bottom: 8px;
+        }
+        .meal-plan {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+        .meal-card {
+            background: linear-gradient(135deg, #667eea15 0%, #764ba215 100%);
+            border-radius: 10px;
+            padding: 20px;
+            border: 1px solid #667eea30;
+        }
+        .meal-card h4 {
+            color: #667eea;
+            margin-top: 0;
+        }
+        .food-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 15px 0;
+        }
+        .food-tag {
+            display: inline-block;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 500;
+        }
+        .food-good {
+            background: #d4edda;
+            color: #155724;
+        }
+        .food-bad {
+            background: #f8d7da;
+            color: #721c24;
+        }
+        .food-caution {
+            background: #fff3cd;
+            color: #856404;
+        }
+        .footer {
+            background: #495057;
+            color: white;
+            text-align: center;
+            padding: 30px;
+            margin-top: 40px;
+        }
+        @media (max-width: 768px) {
+            .content {
+                padding: 20px;
+            }
+            .header {
+                padding: 30px 20px;
+            }
+            .header h1 {
+                font-size: 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🏥 儿童肥胖症诊断与治疗方案</h1>
+            <p>医院质控办 · 专业诊疗指南 · 版本 1.0</p>
+        </div>
+
+        <div class="nav">
+            <a href="#diagnosis">一、诊断标准</a>
+            <a href="#assessment">二、评估内容</a>
+            <a href="#treatment">三、治疗方案</a>
+            <a href="#diet">四、详细饮食方案</a>
+            <a href="#followup">五、随访监测</a>
+        </div>
+
+        <div class="content">
+            <div class="highlight-box">
+                <strong>⚠️ 重要提示：</strong>本方案仅供临床参考，具体诊疗请结合患儿实际情况，遵循最新临床指南和医院规范。
+            </div>
+
+            <!-- 一、诊断标准 -->
+            <div class="section" id="diagnosis">
+                <h2>一、诊断标准</h2>
+
+                <h3>1.1 年龄别体重指数（BMI）法（推荐首选）</h3>
+                <p><strong>计算公式：</strong>BMI = 体重(kg) ÷ 身高²(m²)</p>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>年龄组</th>
+                            <th>正常</th>
+                            <th>超重</th>
+                            <th>轻度肥胖</th>
+                            <th>中度肥胖</th>
+                            <th>重度肥胖</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>7-18岁</td>
+                            <td>&lt;P85</td>
+                            <td>P85-P94</td>
+                            <td>P95-P96</td>
+                            <td>P97-P98</td>
+                            <td>≥P99</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h4>中国7-18岁儿童青少年BMI超重/肥胖筛查界值（kg/m²）</h4>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>年龄（岁）</th>
+                            <th colspan="2">超重</th>
+                            <th colspan="2">肥胖</th>
+                        </tr>
+                        <tr>
+                            <th></th>
+                            <th>男</th>
+                            <th>女</th>
+                            <th>男</th>
+                            <th>女</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>7</td><td>17.4</td><td>17.2</td><td>19.2</td><td>18.9</td></tr>
+                        <tr><td>8</td><td>18.1</td><td>18.1</td><td>20.3</td><td>19.9</td></tr>
+                        <tr><td>9</td><td>18.9</td><td>19.0</td><td>21.4</td><td>21.0</td></tr>
+                        <tr><td>10</td><td>19.6</td><td>20.0</td><td>22.5</td><td>22.1</td></tr>
+                        <tr><td>11</td><td>20.3</td><td>21.1</td><td>23.6</td><td>23.3</td></tr>
+                        <tr><td>12</td><td>21.0</td><td>21.9</td><td>24.6</td><td>24.5</td></tr>
+                        <tr><td>13</td><td>21.9</td><td>22.6</td><td>25.7</td><td>25.3</td></tr>
+                        <tr><td>14</td><td>22.6</td><td>23.0</td><td>26.4</td><td>25.7</td></tr>
+                        <tr><td>15</td><td>23.1</td><td>23.4</td><td>26.9</td><td>25.9</td></tr>
+                        <tr><td>16</td><td>23.5</td><td>23.7</td><td>27.4</td><td>26.0</td></tr>
+                        <tr><td>17</td><td>23.8</td><td>23.8</td><td>27.8</td><td>26.0</td></tr>
+                        <tr><td>18</td><td>24.0</td><td>24.0</td><td>28.0</td><td>26.0</td></tr>
+                    </tbody>
+                </table>
+
+                <h3>1.2 年龄别体重法（适用于&lt;5岁儿童）</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>肥胖程度</th>
+                            <th>超过标准体重比例</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>正常</td><td>±10%</td></tr>
+                        <tr><td>超重</td><td>10%-19%</td></tr>
+                        <tr><td>轻度肥胖</td><td>20%-29%</td></tr>
+                        <tr><td>中度肥胖</td><td>30%-49%</td></tr>
+                        <tr><td>重度肥胖</td><td>≥50%</td></tr>
+                    </tbody>
+                </table>
+
+                <h3>1.3 腰围评估（中心性肥胖）</h3>
+                <p>腰围≥同年龄、同性别儿童第90百分位，提示中心性肥胖</p>
+
+                <div class="info-box">
+                    <strong>腰围测量方法：</strong><br>
+                    受试者站立位，双足分开25-30cm，在腋中线肋弓下缘与髂嵴上缘连线中点水平，用软尺水平环绕腹部一周读取数值。
+                </div>
+            </div>
+
+            <!-- 二、评估内容 -->
+            <div class="section" id="assessment">
+                <h2>二、评估内容</h2>
+
+                <h3>2.1 详细病史采集</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>评估项目</th>
+                            <th>具体内容</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>生长发育史</strong></td>
+                            <td>出生体重、身长；婴儿期喂养方式；各年龄段体重增长曲线；性发育情况</td>
+                        </tr>
+                        <tr>
+                            <td><strong>饮食史</strong></td>
+                            <td>每日进餐次数、时间；食物种类偏好；零食、饮料摄入情况；是否有暴饮暴食、夜间进食习惯</td>
+                        </tr>
+                        <tr>
+                            <td><strong>运动习惯</strong></td>
+                            <td>每日体力活动时间；运动类型；静态行为时间（看电视、玩手机、电脑）</td>
+                        </tr>
+                        <tr>
+                            <td><strong>家族史</strong></td>
+                            <td>父母及兄弟姐妹BMI；家族肥胖史；2型糖尿病史；高血压史；心血管疾病史</td>
+                        </tr>
+                        <tr>
+                            <td><strong>睡眠情况</strong></td>
+                            <td>每日睡眠时间；是否有打鼾、睡眠呼吸暂停；是否有白天嗜睡</td>
+                        </tr>
+                        <tr>
+                            <td><strong>心理社会因素</strong></td>
+                            <td>学习压力；同伴关系；是否有自卑、焦虑、抑郁等情绪问题；是否有因体重受到嘲笑</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>2.2 全面体格检查</h3>
+                <ul>
+                    <li><strong>基本测量：</strong>身高、体重、BMI、腰围、臀围、腰臀比</li>
+                    <li><strong>生命体征：</strong>血压（建议测双侧）、心率、呼吸频率</li>
+                    <li><strong>皮肤检查：</strong>黑棘皮征（颈部、腋窝、腹股沟）、紫纹、多毛</li>
+                    <li><strong>腹部检查：</strong>肝肿大、脂肪肝相关体征</li>
+                    <li><strong>性发育评估：</strong>Tanner分期</li>
+                    <li><strong>其他：</strong>甲状腺检查、关节检查、步态检查</li>
+                </ul>
+
+                <h3>2.3 实验室检查</h3>
+
+                <h4>必查项目</h4>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>检查项目</th>
+                            <th>目的</th>
+                            <th>异常提示</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>空腹血糖（FPG）</td>
+                            <td>糖代谢评估</td>
+                            <td>≥5.6mmol/L提示空腹血糖受损</td>
+                        </tr>
+                        <tr>
+                            <td>空腹胰岛素</td>
+                            <td>胰岛素抵抗评估</td>
+                            <td>升高提示胰岛素抵抗</td>
+                        </tr>
+                        <tr>
+                            <td>口服葡萄糖耐量试验（OGTT）</td>
+                            <td>糖尿病筛查</td>
+                            <td>2h血糖≥7.8mmol/L糖耐量异常，≥11.1mmol/L糖尿病</td>
+                        </tr>
+                        <tr>
+                            <td>血脂四项</td>
+                            <td>血脂异常筛查</td>
+                            <td>TC、TG、LDL-C升高，HDL-C降低</td>
+                        </tr>
+                        <tr>
+                            <td>肝功能（ALT、AST）</td>
+                            <td>脂肪肝评估</td>
+                            <td>升高提示非酒精性脂肪肝</td>
+                        </tr>
+                        <tr>
+                            <td>肾功能</td>
+                            <td>肾脏功能评估</td>
+                            <td>肌酐、尿素氮异常</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h4>可选检查项目</h4>
+                <ul>
+                    <li>甲状腺功能（TSH、FT3、FT4）</li>
+                    <li>性激素（睾酮、雌二醇、LH、FSH）</li>
+                    <li>皮质醇节律</li>
+                    <li>肝脏超声</li>
+                    <li>心电图</li>
+                    <li>睡眠监测（怀疑睡眠呼吸暂停者）</li>
+                </ul>
+
+                <h3>2.4 并发症评估</h3>
+                <ul>
+                    <li>代谢综合征</li>
+                    <li>非酒精性脂肪肝</li>
+                    <li>高血压</li>
+                    <li>糖尿病前期/2型糖尿病</li>
+                    <li>血脂异常</li>
+                    <li>阻塞性睡眠呼吸暂停</li>
+                    <li>多囊卵巢综合征（女性）</li>
+                    <li>骨关节疾病</li>
+                    <li>心理社会问题</li>
+                </ul>
+            </div>
+
+            <!-- 三、治疗方案 -->
+            <div class="section" id="treatment">
+                <h2>三、治疗方案</h2>
+
+                <div class="highlight-box">
+                    <strong>🎯 核心理念：</strong><br>
+                    儿童肥胖治疗的目标是<strong>控制体重增长速度</strong>，而非快速减重！<br>
+                    通过生活方式干预，使身高增长、BMI逐渐下降至正常范围。
+                </div>
+
+                <h3>3.1 治疗原则</h3>
+                <ol>
+                    <li><strong>以生活方式干预为主：</strong>饮食调整、运动增加、行为改变是基础</li>
+                    <li><strong>家庭参与至关重要：</strong>家长起榜样作用，全家共同改变生活方式</li>
+                    <li><strong>循序渐进，持之以恒：</strong>每周减重不宜超过0.5-1kg</li>
+                    <li><strong>个体化治疗：</strong>根据患儿年龄、肥胖程度、并发症制定方案</li>
+                    <li><strong>不推荐药物作为一线治疗：</strong>仅用于重度肥胖且生活方式干预无效者</li>
+                </ol>
+
+                <h3>3.2 分阶段治疗策略</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>肥胖程度</th>
+                            <th>初始治疗</th>
+                            <th>强化治疗</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>超重</td>
+                            <td>预防指导、生活方式干预</td>
+                            <td>如6个月无改善，进入下一阶段</td>
+                        </tr>
+                        <tr>
+                            <td>轻度肥胖</td>
+                            <td>结构化生活方式干预</td>
+                            <td>如3-6个月无改善，考虑药物</td>
+                        </tr>
+                        <tr>
+                            <td>中度肥胖</td>
+                            <td>强化生活方式干预</td>
+                            <td>如3个月无改善，考虑药物</td>
+                        </tr>
+                        <tr>
+                            <td>重度肥胖</td>
+                            <td>多学科综合干预</td>
+                            <td>尽早考虑药物，必要时手术</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>3.3 运动干预方案</h3>
+
+                <h4>运动目标</h4>
+                <ul>
+                    <li><strong>有氧运动：</strong>每周5-7天，每天累计60分钟中等强度运动</li>
+                    <li><strong>力量训练：</strong>每周2-3次，每次20-30分钟</li>
+                    <li><strong>减少静态行为：</strong>每天屏幕时间≤2小时</li>
+                </ul>
+
+                <h4>运动强度评估</h4>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>强度</th>
+                            <th>主观感受</th>
+                            <th>心率范围</th>
+                            <th>运动类型</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>低强度</td>
+                            <td>轻松，能正常交谈</td>
+                            <td>最大心率的50-60%</td>
+                            <td>慢走、做家务</td>
+                        </tr>
+                        <tr>
+                            <td>中等强度</td>
+                            <td>有点累，还能交谈</td>
+                            <td>最大心率的60-70%</td>
+                            <td>快走、慢跑、骑车、游泳</td>
+                        </tr>
+                        <tr>
+                            <td>高强度</td>
+                            <td>很累，难以交谈</td>
+                            <td>最大心率的70-85%</td>
+                            <td>快跑、跳绳、球类运动</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="info-box">
+                    <strong>最大心率估算公式：</strong><br>
+                    最大心率 = 220 - 年龄（岁）
+                </div>
+
+                <h4>推荐运动类型</h4>
+                <div class="food-list">
+                    <span class="food-tag food-good">快走</span>
+                    <span class="food-tag food-good">慢跑</span>
+                    <span class="food-tag food-good">游泳</span>
+                    <span class="food-tag food-good">骑自行车</span>
+                    <span class="food-tag food-good">跳绳</span>
+                    <span class="food-tag food-good">篮球</span>
+                    <span class="food-tag food-good">足球</span>
+                    <span class="food-tag food-good">乒乓球</span>
+                    <span class="food-tag food-good">羽毛球</span>
+                    <span class="food-tag food-good">跳舞</span>
+                    <span class="food-tag food-good">武术</span>
+                    <span class="food-tag food-good">瑜伽</span>
+                </div>
+
+                <h4>力量训练建议</h4>
+                <ul>
+                    <li><strong>上肢力量：</strong>俯卧撑、哑铃、弹力带</li>
+                    <li><strong>下肢力量：</strong>深蹲、弓步、跳台阶</li>
+                    <li><strong>核心力量：</strong>仰卧起坐、平板支撑、卷腹</li>
+                    <li><strong>频率：</strong>每周2-3次，每次2-3组，每组10-15次</li>
+                </ul>
+
+                <h3>3.4 行为干预方案</h3>
+
+                <h4>建立健康作息</h4>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>年龄段</th>
+                            <th>推荐睡眠时间</th>
+                            <th>建议入睡时间</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>小学生（6-12岁）</td><td>10小时</td><td>21:00前</td></tr>
+                        <tr><td>初中生（13-15岁）</td><td>9小时</td><td>22:00前</td></tr>
+                        <tr><td>高中生（16-18岁）</td><td>8小时</td><td>22:30前</td></tr>
+                    </tbody>
+                </table>
+
+                <h4>饮食行为技巧</h4>
+                <ul>
+                    <li>细嚼慢咽，每口食物咀嚼20-30次</li>
+                    <li>避免边吃边看电视、玩手机</li>
+                    <li>使用较小的餐盘和碗</li>
+                    <li>先吃蔬菜，再吃肉，最后吃主食</li>
+                    <li>记录饮食日记，包括食物种类、数量、进食时间</li>
+                    <li>定期监测体重，每周1-2次，固定时间</li>
+                </ul>
+
+                <h4>目标设定与奖励机制</h4>
+                <ul>
+                    <li>设定具体、可测量的小目标（如"每周运动5天"）</li>
+                    <li>目标达成后给予非食物奖励（看电影、买书籍、户外活动等）</li>
+                    <li>避免用食物作为奖励</li>
+                    <li>定期回顾目标，及时调整</li>
+                </ul>
+
+                <h3>3.5 药物治疗</h3>
+
+                <div class="warning-box">
+                    <strong>⚠️ 药物治疗适应症：</strong><br>
+                    1. BMI≥同年龄同性别第99百分位<br>
+                    2. 已进行至少6个月强化生活方式干预但效果不佳<br>
+                    3. 合并肥胖相关并发症（糖尿病、高血压、睡眠呼吸暂停等）<br><br>
+                    <strong>不推荐用于12岁以下儿童！</strong>
+                </div>
+
+                <h3>3.6 手术治疗</h3>
+                <p>仅用于极端情况：青少年重度肥胖，且其他治疗无效，存在严重并发症者。需严格评估，由多学科团队共同决定。</p>
+            </div>
+
+            <!-- 四、详细饮食方案 -->
+            <div class="section" id="diet">
+                <h2>四、详细饮食减脂方案</h2>
+
+                <h3>4.1 营养原则</h3>
+
+                <h4>能量摄入目标</h4>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>年龄（岁）</th>
+                            <th>正常需要量（kcal/天）</th>
+                            <th>减重目标（kcal/天）</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>6-8</td><td>1400-1600</td><td>1100-1300</td></tr>
+                        <tr><td>9-11</td><td>1600-2000</td><td>1300-1600</td></tr>
+                        <tr><td>12-14</td><td>1800-2400</td><td>1500-1900</td></tr>
+                        <tr><td>15-18</td><td>2000-2800</td><td>1700-2300</td></tr>
+                    </tbody>
+                </table>
+
+                <div class="info-box">
+                    <strong>💡 能量减少原则：</strong><br>
+                    比推荐摄入量减少300-500kcal/天，每周减重0.5-1kg为宜。<br>
+                    儿童不宜过度节食，需保证生长发育所需营养。
+                </div>
+
+                <h4>三大营养素分配比例</h4>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>营养素</th>
+                            <th>占总能量比例</th>
+                            <th>作用</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>碳水化合物</strong></td>
+                            <td>50-55%</td>
+                            <td>主要能量来源，选择低GI食物</td>
+                        </tr>
+                        <tr>
+                            <td><strong>蛋白质</strong></td>
+                            <td>20-25%</td>
+                            <td>保证生长发育，增加饱腹感</td>
+                        </tr>
+                        <tr>
+                            <td><strong>脂肪</strong></td>
+                            <td>25-30%</td>
+                            <td>必需脂肪酸，选择健康脂肪</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>4.2 各类食物选择指南</h3>
+
+                <h4>🍚 主食类</h4>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>推荐食物</th>
+                            <th>限量食物</th>
+                            <th>避免食物</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <strong>燕麦、糙米、全麦面包</strong><br>
+                                红薯、山药、芋头等薯类<br>
+                                小米、玉米、荞麦等杂粮<br>
+                                红豆、绿豆、黑豆等杂豆
+                            </td>
+                            <td>
+                                白米饭、白馒头（适量）<br>
+                                面条、包子、饺子（控制量）
+                            </td>
+                            <td>
+                                蛋糕、面包、甜点<br>
+                                饼干、薯片、膨化食品<br>
+                                甜粽子、甜年糕
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="food-list">
+                    <span class="food-tag food-good">燕麦</span>
+                    <span class="food-tag food-good">糙米</span>
+                    <span class="food-tag food-good">全麦</span>
+                    <span class="food-tag food-good">红薯</span>
+                    <span class="food-tag food-good">山药</span>
+                    <span class="food-tag food-good">小米</span>
+                    <span class="food-tag food-good">玉米</span>
+                    <span class="food-tag food-caution">白米</span>
+                    <span class="food-tag food-caution">白面</span>
+                    <span class="food-tag food-bad">蛋糕</span>
+                    <span class="food-tag food-bad">甜点</span>
+                    <span class="food-tag food-bad">薯片</span>
+                </div>
+
+                <h4>🥩 蛋白质类</h4>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>推荐食物</th>
+                            <th>限量食物</th>
+                            <th>避免食物</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <strong>鱼（深海鱼更佳）</strong><br>
+                                鸡胸肉、瘦牛肉、瘦猪肉<br>
+                                鸡蛋、鸭蛋、鹌鹑蛋<br>
+                                豆腐、豆浆、豆制品
+                            </td>
+                            <td>
+                                普通牛肉、猪肉（适量）<br>
+                                鸡腿、鸡翅（去皮）
+                            </td>
+                            <td>
+                                肥肉、五花肉<br>
+                                炸鸡、炸鱼、油炸食品<br>
+                                香肠、火腿、培根<br>
+                                动物内脏（偶尔少量可）
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="food-list">
+                    <span class="food-tag food-good">鱼</span>
+                    <span class="food-tag food-good">虾</span>
+                    <span class="food-tag food-good">鸡胸肉</span>
+                    <span class="food-tag food-good">牛肉</span>
+                    <span class="food-tag food-good">鸡蛋</span>
+                    <span class="food-tag food-good">豆腐</span>
+                    <span class="food-tag food-caution">猪肉</span>
+                    <span class="food-tag food-bad">肥肉</span>
+                    <span class="food-tag food-bad">炸鸡</span>
+                    <span class="food-tag food-bad">香肠</span>
+                </div>
+
+                <h4>🥬 蔬菜水果类</h4>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>推荐食物</th>
+                            <th>限量食物</th>
+                            <th>避免食物</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <strong>深绿色叶菜：</strong>菠菜、油菜、西兰花<br>
+                                <strong>其他蔬菜：</strong>白菜、萝卜、黄瓜、番茄<br>
+                                <strong>低糖水果：</strong>苹果、梨、柚子、草莓<br>
+                                <strong>菌菇类：</strong>香菇、木耳、金针菇
+                            </td>
+                            <td>
+                                中等糖水果：橙子、桃、葡萄<br>
+                                土豆、藕、荸荠（算主食）
+                            </td>
+                            <td>
+                                高糖水果：荔枝、龙眼、榴莲<br>
+                                果泥、果汁、蜜饯、水果罐头<br>
+                                加糖的水果沙拉
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="food-list">
+                    <span class="food-tag food-good">菠菜</span>
+                    <span class="food-tag food-good">西兰花</span>
+                    <span class="food-tag food-good">黄瓜</span>
+                    <span class="food-tag food-good">番茄</span>
+                    <span class="food-tag food-good">苹果</span>
+                    <span class="food-tag food-good">柚子</span>
+                    <span class="food-tag food-good">草莓</span>
+                    <span class="food-tag food-caution">橙子</span>
+                    <span class="food-tag food-caution">葡萄</span>
+                    <span class="food-tag food-bad">荔枝</span>
+                    <span class="food-tag food-bad">果汁</span>
+                    <span class="food-tag food-bad">蜜饯</span>
+                </div>
+
+                <h4>🥛 奶及奶制品</h4>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>推荐食物</th>
+                            <th>限量食物</th>
+                            <th>避免食物</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <strong>低脂/脱脂牛奶</strong><br>
+                                无糖低脂酸奶<br>
+                                低脂奶酪（少量）
+                            </td>
+                            <td>
+                                全脂牛奶（适量）<br>
+                                普通酸奶（无糖）
+                            </td>
+                            <td>
+                                奶油、黄油、炼乳<br>
+                                含糖酸奶、乳酸菌饮料<br>
+                                奶昔、冰淇淋
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h4>🥜 油脂与坚果</h4>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>推荐食物</th>
+                            <th>限量食物</th>
+                            <th>避免食物</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <strong>橄榄油、茶籽油</strong><br>
+                                坚果（每天15-20g）：原味杏仁、核桃<br>
+                                牛油果、亚麻籽
+                            </td>
+                            <td>
+                                花生油、大豆油<br>
+                                瓜子、花生（原味，少量）
+                            </td>
+                            <td>
+                                猪油、牛油、椰子油<br>
+                                油炸食品、膨化食品<br>
+                                盐焗/糖炒坚果、花生酱
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h4>🥤 饮品选择</h4>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>推荐饮品</th>
+                            <th>限量饮品</th>
+                            <th>避免饮品</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <strong>白开水（首选）</strong><br>
+                                淡茶水（绿茶、乌龙茶）<br>
+                                无糖豆浆、柠檬水
+                            </td>
+                            <td>
+                                纯黑咖啡（无糖）<br>
+                                100%纯果汁（每天≤100ml）
+                            </td>
+                            <td>
+                                可乐、雪碧等碳酸饮料<br>
+                                奶茶、果味饮料、运动饮料<br>
+                                含糖咖啡、热巧克力
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>4.3 每日食物摄入量参考</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>食物类别</th>
+                            <th>6-8岁</th>
+                            <th>9-11岁</th>
+                            <th>12-14岁</th>
+                            <th>15-18岁</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td><strong>主食</strong></td><td>150-200g</td><td>200-250g</td><td>250-300g</td><td>300-350g</td></tr>
+                        <tr><td><strong>蔬菜</strong></td><td>300-400g</td><td>400-500g</td><td>400-500g</td><td>500-600g</td></tr>
+                        <tr><td><strong>水果</strong></td><td>150-200g</td><td>200-250g</td><td>200-300g</td><td>200-300g</td></tr>
+                        <tr><td><strong>肉类</strong></td><td>50-75g</td><td>75-100g</td><td>100-125g</td><td>125-150g</td></tr>
+                        <tr><td><strong>鱼虾</strong></td><td>50g</td><td>50-75g</td><td>75g</td><td>75-100g</td></tr>
+                        <tr><td><strong>蛋类</strong></td><td>1个</td><td>1个</td><td>1-2个</td><td>1-2个</td></tr>
+                        <tr><td><strong>奶类</strong></td><td>300ml</td><td>300-400ml</td><td>400-500ml</td><td>400-500ml</td></tr>
+                        <tr><td><strong>大豆</strong></td><td>15-20g</td><td>20-25g</td><td>25-30g</td><td>25-30g</td></tr>
+                        <tr><td><strong>坚果</strong></td><td>10g</td><td>10-15g</td><td>15g</td><td>15-20g</td></tr>
+                        <tr><td><strong>油脂</strong></td><td>15-20g</td><td>20-25g</td><td>25g</td><td>25-30g</td></tr>
+                    </tbody>
+                </table>
+
+                <h3>4.4 一周食谱示例</h3>
+
+                <h4>📅 周一</h4>
+                <div class="meal-plan">
+                    <div class="meal-card">
+                        <h4>🌅 早餐</h4>
+                        <p>全麦面包2片 + 煮鸡蛋1个 + 低脂牛奶250ml + 小番茄5个</p>
+                    </div>
+                    <div class="meal-card">
+                        <h4>☀️ 午餐</h4>
+                        <p>糙米饭100g + 清蒸鲈鱼100g + 蒜蓉西兰花200g</p>
+                    </div>
+                    <div class="meal-card">
+                        <h4>🌙 晚餐</h4>
+                        <p>小米粥1碗 + 清炒鸡胸肉100g + 凉拌黄瓜150g</p>
+                    </div>
+                </div>
+
+                <h4>📅 周二</h4>
+                <div class="meal-plan">
+                    <div class="meal-card">
+                        <h4>🌅 早餐</h4>
+                        <p>燕麦粥1碗 + 水煮蛋1个 + 苹果半个 + 原味坚果10g</p>
+                    </div>
+                    <div class="meal-card">
+                        <h4>☀️ 午餐</h4>
+                        <p>杂粮饭100g + 番茄炒牛肉100g + 清炒油麦菜200g</p>
+                    </div>
+                    <div class="meal-card">
+                        <h4>🌙 晚餐</h4>
+                        <p>红薯1个 + 白灼虾100g + 冬瓜汤1碗</p>
+                    </div>
+                </div>
+
+                <h4>📅 周三</h4>
+                <div class="meal-plan">
+                    <div class="meal-card">
+                        <h4>🌅 早餐</h4>
+                        <p>玉米1根 + 无糖豆浆250ml + 水煮蛋1个 + 凉拌菠菜100g</p>
+                    </div>
+                    <div class="meal-card">
+                        <h4>☀️ 午餐</h4>
+                        <p>荞麦面条100g + 香菇鸡肉卤 + 青菜200g</p>
+                    </div>
+                    <div class="meal-card">
+                        <h4>🌙 晚餐</h4>
+                        <p>山药粥1碗 + 清蒸豆腐150g + 炒胡萝卜丝150g</p>
+                    </div>
+                </div>
+
+                <h4>📅 周四</h4>
+                <div class="meal-plan">
+                    <div class="meal-card">
+                        <h4>🌅 早餐</h4>
+                        <p>全麦馒头1个 + 低脂牛奶250ml + 煮鸡蛋1个 + 蓝莓50g</p>
+                    </div>
+                    <div class="meal-card">
+                        <h4>☀️ 午餐</h4>
+                        <p>糙米饭100g + 红烧带鱼100g + 清炒白菜200g</p>
+                    </div>
+                    <div class="meal-card">
+                        <h4>🌙 晚餐</h4>
+                        <p>红豆粥1碗 + 香干炒芹菜150g + 凉拌木耳100g</p>
+                    </div>
+                </div>
+
+                <h4>📅 周五</h4>
+                <div class="meal-plan">
+                    <div class="meal-card">
+                        <h4>🌅 早餐</h4>
+                        <p>紫薯1个 + 无糖酸奶200g + 水煮蛋1个 + 小黄瓜1根</p>
+                    </div>
+                    <div class="meal-card">
+                        <h4>☀️ 午餐</h4>
+                        <p>杂粮饭100g + 番茄炒蛋 + 清炒芦笋200g</p>
+                    </div>
+                    <div class="meal-card">
+                        <h4>🌙 晚餐</h4>
+                        <p>南瓜粥1碗 + 清蒸龙利鱼100g + 炒西兰花150g</p>
+                    </div>
+                </div>
+
+                <h4>📅 周六</h4>
+                <div class="meal-plan">
+                    <div class="meal-card">
+                        <h4>🌅 早餐</h4>
+                        <p>燕麦片50g（冲牛奶）+ 煮鸡蛋1个 + 香蕉半根</p>
+                    </div>
+                    <div class="meal-card">
+                        <h4>☀️ 午餐</h4>
+                        <p>全麦意面100g + 番茄牛肉酱 + 菠菜150g</p>
+                    </div>
+                    <div class="meal-card">
+                        <h4>🌙 晚餐</h4>
+                        <p>藜麦饭100g + 白灼菜心200g + 豆腐汤1碗</p>
+                    </div>
+                </div>
+
+                <h4>📅 周日</h4>
+                <div class="meal-plan">
+                    <div class="meal-card">
+                        <h4>🌅 早餐</h4>
+                        <p>玉米碴粥1碗 + 水煮蛋1个 + 全麦包子1个 + 小番茄5个</p>
+                    </div>
+                    <div class="meal-card">
+                        <h4>☀️ 午餐</h4>
+                        <p>糙米饭100g + 宫保鸡丁（少油版）+ 清炒娃娃菜200g</p>
+                    </div>
+                    <div class="meal-card">
+                        <h4>🌙 晚餐</h4>
+                        <p>小米粥1碗 + 清蒸虾100g + 凉拌苦瓜150g</p>
+                    </div>
+                </div>
+
+                <div class="info-box">
+                    <strong>🍎 加餐建议：</strong><br>
+                    • 上午/下午加餐：苹果1个 或 原味坚果15g 或 无糖酸奶100g<br>
+                    • 运动后：香蕉1根 + 牛奶100ml<br>
+                    • 避免：薯片、巧克力、蛋糕等高热量零食
+                </div>
+
+                <h3>4.5 实用饮食技巧</h3>
+                <ul>
+                    <li><strong>餐盘分区法：</strong>一半蔬菜，四分之一蛋白质，四分之一主食</li>
+                    <li><strong>细嚼慢咽：</strong>每口咀嚼20-30次，每餐20-30分钟</li>
+                    <li><strong>小餐具策略：</strong>使用较小的餐盘和碗，视觉上感觉食物更多</li>
+                    <li><strong>先进食顺序：</strong>先喝汤 → 再吃蔬菜 → 再吃肉 → 最后吃主食</li>
+                    <li><strong>三餐规律：</strong>定时定量，不吃夜宵，避免过度饥饿后暴饮暴食</li>
+                    <li><strong>减少在外就餐：</strong>外卖和餐馆通常油脂和盐分较高</li>
+                    <li><strong>学会看食品标签：</strong>注意能量、脂肪、糖、钠含量</li>
+                    <li><strong>家庭共同参与：</strong>全家一起改变饮食习惯，营造健康饮食环境</li>
+                </ul>
+
+                <h3>4.6 常见误区提醒</h3>
+                <div class="warning-box">
+                    <strong>❌ 常见误区：</strong><br>
+                    • <strong>误区1：</strong>儿童快速减重没问题 → 可能影响生长发育，每周减重不宜超过0.5-1kg<br>
+                    • <strong>误区2：</strong>完全不吃主食 → 主食是必需能量来源，选择全谷物即可<br>
+                    • <strong>误区3：</strong>用水果代餐 → 水果含糖，不能完全替代正餐<br>
+                    • <strong>误区4：</strong>只吃蔬菜不吃肉 → 蛋白质对生长发育很重要<br>
+                    • <strong>误区5：</strong>喝果汁代替喝水 → 果汁含糖高，直接吃水果更好<br>
+                    • <strong>误区6：</strong>用食物奖励孩子 → 会形成不健康的食物关联
+                </div>
+            </div>
+
+            <!-- 五、随访监测 -->
+            <div class="section" id="followup">
+                <h2>五、随访与监测方案</h2>
+
+                <h3>5.1 随访频率</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>肥胖程度</th>
+                            <th>随访频率</th>
+                            <th>监测内容</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>超重</td>
+                            <td>每3个月1次</td>
+                            <td>体重、身高、BMI、饮食运动指导</td>
+                        </tr>
+                        <tr>
+                            <td>轻度肥胖</td>
+                            <td>每1-2个月1次</td>
+                            <td>体重、身高、BMI、腰围、血压</td>
+                        </tr>
+                        <tr>
+                            <td>中度肥胖</td>
+                            <td>每月1次</td>
+                            <td>上述 + 血糖、血脂、肝功能</td>
+                        </tr>
+                        <tr>
+                            <td>重度肥胖</td>
+                            <td>每2周1次</td>
+                            <td>上述 + 并发症评估、多学科会诊</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>5.2 监测指标</h3>
+
+                <h4>体格测量</h4>
+                <ul>
+                    <li><strong>体重：</strong>每周测量1-2次，固定时间（晨起空腹排便后）</li>
+                    <li><strong>身高：</strong>每月测量1次</li>
+                    <li><strong>BMI：</strong>每次随访计算</li>
+                    <li><strong>腰围：</strong>每月测量1次</li>
+                    <li><strong>血压：</strong>每次随访测量</li>
+                </ul>
+
+                <h4>实验室检查</h4>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>检查项目</th>
+                            <th>初诊</th>
+                            <th>轻度肥胖</th>
+                            <th>中重度肥胖</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>血糖、胰岛素</td><td>✓</td><td>每6个月</td><td>每3个月</td></tr>
+                        <tr><td>血脂</td><td>✓</td><td>每6个月</td><td>每3个月</td></tr>
+                        <tr><td>肝功能</td><td>✓</td><td>每6个月</td><td>每3个月</td></tr>
+                        <tr><td>肝脏超声</td><td>可选</td><td>每年1次</td><td>每6个月</td></tr>
+                    </tbody>
+                </table>
+
+                <h3>5.3 疗效评估</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>疗效</th>
+                            <th>判定标准</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td><strong>显效</strong></td><td>BMI下降≥2个标准差单位，或BMI Z评分下降≥0.5</td></tr>
+                        <tr><td><strong>有效</strong></td><td>BMI下降1-2个标准差单位，或BMI Z评分下降0.25-0.5</td></tr>
+                        <tr><td><strong>稳定</strong></td><td>体重增长速度减慢，BMI保持稳定或轻度上升</td></tr>
+                        <tr><td><strong>无效</strong></td><td>BMI持续上升，或无明显改善</td></tr>
+                    </tbody>
+                </table>
+
+                <h3>5.4 心理健康关注</h3>
+                <ul>
+                    <li>关注患儿情绪，预防自卑、焦虑、抑郁等心理问题</li>
+                    <li>鼓励患儿积极参与社交活动，避免因体重受到嘲笑</li>
+                    <li>必要时请心理科/精神科会诊</li>
+                    <li>强调健康比体重更重要，培养积极的身体意象</li>
+                </ul>
+
+                <h3>5.5 长期管理目标</h3>
+                <div class="highlight-box">
+                    <strong>🎯 长期目标：</strong><br>
+                    • 短期（1-3个月）：建立健康生活方式，控制体重增长<br>
+                    • 中期（3-12个月）：BMI逐渐改善，养成运动习惯<br>
+                    • 长期（1-5年）：维持健康体重，预防并发症，终身健康生活方式
+                </div>
+            </div>
+
+            <div class="info-box">
+                <strong>📚 参考依据：</strong><br>
+                • 《中国儿童青少年肥胖防控实施方案（2020-2030年）》<br>
+                • 《儿童肥胖症诊疗指南》<br>
+                • 《中国居民膳食指南（2022）》<br>
+                • 中华医学会儿科学分会内分泌遗传代谢学组相关指南
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>🏥 医院质控办 · 儿童肥胖症诊疗方案</p>
+            <p>版本 1.0 | 2026年4月</p>
+            <p style="margin-top: 15px; opacity: 0.8; font-size: 14px;">本方案仅供临床参考，具体诊疗请结合患儿实际情况</p>
+        </div>
+    </div>
+</body>
+</html>
