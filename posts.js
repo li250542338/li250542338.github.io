@@ -1,6 +1,44 @@
 // 博客文章数据
 const posts = [
     {
+        id: 3,
+        title: "📚 高中英语3500词速记（7天版）",
+        date: "2026-04-18",
+        category: "学习",
+        tags: ["英语", "高考", "单词", "学习资料"],
+        summary: "7天搞定高考核心3500词汇，每天10分钟，轻松掌握高考必备单词，配套练习，高效记忆！",
+        content: `
+            <p>高考英语3500词是高中英语学习的核心，掌握这些单词是英语提分的关键！</p>
+            
+            <h2>🎯 学习特点</h2>
+            <ul>
+                <li><strong>分天规划</strong> - 7天完成所有3500词学习，每天学习量适中</li>
+                <li><strong>按考频排序</strong> - 高频单词优先学习，提分效率更高</li>
+                <li><strong>配套例句</strong> - 每个单词都有高考真题例句，结合语境记忆</li>
+                <li><strong>移动端适配</strong> - 随时随地都可以打开学习，充分利用碎片化时间</li>
+            </ul>
+            
+            <div style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); padding: 30px; border-radius: 15px; text-align: center; margin: 30px 0;">
+                <h3 style="color: white; margin-bottom: 20px;">📝 开始学习</h3>
+                <a href="/高中3500词-HTML/" style="display: inline-block; background: white; color: #f5576c; padding: 15px 40px; border-radius: 10px; text-decoration: none; font-weight: bold; font-size: 1.2em; box-shadow: 0 5px 20px rgba(245, 87, 108, 0.2);">
+                    🚀 进入单词学习页面
+                </a>
+            </div>
+            
+            <h2>💡 学习建议</h2>
+            <ul>
+                <li><strong>每天坚持</strong> - 固定时间学习，养成习惯，7天就能完成一轮</li>
+                <li><strong>反复复习</strong> - 学过的单词定期回顾，避免遗忘</li>
+                <li><strong>结合真题</strong> - 遇到陌生单词回到真题语境中理解</li>
+                <li><strong>听力配合</strong> - 可以边听发音边记，效果更好</li>
+            </ul>
+            
+            <p style="background: #d4edda; border: 1px solid #c3e6cb; padding: 20px; border-radius: 10px; margin-top: 30px;">
+                <strong>💪 加油！</strong>坚持下来，你的英语词汇量会有质的飞跃，高考英语成绩也会大幅提升！
+            </p>
+        `
+    },
+    {
         id: 2,
         title: "医学+AI 学习规划思维导图",
         date: "2026-04-15",
