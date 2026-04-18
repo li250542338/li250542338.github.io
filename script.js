@@ -105,7 +105,7 @@ function renderPosts() {
     if (currentTag) {
         postsToRender = posts.filter(post => post.tags.includes(currentTag));
     } else if (currentCategory) {
-        postsToRender = posts.filter(post => post.category === currentCategory);
+        postsToRender = posts.filter(post => post.category.split(',').includes(currentCategory));
     }
 
     postsToRender.forEach(post => {
