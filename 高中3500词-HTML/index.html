@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>高中英语3500词速记 - 按天学习</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Microsoft Yahei', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            padding: 40px;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 10px;
+            font-size: 2.5rem;
+        }
+        .subtitle {
+            text-align: center;
+            color: #666;
+            margin-bottom: 40px;
+            font-size: 1.1rem;
+        }
+        .day-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+        .day-card {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            padding: 30px 20px;
+            border-radius: 12px;
+            text-align: center;
+            text-decoration: none;
+            font-size: 1.3rem;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(245, 87, 108, 0.3);
+        }
+        .day-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(245, 87, 108, 0.4);
+        }
+        .day-card:nth-child(2n) {
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            box-shadow: 0 4px 15px rgba(0, 242, 254, 0.3);
+        }
+        .day-card:nth-child(2n):hover {
+            box-shadow: 0 10px 25px rgba(0, 242, 254, 0.4);
+        }
+        .tip {
+            text-align: center;
+            margin-top: 40px;
+            color: #888;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>📚 高中英语3500词速记</h1>
+        <p class="subtitle">7天搞定高考核心词汇，每天一练，轻松提分！</p>
+        <div class="day-list">
+            <a href="Day-01.html" class="day-card">Day 01</a>
+            <a href="Day-02.html" class="day-card">Day 02</a>
+            <a href="Day-03.html" class="day-card">Day 03</a>
+            <a href="Day-04.html" class="day-card">Day 04</a>
+            <a href="Day-05.html" class="day-card">Day 05</a>
+            <a href="Day-06.html" class="day-card">Day 06</a>
+            <a href="Day-07.html" class="day-card">Day 07</a>
+        </div>
+        <p class="tip">点击对应日期即可开始学习，页面支持离线保存哦~</p>
+    </div>
+</body>
+</html>
