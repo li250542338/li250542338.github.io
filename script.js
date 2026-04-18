@@ -3,6 +3,7 @@
 // 当前状态
 let currentPage = 'home';
 let currentTag = null;
+let currentCategory = null;
 
 // 初始化
 document.addEventListener('DOMContentLoaded', function() {
@@ -36,23 +37,35 @@ function initNavigation() {
         link.addEventListener('click', function(e) {
             e.preventDefault();
             const page = this.dataset.page;
-            showPage(page);
+            const category = this.dataset.category;
+            if (category) {
+                filterByCategory(category);
+            } else {
+                showPage(page);
+            }
         });
     });
 
     document.getElementById('backBtn').addEventListener('click', function() {
         showPage('home');
     });
+
+    // 搜索功能初始化
+    document.getElementById('searchInput').addEventListener('input', function() {
+        const keyword = this.value.trim();
+        renderSearchResults(keyword);
+    });
 }
 
 function showPage(page) {
     currentPage = page;
     currentTag = null;
+    currentCategory = null;
 
     // 更新导航状态
     document.querySelectorAll('.nav-link').forEach(link => {
         link.classList.remove('active');
-        if (link.dataset.page === page) {
+        if (link.dataset.page === page || link.dataset.category === currentCategory) {
             link.classList.add('active');
         }
     });
@@ -76,6 +89,10 @@ function showPage(page) {
             document.getElementById('tagsPage').classList.add('active');
             renderTags();
             break;
+        case 'search':
+            document.getElementById('searchPage').classList.add('active');
+            document.getElementById('searchInput').focus();
+            break;
     }
 }
 
@@ -87,6 +104,8 @@ function renderPosts() {
     let postsToRender = posts;
     if (currentTag) {
         postsToRender = posts.filter(post => post.tags.includes(currentTag));
+    } else if (currentCategory) {
+        postsToRender = posts.filter(post => post.category === currentCategory);
     }
 
     postsToRender.forEach(post => {
@@ -211,10 +230,73 @@ function renderTags() {
     }
 }
 
+// 按分类过滤
+function filterByCategory(category) {
+    currentCategory = category;
+    currentTag = null;
+    currentPage = 'home';
+
+    // 更新导航状态
+    document.querySelectorAll('.nav-link').forEach(link => {
+        link.classList.remove('active');
+        if (link.dataset.category === category) {
+            link.classList.add('active');
+        }
+    });
+
+    document.getElementById('homePage').classList.add('active');
+    renderPosts();
+}
+
 // 按标签过滤
 function filterByTag(tag) {
     currentTag = tag;
+    currentCategory = null;
     showPage('tags');
+}
+
+// 渲染搜索结果
+function renderSearchResults(keyword) {
+    const container = document.getElementById('searchResults');
+    if (!keyword) {
+        container.innerHTML = '<p style="color: #888; text-align: center;">请输入关键词进行搜索</p>';
+        return;
+    }
+
+    const results = posts.filter(post => {
+        const lowerKeyword = keyword.toLowerCase();
+        return post.title.toLowerCase().includes(lowerKeyword) ||
+               post.summary.toLowerCase().includes(lowerKeyword) ||
+               post.content.toLowerCase().includes(lowerKeyword) ||
+               post.tags.some(tag => tag.toLowerCase().includes(lowerKeyword)) ||
+               post.category.toLowerCase().includes(lowerKeyword);
+    });
+
+    if (results.length === 0) {
+        container.innerHTML = `<p style="color: #888; text-align: center;">没有找到包含 "${keyword}" 的内容</p>`;
+        return;
+    }
+
+    container.innerHTML = `<p style="margin-bottom: 20px;">找到 ${results.length} 个结果：</p>` + results.map(post => `
+        <div class="post-card" onclick="showPost(${post.id})">
+            <h3 class="post-title">${highlightKeyword(post.title, keyword)}</h3>
+            <div class="post-meta">
+                <span>📅 ${formatDate(post.date)}</span>
+                <span>📁 ${post.category}</span>
+            </div>
+            <p class="post-summary">${highlightKeyword(post.summary, keyword)}</p>
+            <div class="post-tags">
+                ${post.tags.map(tag => `<span class="tag">${highlightKeyword(tag, keyword)}</span>`).join('')}
+            </div>
+        </div>
+    `).join('');
+}
+
+// 关键词高亮
+function highlightKeyword(text, keyword) {
+    if (!keyword) return text;
+    const regex = new RegExp(`(${keyword})`, 'gi');
+    return text.replace(regex, '<mark style="background: #fff3cd; padding: 2px 4px; border-radius: 4px;">$1</mark>');
 }
 
 // 工具函数

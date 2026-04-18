@@ -3,18 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>李老板的博客</title>
+    <title>AI爱好者李医生的博客</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header class="header">
         <div class="container">
-            <h1 class="logo">📚 李老板的博客</h1>
+            <h1 class="logo">🏥 AI爱好者李医生的博客</h1>
             <nav class="nav">
                 <a href="#" class="nav-link active" data-page="home">首页</a>
-                <a href="#" class="nav-link" data-page="archives">归档</a>
-                <a href="#" class="nav-link" data-page="tags">标签</a>
-                <a href="/高中3500词-HTML/" class="nav-link" target="_blank">高中3500词</a>
+                <a href="#" class="nav-link" data-category="英语">英语</a>
+                <a href="#" class="nav-link" data-category="AI">AI</a>
+                <a href="#" class="nav-link" data-category="医学">医学</a>
+                <a href="#" class="nav-link" data-category="文化">文化</a>
+                <a href="#" class="nav-link" data-page="search">🔍 搜索</a>
                 <button class="theme-toggle" id="themeToggle">🌙</button>
             </nav>
         </div>
@@ -40,6 +42,15 @@
                 <div id="tagPosts"></div>
             </div>
 
+            <!-- 搜索页 -->
+            <div id="searchPage" class="page">
+                <h2 class="page-title">🔍 搜索资料</h2>
+                <div style="margin-bottom: 30px;">
+                    <input type="text" id="searchInput" placeholder="输入关键词搜索，支持模糊匹配..." style="width: 100%; padding: 15px 20px; font-size: 1.1rem; border: 2px solid #e0e0e0; border-radius: 12px; outline: none; transition: border-color 0.3s;" />
+                </div>
+                <div id="searchResults"></div>
+            </div>
+
             <!-- 文章详情页 -->
             <div id="postPage" class="page">
                 <button class="back-btn" id="backBtn">← 返回首页</button>
@@ -50,7 +61,7 @@
 
     <footer class="footer">
         <div class="container">
-            <p>© 2026 李老板的博客 | 用心记录生活</p>
+            <p>© 2026 AI爱好者李医生的博客 | 用心记录成长</p>
         </div>
     </footer>
 
