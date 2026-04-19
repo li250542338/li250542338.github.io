@@ -1,6 +1,24 @@
 // 博客文章数据
 const posts = [
     {
+        id: 18,
+        title: "🐍 Python函数最全知识点/难点/易错点速查表",
+        date: "2026-04-19",
+        category: "AI",
+        tags: ["编程", "Python", "函数", "速查表", "开发工具"],
+        summary: "从基础到进阶，覆盖所有考点、坑点，学习Python函数必备指南，包含参数、作用域、闭包、装饰器、递归等所有知识点，附带常见坑点避坑指南。",
+        content: `
+            <p>专为Python学习者整理的函数全知识点速查表，从基础的参数定义到进阶的闭包、装饰器，覆盖所有高频考点、难点和90%的人都会踩的易错坑点，附带最佳实践建议。</p>
+            
+            <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 30px; border-radius: 15px; text-align: center; margin: 30px 0;">
+                <h3 style="color: white; margin-bottom: 20px;">📄 查看完整速查表</h3>
+                <a href="python-function-cheatsheet.html" style="display: inline-block; background: white; color: #667eea; padding: 15px 40px; border-radius: 10px; text-decoration: none; font-weight: bold; font-size: 1.2em; box-shadow: 0 5px 20px rgba(102, 126, 234, 0.2);">
+                    🚀 打开学习资料
+                </a>
+            </div>
+        `
+    },
+    {
         id: 17,
         title: "📝 《1500~2500g低出生体重儿近期并发症及预后影响因素》论文写作指南（二甲妇幼专属版）",
         date: "2026-04-19",
