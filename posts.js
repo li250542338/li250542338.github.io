@@ -1,6 +1,24 @@
 // 博客文章数据
 const posts = [
     {
+        id: 17,
+        title: "📝 《1500~2500g低出生体重儿近期并发症及预后影响因素》论文写作指南（二甲妇幼专属版）",
+        date: "2026-04-19",
+        category: "医学",
+        tags: ["医学", "儿科", "新生儿科", "低出生体重儿", "论文写作", "回顾性研究", "基层医疗"],
+        summary: "专为二甲/基层妇幼医生定制，从零到一完成低出生体重儿回顾性研究论文写作，突出基层研究特色，大幅提升中稿率！",
+        content: `
+            <p>本指南专为基层妇幼保健院医生定制，解决基层样本量少、检查项目不全、统计基础薄弱等痛点，提供全流程可落地的论文写作方案，包含研究设计、数据收集、写作模板、统计方案、投稿技巧全套内容。</p>
+            
+            <div style="background: linear-gradient(135deg, #2c7fb8 0%, #76d1cb 100%); padding: 30px; border-radius: 15px; text-align: center; margin: 30px 0;">
+                <h3 style="color: white; margin-bottom: 20px;">📄 查看完整写作指南</h3>
+                <a href="低出生体重儿论文写作指南.html" style="display: inline-block; background: white; color: #2c7fb8; padding: 15px 40px; border-radius: 10px; text-decoration: none; font-weight: bold; font-size: 1.2em; box-shadow: 0 5px 20px rgba(44, 127, 184, 0.2);">
+                    🚀 打开详细指南
+                </a>
+            </div>
+        `
+    },
+    {
         id: 16,
         title: "📝 AI专业词汇7天学习计划-Day7：AI前沿技术+伦理+行业应用",
         date: "2026-04-18",
