@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python文件与异常知识点/重点/难点/易错点速查表</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.7;
+            color: #333;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        .container {
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+            padding: 50px;
+            margin-bottom: 30px;
+        }
+        h1 {
+            color: #1e293b;
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            text-align: center;
+            padding-bottom: 20px;
+            border-bottom: 3px solid #667eea;
+        }
+        .instance-banner {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 12px;
+            margin: 25px 0;
+            font-size: 1.1rem;
+            font-weight: 500;
+        }
+        h2 {
+            color: #1e293b;
+            font-size: 1.8rem;
+            margin: 40px 0 20px;
+            padding-left: 15px;
+            border-left: 5px solid #667eea;
+        }
+        h3 {
+            color: #1e293b;
+            font-size: 1.4rem;
+            margin: 25px 0 15px;
+            padding-bottom: 5px;
+            border-bottom: 2px solid #e0e7ff;
+        }
+        h4 {
+            color: #4338ca;
+            font-size: 1.2rem;
+            margin: 20px 0 10px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+        }
+        th, td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        th {
+            background-color: #e0e7ff;
+            font-weight: 600;
+            color: #4338ca;
+        }
+        tr:hover {
+            background-color: #f8fafc;
+        }
+        pre {
+            background-color: #1e293b;
+            color: #e2e8f0;
+            padding: 20px;
+            border-radius: 10px;
+            overflow-x: auto;
+            margin: 15px 0;
+            font-family: "Consolas", "Monaco", monospace;
+            font-size: 0.95rem;
+            line-height: 1.6;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+        code {
+            background-color: #e0e7ff;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: "Consolas", "Monaco", monospace;
+            color: #4338ca;
+            font-size: 0.95rem;
+        }
+        pre code {
+            background: none;
+            padding: 0;
+            color: #e2e8f0;
+        }
+        ul, ol {
+            margin: 15px 0 15px 30px;
+        }
+        li {
+            margin: 8px 0;
+        }
+        .error {
+            color: #dc2626;
+            font-weight: 500;
+        }
+        .correct {
+            color: #16a34a;
+            font-weight: 500;
+        }
+        .highlight-box {
+            background: #dcfce7;
+            border-left: 4px solid #16a34a;
+            padding: 15px 20px;
+            border-radius: 6px;
+            margin: 15px 0;
+        }
+        .demo-result {
+            background: #eff6ff;
+            border-left: 4px solid #3b82f6;
+            padding: 12px 20px;
+            border-radius: 6px;
+            margin: 10px 0 20px;
+            font-family: "Consolas", "Monaco", monospace;
+        }
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+            .container {
+                padding: 25px;
+            }
+            h1 {
+                font-size: 1.8rem;
+            }
+            h2 {
+                font-size: 1.4rem;
+            }
+            h3 {
+                font-size: 1.2rem;
+            }
+            pre {
+                padding: 15px;
+                font-size: 0.85rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Python文件与异常知识点/重点/难点/易错点速查表</h1>
+        
+        <div class="instance-banner">
+            📚 配套教材：《Python编程：从入门到实践》（埃里克·马赛斯 著）<br>
+            本章是Python基础阶段非常实用的章节，学完后你将能够读写文件、处理程序错误、持久化存储数据，写出更健壮的Python程序！
+        </div>
+
+        <h2>一、本章核心内容概述</h2>
+        <p>学完本章你将具备以下能力：</p>
+        <ul>
+            <li>✅ 读写各种文本文件、配置文件</li>
+            <li>✅ 处理程序运行时的各种错误，避免程序直接崩溃</li>
+            <li>✅ 持久化存储程序数据（比如用户信息、配置、游戏进度等）</li>
+            <li>✅ 写出更健壮、容错性更强的Python程序</li>
+        </ul>
+
+        <h2>二、知识点详细讲解</h2>
+        <h3>2.1 文件操作</h3>
+        <h4>2.1.1 打开和关闭文件</h4>
+        <p>Python使用<code>open()</code>函数打开文件，使用完后必须关闭文件释放资源</p>
+<pre><code># 普通打开方式（容易忘记关闭文件）
+f = open('test.txt', 'r', encoding='utf-8')
+content = f.read()
+f.close()
+
+# 推荐方式：使用with关键字，会自动关闭文件
+with open('test.txt', 'r', encoding='utf-8') as f:
+    content = f.read()
+</code></pre>
+        <p><strong>参数说明：</strong></p>
+        <ul>
+            <li>第一个参数：文件路径（相对路径或绝对路径）</li>
+            <li>第二个参数：打开模式
+                <ul>
+                    <li><code>'r'</code>：只读模式（默认）</li>
+                    <li><code>'w'</code>：写入模式（文件不存在则创建，存在则覆盖原有内容）</li>
+                    <li><code>'a'</code>：追加模式（文件不存在则创建，存在则在末尾追加内容）</li>
+                    <li><code>'r+'</code>：读写模式</li>
+                    <li><code>'b'</code>：二进制模式（比如读写图片、视频等非文本文件，和其他模式组合使用：<code>'rb'</code>、<code>'wb'</code>）</li>
+                </ul>
+            </li>
+            <li><code>encoding='utf-8'</code>：指定文件编码，避免中文乱码问题</li>
+        </ul>
+
+        <h4>2.1.2 读取文件的三种方式</h4>
+<pre><code># 1. read()：一次性读取整个文件内容，返回字符串
+with open('test.txt', 'r', encoding='utf-8') as f:
+    content = f.read()
+    print(content)
+
+# 2. readlines()：按行读取所有内容，返回列表，每个元素是一行内容
+with open('test.txt', 'r', encoding='utf-8') as f:
+    lines = f.readlines()
+    for line in lines:
+        print(line.strip())  # strip()去掉每行末尾的换行符
+
+# 3. 逐行读取（适合大文件，不会一次性占用太多内存）
+with open('test.txt', 'r', encoding='utf-8') as f:
+    for line in f:
+        print(line.strip())
+</code></pre>
+
+        <h4>2.1.3 写入文件</h4>
+<pre><code># 覆盖写入（原有内容会被清空）
+with open('test.txt', 'w', encoding='utf-8') as f:
+    f.write("第一行内容\n")
+    f.write("第二行内容\n")  # 手动加换行符实现多行写入
+
+# 追加写入（在文件末尾添加内容，原有内容保留）
+with open('test.txt', 'a', encoding='utf-8') as f:
+    f.write("第三行追加内容\n")
+</code></pre>
+
+        <h4>2.1.4 文件路径</h4>
+        <ul>
+            <li><strong>相对路径</strong>：相对于当前运行程序的目录
+<pre><code># 当前目录下的test.txt
+open('test.txt', 'r')
+# 当前目录下data文件夹里的test.txt
+open('data/test.txt', 'r')
+# 上一级目录里的test.txt
+open('../test.txt', 'r')
+</code></pre>
+            </li>
+            <li><strong>绝对路径</strong>：从磁盘根目录开始的完整路径
+<pre><code># Windows系统
+open('C:/Users/xxx/Documents/test.txt', 'r')
+# macOS/Linux系统
+open('/home/xxx/Documents/test.txt', 'r')
+</code></pre>
+            </li>
+        </ul>
+
+        <h3>2.2 异常处理</h3>
+        <p>异常是程序运行时出现的错误，如果不处理，程序会直接崩溃退出，异常处理可以让程序优雅地处理错误，继续运行。</p>
+
+        <h4>2.2.1 基本语法：try-except</h4>
+<pre><code>try:
+    # 可能出现错误的代码
+    num = int(input("请输入一个数字："))
+    result = 10 / num
+except ZeroDivisionError:
+    # 捕获到除零错误时执行
+    print("错误：不能除以0！")
+except ValueError:
+    # 捕获到值错误（输入不是数字）时执行
+    print("错误：请输入有效的数字！")
+else:
+    # 没有出现异常时执行
+    print(f"计算结果是：{result}")
+finally:
+    # 不管有没有异常都会执行，通常用来释放资源
+    print("程序执行结束")
+</code></pre>
+
+        <h4>2.2.2 常见异常类型</h4>
+        <table>
+            <thead>
+                <tr>
+                    <th>异常类型</th>
+                    <th>说明</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><code>FileNotFoundError</code></td>
+                    <td>文件不存在错误</td>
+                </tr>
+                <tr>
+                    <td><code>ZeroDivisionError</code></td>
+                    <td>除零错误</td>
+                </tr>
+                <tr>
+                    <td><code>ValueError</code></td>
+                    <td>值错误（比如把字符串转数字失败）</td>
+                </tr>
+                <tr>
+                    <td><code>TypeError</code></td>
+                    <td>类型错误（比如字符串和数字相加）</td>
+                </tr>
+                <tr>
+                    <td><code>IndexError</code></td>
+                    <td>索引错误（列表访问超出范围）</td>
+                </tr>
+                <tr>
+                    <td><code>KeyError</code></td>
+                    <td>键错误（字典访问不存在的键）</td>
+                </tr>
+                <tr>
+                    <td><code>PermissionError</code></td>
+                    <td>权限错误（没有权限读写文件）</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h4>2.2.3 pass关键字</h4>
+        <p>捕获异常后什么都不做，静默处理</p>
+<pre><code>try:
+    with open('不存在的文件.txt', 'r') as f:
+        content = f.read()
+except FileNotFoundError:
+    pass  # 文件不存在就跳过，不做任何处理
+</code></pre>
+
+        <h3>2.3 数据持久化：json模块</h3>
+        <p>JSON是一种轻量级的数据交换格式，Python的json模块可以把Python数据结构（字典、列表等）序列化保存到文件，也可以从文件中反序列化读取回来。</p>
+<pre><code>import json
+
+# 1. 写入json文件：json.dump()
+user_info = {
+    "name": "张三",
+    "age": 18,
+    "hobbies": ["读书", "编程", "跑步"]
+}
+with open('user.json', 'w', encoding='utf-8') as f:
+    # ensure_ascii=False保证中文正常保存，indent=4格式化输出更美观
+    json.dump(user_info, f, ensure_ascii=False, indent=4)
+
+# 2. 读取json文件：json.load()
+with open('user.json', 'r', encoding='utf-8') as f:
+    user_info = json.load(f)
+    print(user_info["name"])  # 输出：张三
+</code></pre>
+
+        <h2>三、本章重点</h2>
+        <ol>
+            <li><strong>with关键字的使用</strong>：必须掌握，是Python中操作文件的标准方式，避免资源泄漏</li>
+            <li><strong>文件的读写操作</strong>：掌握常见的读取方式和写入方式，区分覆盖和追加模式</li>
+            <li><strong>try-except异常处理结构</strong>：掌握基本的异常捕获和处理，写出更健壮的程序</li>
+            <li><strong>json模块的使用</strong>：掌握数据的持久化存储，这是实际开发中最常用的功能之一</li>
+            <li><strong>常见异常类型的识别</strong>：能够根据报错信息快速定位错误类型</li>
+        </ol>
+
+        <h2>四、本章难点</h2>
+        <ol>
+            <li><strong>文件路径的处理</strong>：相对路径和绝对路径的区分，不同操作系统路径格式的差异，路径拼接的问题</li>
+            <li><strong>异常的合理使用</strong>：知道什么时候需要捕获异常，不要过度捕获异常，也不要什么异常都不处理</li>
+            <li><strong>二进制文件的读写</strong>：图片、视频等非文本文件的读写操作，需要使用<code>'b'</code>模式</li>
+            <li><strong>多异常的捕获顺序</strong>：子类异常要放在父类异常前面捕获，否则子类异常会被父类异常拦截</li>
+            <li><strong>JSON序列化的限制</strong>：不是所有Python对象都能序列化为JSON，比如自定义类的实例默认不能直接序列化</li>
+        </ol>
+
+        <h2>五、高频易错点汇总</h2>
+        <h3>1. ❌ 忘记关闭文件</h3>
+<pre><code># 错误：如果read()报错，close()不会执行，文件资源泄漏
+f = open('test.txt', 'r')
+content = f.read()
+f.close()
+
+# 正确：使用with关键字，自动关闭文件
+with open('test.txt', 'r') as f:
+    content = f.read()
+</code></pre>
+
+        <h3>2. ❌ 中文文件读写乱码</h3>
+<pre><code># 错误：不指定encoding参数，Windows系统默认编码是gbk，会导致中文乱码
+with open('test.txt', 'w') as f:
+    f.write("中文内容")
+
+# 正确：指定encoding='utf-8'
+with open('test.txt', 'w', encoding='utf-8') as f:
+    f.write("中文内容")
+</code></pre>
+
+        <h3>3. ❌ 读取文件后指针位置问题</h3>
+<pre><code># 错误：read()读取完整个文件后，文件指针在末尾，再次read()会得到空字符串
+with open('test.txt', 'r') as f:
+    content1 = f.read()
+    content2 = f.read()  # 内容为空
+
+# 正确：需要重新定位指针到开头
+with open('test.txt', 'r') as f:
+    content1 = f.read()
+    f.seek(0)  # 指针移动到开头
+    content2 = f.read()
+</code></pre>
+
+        <h3>4. ❌ 写入文件时忘记加换行符</h3>
+<pre><code># 错误：所有内容会写在同一行
+with open('test.txt', 'w') as f:
+    f.write("第一行")
+    f.write("第二行")
+
+# 正确：每行末尾加\n
+with open('test.txt', 'w') as f:
+    f.write("第一行\n")
+    f.write("第二行\n")
+</code></pre>
+
+        <h3>5. ❌ 捕获异常太宽泛</h3>
+<pre><code># 错误：捕获所有异常，会隐藏真正的错误，不推荐
+try:
+    # 代码
+except:
+    print("出错了")
+
+# 正确：捕获具体的异常类型，只处理你预期的错误
+try:
+    # 代码
+except FileNotFoundError:
+    print("文件不存在")
+</code></pre>
+
+        <h3>6. ❌ JSON序列化中文乱码</h3>
+<pre><code># 错误：不指定ensure_ascii=False，中文会被转成Unicode编码
+json.dump(user_info, f)
+
+# 正确：指定ensure_ascii=False
+json.dump(user_info, f, ensure_ascii=False, indent=4)
+</code></pre>
+
+        <h2>六、实战案例：用户登录注册系统</h2>
+<pre><code>import json
+
+# 读取用户数据
+def load_users():
+    try:
+        with open('users.json', 'r', encoding='utf-8') as f:
+            return json.load(f)
+    except FileNotFoundError:
+        return {}
+
+# 保存用户数据
+def save_users(users):
+    with open('users.json', 'w', encoding='utf-8') as f:
+        json.dump(users, f, ensure_ascii=False, indent=4)
+
+# 用户注册
+def register():
+    users = load_users()
+    username = input("请输入用户名：")
+    if username in users:
+        print("用户名已存在！")
+        return
+    password = input("请输入密码：")
+    users[username] = {"password": password}
+    save_users(users)
+    print("注册成功！")
+
+# 用户登录
+def login():
+    users = load_users()
+    username = input("请输入用户名：")
+    password = input("请输入密码：")
+    if username in users and users[username]["password"] == password:
+        print("登录成功！")
+    else:
+        print("用户名或密码错误！")
+
+# 主程序
+while True:
+    print("\n1. 注册\n2. 登录\n3. 退出")
+    choice = input("请输入你的选择：")
+    if choice == "1":
+        register()
+    elif choice == "2":
+        login()
+    elif choice == "3":
+        break
+    else:
+        print("无效输入，请重新输入！")
+</code></pre>
+
+        <h2>七、配套练习题</h2>
+        <ol>
+            <li>编写程序，统计一个文本文件中单词的数量和出现频率最高的10个单词</li>
+            <li>编写程序，将用户输入的通讯录信息（姓名、电话、邮箱）保存到json文件中，支持查询功能</li>
+            <li>编写程序，批量修改一个文件夹下所有txt文件的文件名，在文件名前面加上当前日期</li>
+            <li>编写程序，处理读取文件时可能出现的各种异常（文件不存在、权限不足、编码错误等）</li>
+        </ol>
+    </div>
+</body>
+</html>
