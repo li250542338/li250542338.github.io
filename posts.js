@@ -1,6 +1,24 @@
 // 博客文章数据
 const posts = [
     {
+        id: 19,
+        title: "🐍 Python类（Class）最全知识点/难点/易错点速查表（实例贯穿版）",
+        date: "2026-04-20",
+        category: "AI",
+        tags: ["编程", "Python", "面向对象", "类", "速查表", "开发工具"],
+        summary: "从基础到进阶，覆盖所有考点、坑点，学习Python面向对象必备指南，采用校园人员管理系统实例贯穿全文，包含封装、继承、多态等所有知识点，附带常见坑点避坑指南。",
+        content: `
+            <p>专为Python学习者整理的类（Class）全知识点速查表，采用校园人员管理系统实例贯穿全文，从基础的类定义到进阶的抽象类、元类，覆盖所有高频考点、难点和90%的人都会踩的易错坑点，附带最佳实践建议。</p>
+            
+            <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 30px; border-radius: 15px; text-align: center; margin: 30px 0;">
+                <h3 style="color: white; margin-bottom: 20px;">📄 查看完整速查表</h3>
+                <a href="Python类知识点总结.html" style="display: inline-block; background: white; color: #667eea; padding: 15px 40px; border-radius: 10px; text-decoration: none; font-weight: bold; font-size: 1.2em; box-shadow: 0 5px 20px rgba(102, 126, 234, 0.2);">
+                    🚀 打开学习资料
+                </a>
+            </div>
+        `
+    },
+    {
         id: 18,
         title: "🐍 Python函数最全知识点/难点/易错点速查表",
         date: "2026-04-19",
