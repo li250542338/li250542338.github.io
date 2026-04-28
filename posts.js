@@ -1,7 +1,8 @@
 // 博客文章数据
 const posts = [
     {
-        id: 19,
+{
+        id: 21,
         title: "🎵 一人音乐公司完整实现攻略",
         date: "2026-04-28",
         category: "文化",
@@ -14,6 +15,42 @@ const posts = [
                 <h3 style="color: white; margin-bottom: 20px;">📄 查看完整攻略</h3>
                 <a href="wenhua/yi-ren-yin-yue-gong-si-shi-xian-fang-an.html" style="display: inline-block; background: white; color: #f093fb; padding: 15px 40px; border-radius: 10px; text-decoration: none; font-weight: bold; font-size: 1.2em; box-shadow: 0 5px 20px rgba(240, 147, 251, 0.2);">
                     🚀 打开完整攻略
+                </a>
+            </div>
+        `
+    },
+    {
+        id: 20,
+        title: "🐍 Python文件与异常最全知识点/重点/难点/易错点速查表（《Python编程从入门到实践》配套）",
+        date: "2026-04-20",
+        category: "AI",
+        tags: ["编程", "Python", "文件", "异常", "速查表", "入门教程"],
+        summary: "配套《Python编程从入门到实践》学习资料，包含文件操作、异常处理、JSON数据持久化全知识点讲解，重点难点梳理，高频易错点避坑指南，附带实战案例和练习题。",
+        content: `
+            <p>配套《Python编程：从入门到实践》的文件与异常章节学习资料，包含完整的知识点讲解、重点难点梳理、高频易错点避坑指南，附带实战案例和配套练习题，帮助你快速掌握这部分内容。</p>
+            
+            <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 30px; border-radius: 15px; text-align: center; margin: 30px 0;">
+                <h3 style="color: white; margin-bottom: 20px;">📄 查看完整学习资料</h3>
+                <a href="Python文件与异常知识点总结.html" style="display: inline-block; background: white; color: #667eea; padding: 15px 40px; border-radius: 10px; text-decoration: none; font-weight: bold; font-size: 1.2em; box-shadow: 0 5px 20px rgba(102, 126, 234, 0.2);">
+                    🚀 打开学习资料
+                </a>
+            </div>
+        `
+    },
+    {
+        id: 19,
+        title: "🐍 Python类（Class）最全知识点/难点/易错点速查表（实例贯穿版）",
+        date: "2026-04-20",
+        category: "AI",
+        tags: ["编程", "Python", "面向对象", "类", "速查表", "开发工具"],
+        summary: "从基础到进阶，覆盖所有考点、坑点，学习Python面向对象必备指南，采用校园人员管理系统实例贯穿全文，包含封装、继承、多态等所有知识点，附带常见坑点避坑指南。",
+        content: `
+            <p>专为Python学习者整理的类（Class）全知识点速查表，采用校园人员管理系统实例贯穿全文，从基础的类定义到进阶的抽象类、元类，覆盖所有高频考点、难点和90%的人都会踩的易错坑点，附带最佳实践建议。</p>
+            
+            <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 30px; border-radius: 15px; text-align: center; margin: 30px 0;">
+                <h3 style="color: white; margin-bottom: 20px;">📄 查看完整速查表</h3>
+                <a href="Python类知识点总结.html" style="display: inline-block; background: white; color: #667eea; padding: 15px 40px; border-radius: 10px; text-decoration: none; font-weight: bold; font-size: 1.2em; box-shadow: 0 5px 20px rgba(102, 126, 234, 0.2);">
+                    🚀 打开学习资料
                 </a>
             </div>
         `
