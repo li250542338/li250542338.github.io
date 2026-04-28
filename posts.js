@@ -1,6 +1,24 @@
 // 博客文章数据
 const posts = [
     {
+        id: 19,
+        title: "🎵 一人音乐公司完整实现攻略",
+        date: "2026-04-28",
+        category: "文化",
+        tags: ["音乐创作", "数字人", "AI工具", "IP运营", "副业"],
+        summary: "单人即可落地的完整音乐公司运营方案，包含AI音乐制作、数字人创建、口型同步、MV制作、发布运营全流程，零代码基础也能快速上手！",
+        content: `
+            <p>现在AI工具链已经非常成熟，一个人就能搞定从音乐创作到数字人IP运营的全流程，开启自己的一人音乐公司。这份攻略包含从零到一落地的完整路径，新手也能快速上手。</p>
+            
+            <div style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); padding: 30px; border-radius: 15px; text-align: center; margin: 30px 0;">
+                <h3 style="color: white; margin-bottom: 20px;">📄 查看完整攻略</h3>
+                <a href="wenhua/yi-ren-yin-yue-gong-si-shi-xian-fang-an.html" style="display: inline-block; background: white; color: #f093fb; padding: 15px 40px; border-radius: 10px; text-decoration: none; font-weight: bold; font-size: 1.2em; box-shadow: 0 5px 20px rgba(240, 147, 251, 0.2);">
+                    🚀 打开完整攻略
+                </a>
+            </div>
+        `
+    },
+    {
         id: 18,
         title: "🐍 Python函数最全知识点/难点/易错点速查表",
         date: "2026-04-19",
